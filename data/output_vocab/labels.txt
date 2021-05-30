@@ -1,3 +1,5 @@
+$KEEP
+$DELETE
 $APPEND_!
 $APPEND_"
 $APPEND_"(
@@ -7,6 +9,7 @@ $APPEND_"」
 $APPEND_#
 $APPEND_##!
 $APPEND_##"
+$APPEND_###
 $APPEND_##%
 $APPEND_##&
 $APPEND_##'
@@ -23,6 +26,7 @@ $APPEND_##/
 $APPEND_##0
 $APPEND_##00
 $APPEND_##000
+$APPEND_##0000
 $APPEND_##1
 $APPEND_##10
 $APPEND_##11
@@ -229,7 +233,6 @@ $APPEND_##HI
 $APPEND_##HO
 $APPEND_##HS
 $APPEND_##HT
-$APPEND_##Hz
 $APPEND_##I
 $APPEND_##IA
 $APPEND_##IAL
@@ -307,8 +310,8 @@ $APPEND_##OCK
 $APPEND_##OD
 $APPEND_##OG
 $APPEND_##OK
-$APPEND_##OKAWA
 $APPEND_##OL
+$APPEND_##OLD
 $APPEND_##OLL
 $APPEND_##OM
 $APPEND_##OMA
@@ -1072,6 +1075,7 @@ $APPEND_##ven
 $APPEND_##vent
 $APPEND_##ver
 $APPEND_##very
+$APPEND_##vex
 $APPEND_##ville
 $APPEND_##w
 $APPEND_##ward
@@ -1105,8 +1109,6 @@ $APPEND_##Á
 $APPEND_##Ä
 $APPEND_##Ç
 $APPEND_##É
-$APPEND_##Í
-$APPEND_##Ó
 $APPEND_##Ö
 $APPEND_##×
 $APPEND_##Ø
@@ -1143,24 +1145,27 @@ $APPEND_##û
 $APPEND_##ü
 $APPEND_##ür
 $APPEND_##ý
+$APPEND_##þ
 $APPEND_##ā
 $APPEND_##ă
 $APPEND_##ą
 $APPEND_##ć
+$APPEND_##Č
 $APPEND_##č
-$APPEND_##đ
 $APPEND_##ē
 $APPEND_##ĕ
+$APPEND_##ė
 $APPEND_##ę
 $APPEND_##ě
+$APPEND_##ĝ
 $APPEND_##ğ
-$APPEND_##Ī
 $APPEND_##ī
 $APPEND_##ı
 $APPEND_##ł
 $APPEND_##ń
 $APPEND_##ŋ
 $APPEND_##ō
+$APPEND_##ŏ
 $APPEND_##ő
 $APPEND_##œ
 $APPEND_##ř
@@ -1169,26 +1174,25 @@ $APPEND_##ş
 $APPEND_##Š
 $APPEND_##š
 $APPEND_##ţ
-$APPEND_##ť
 $APPEND_##ū
 $APPEND_##ŭ
-$APPEND_##ů
 $APPEND_##ź
 $APPEND_##ż
 $APPEND_##Ž
 $APPEND_##ž
+$APPEND_##ư
 $APPEND_##ǎ
 $APPEND_##ǐ
-$APPEND_##ǒ
 $APPEND_##ǔ
-$APPEND_##ș
 $APPEND_##ə
+$APPEND_##ɡ
+$APPEND_##ˈ
+$APPEND_##Ε
 $APPEND_##Ζ
 $APPEND_##Κ
 $APPEND_##Λ
-$APPEND_##Π
 $APPEND_##Ρ
-$APPEND_##Τ
+$APPEND_##Χ
 $APPEND_##ά
 $APPEND_##έ
 $APPEND_##ή
@@ -1197,12 +1201,12 @@ $APPEND_##α
 $APPEND_##γ
 $APPEND_##δ
 $APPEND_##ε
+$APPEND_##ζ
 $APPEND_##η
 $APPEND_##θ
 $APPEND_##ι
 $APPEND_##κ
 $APPEND_##λ
-$APPEND_##μ
 $APPEND_##ν
 $APPEND_##ο
 $APPEND_##π
@@ -1215,6 +1219,8 @@ $APPEND_##φ
 $APPEND_##χ
 $APPEND_##ω
 $APPEND_##ό
+$APPEND_##ύ
+$APPEND_##І
 $APPEND_##А
 $APPEND_##Б
 $APPEND_##В
@@ -1222,8 +1228,8 @@ $APPEND_##Г
 $APPEND_##Д
 $APPEND_##Е
 $APPEND_##З
+$APPEND_##И
 $APPEND_##К
-$APPEND_##Л
 $APPEND_##М
 $APPEND_##Н
 $APPEND_##О
@@ -1233,11 +1239,10 @@ $APPEND_##С
 $APPEND_##Т
 $APPEND_##У
 $APPEND_##Ф
-$APPEND_##Х
 $APPEND_##Ц
+$APPEND_##Ч
 $APPEND_##Э
 $APPEND_##Ю
-$APPEND_##Я
 $APPEND_##а
 $APPEND_##ан
 $APPEND_##ар
@@ -1289,6 +1294,7 @@ $APPEND_##ю
 $APPEND_##я
 $APPEND_##ё
 $APPEND_##і
+$APPEND_##ї
 $APPEND_##ћ
 $APPEND_##و
 $APPEND_##ي
@@ -1328,17 +1334,13 @@ $APPEND_##็
 $APPEND_##่
 $APPEND_##้
 $APPEND_##ํ
-$APPEND_##ḍ
 $APPEND_##ḥ
-$APPEND_##ṇ
+$APPEND_##ṃ
+$APPEND_##ṛ
 $APPEND_##ṣ
-$APPEND_##ṭ
 $APPEND_##ạ
 $APPEND_##ầ
 $APPEND_##ế
-$APPEND_##ề
-$APPEND_##ố
-$APPEND_##ồ
 $APPEND_##―
 $APPEND_##‘
 $APPEND_##“
@@ -1349,18 +1351,19 @@ $APPEND_##→
 $APPEND_##⇒
 $APPEND_##∀
 $APPEND_##−
-$APPEND_##≤
 $APPEND_##△
 $APPEND_##○
 $APPEND_##◎
 $APPEND_##☆
+$APPEND_##♣
 $APPEND_##♪
 $APPEND_##、
 $APPEND_##。
 $APPEND_##々
 $APPEND_##々しい
 $APPEND_##々しく
-$APPEND_##々木
+$APPEND_##〆
+$APPEND_##〈
 $APPEND_##》
 $APPEND_##「
 $APPEND_##」
@@ -1815,6 +1818,7 @@ $APPEND_##わり
 $APPEND_##わる
 $APPEND_##われ
 $APPEND_##われる
+$APPEND_##ゐ
 $APPEND_##ゑ
 $APPEND_##を
 $APPEND_##ん
@@ -1833,7 +1837,6 @@ $APPEND_##アイランド
 $APPEND_##アウト
 $APPEND_##アス
 $APPEND_##アップ
-$APPEND_##アニア
 $APPEND_##アフ
 $APPEND_##アミ
 $APPEND_##アム
@@ -1854,12 +1857,10 @@ $APPEND_##ィ
 $APPEND_##ィー
 $APPEND_##イ
 $APPEND_##イア
-$APPEND_##イアント
 $APPEND_##イェ
 $APPEND_##イオ
 $APPEND_##イオス
 $APPEND_##イク
-$APPEND_##イクル
 $APPEND_##イス
 $APPEND_##イズ
 $APPEND_##イセン
@@ -1867,7 +1868,6 @@ $APPEND_##イチ
 $APPEND_##イッチ
 $APPEND_##イツ
 $APPEND_##イト
-$APPEND_##イトル
 $APPEND_##イトン
 $APPEND_##イド
 $APPEND_##イナー
@@ -1876,8 +1876,7 @@ $APPEND_##イヤ
 $APPEND_##イラ
 $APPEND_##イラー
 $APPEND_##イル
-$APPEND_##イルズ
-$APPEND_##イルド
+$APPEND_##イルス
 $APPEND_##イロ
 $APPEND_##イン
 $APPEND_##イング
@@ -1943,6 +1942,7 @@ $APPEND_##オ
 $APPEND_##オウ
 $APPEND_##オケ
 $APPEND_##オス
+$APPEND_##オニア
 $APPEND_##オフ
 $APPEND_##オラ
 $APPEND_##オリ
@@ -1982,6 +1982,7 @@ $APPEND_##カール
 $APPEND_##カーン
 $APPEND_##ガ
 $APPEND_##ガイ
+$APPEND_##ガイモ
 $APPEND_##ガキ
 $APPEND_##ガス
 $APPEND_##ガタ
@@ -2023,9 +2024,10 @@ $APPEND_##キング
 $APPEND_##キンス
 $APPEND_##キンソン
 $APPEND_##キー
-$APPEND_##キーパー
+$APPEND_##キース
 $APPEND_##ギ
 $APPEND_##ギス
+$APPEND_##ギニア
 $APPEND_##ギャ
 $APPEND_##ギュ
 $APPEND_##ギュア
@@ -2126,7 +2128,6 @@ $APPEND_##コーン
 $APPEND_##ゴ
 $APPEND_##ゴス
 $APPEND_##ゴット
-$APPEND_##ゴビナ
 $APPEND_##ゴメ
 $APPEND_##ゴラ
 $APPEND_##ゴリ
@@ -2153,8 +2154,8 @@ $APPEND_##サン
 $APPEND_##サンス
 $APPEND_##サンダー
 $APPEND_##サンド
-$APPEND_##サンブル
 $APPEND_##サー
+$APPEND_##サーチ
 $APPEND_##サード
 $APPEND_##サール
 $APPEND_##ザ
@@ -2174,7 +2175,6 @@ $APPEND_##シ
 $APPEND_##シア
 $APPEND_##シアム
 $APPEND_##シアン
-$APPEND_##シアード
 $APPEND_##シウム
 $APPEND_##シェ
 $APPEND_##シェル
@@ -2189,7 +2189,6 @@ $APPEND_##シスコ
 $APPEND_##システム
 $APPEND_##シスト
 $APPEND_##シズム
-$APPEND_##シタン
 $APPEND_##シック
 $APPEND_##シップ
 $APPEND_##シティ
@@ -2209,7 +2208,6 @@ $APPEND_##シュタット
 $APPEND_##シュト
 $APPEND_##シュヴァ
 $APPEND_##シュー
-$APPEND_##シュート
 $APPEND_##ショ
 $APPEND_##ショウ
 $APPEND_##ショップ
@@ -2235,12 +2233,12 @@ $APPEND_##ジスタ
 $APPEND_##ジスト
 $APPEND_##ジック
 $APPEND_##ジット
-$APPEND_##ジメント
 $APPEND_##ジャ
 $APPEND_##ジャック
 $APPEND_##ジャレ
 $APPEND_##ジャン
 $APPEND_##ジャー
+$APPEND_##ジャース
 $APPEND_##ジャーズ
 $APPEND_##ジュ
 $APPEND_##ジュアル
@@ -2254,6 +2252,7 @@ $APPEND_##ジロ
 $APPEND_##ジン
 $APPEND_##ジング
 $APPEND_##ジー
+$APPEND_##ジーミル
 $APPEND_##ス
 $APPEND_##スカ
 $APPEND_##スキ
@@ -2263,6 +2262,7 @@ $APPEND_##スコ
 $APPEND_##スタ
 $APPEND_##スタル
 $APPEND_##スタン
+$APPEND_##スタント
 $APPEND_##スター
 $APPEND_##ステ
 $APPEND_##スティ
@@ -2395,7 +2395,6 @@ $APPEND_##チック
 $APPEND_##チド
 $APPEND_##チナ
 $APPEND_##チネ
-$APPEND_##チモア
 $APPEND_##チャ
 $APPEND_##チャル
 $APPEND_##チャン
@@ -2464,6 +2463,7 @@ $APPEND_##ッター
 $APPEND_##ッダ
 $APPEND_##ッチ
 $APPEND_##ッチェ
+$APPEND_##ッチメント
 $APPEND_##ッチャ
 $APPEND_##ッチャー
 $APPEND_##ッチン
@@ -2478,6 +2478,7 @@ $APPEND_##ッテル
 $APPEND_##ッテン
 $APPEND_##ッディーン
 $APPEND_##ット
+$APPEND_##ットガルト
 $APPEND_##ットン
 $APPEND_##ットー
 $APPEND_##ッド
@@ -2505,7 +2506,6 @@ $APPEND_##ツァ
 $APPEND_##ツィ
 $APPEND_##ツィア
 $APPEND_##ツィオ
-$APPEND_##ツィオーネ
 $APPEND_##ツィヒ
 $APPEND_##ツェ
 $APPEND_##ツォ
@@ -2621,6 +2621,7 @@ $APPEND_##トン
 $APPEND_##トー
 $APPEND_##ド
 $APPEND_##ドア
+$APPEND_##ドイツ
 $APPEND_##ドゥ
 $APPEND_##ドゥス
 $APPEND_##ドウ
@@ -2634,6 +2635,7 @@ $APPEND_##ドル
 $APPEND_##ドルフ
 $APPEND_##ドロ
 $APPEND_##ドン
+$APPEND_##ドンナ
 $APPEND_##ドー
 $APPEND_##ドール
 $APPEND_##ナ
@@ -2658,6 +2660,7 @@ $APPEND_##ナリー
 $APPEND_##ナル
 $APPEND_##ナルド
 $APPEND_##ナン
+$APPEND_##ナンシャル
 $APPEND_##ナンデス
 $APPEND_##ナント
 $APPEND_##ナンド
@@ -2697,6 +2700,7 @@ $APPEND_##ニバル
 $APPEND_##ニャ
 $APPEND_##ニヤ
 $APPEND_##ニュ
+$APPEND_##ニュメント
 $APPEND_##ニュー
 $APPEND_##ニョ
 $APPEND_##ニル
@@ -2753,7 +2757,6 @@ $APPEND_##ハイム
 $APPEND_##ハウ
 $APPEND_##ハウス
 $APPEND_##ハウゼン
-$APPEND_##ハッタン
 $APPEND_##ハマ
 $APPEND_##ハム
 $APPEND_##ハメ
@@ -2761,6 +2764,7 @@ $APPEND_##ハラ
 $APPEND_##ハル
 $APPEND_##ハルト
 $APPEND_##ハン
+$APPEND_##ハンマ
 $APPEND_##ハンマド
 $APPEND_##ハー
 $APPEND_##ハーゲン
@@ -2770,7 +2774,6 @@ $APPEND_##バイザー
 $APPEND_##バイス
 $APPEND_##バオ
 $APPEND_##バキア
-$APPEND_##バシー
 $APPEND_##バス
 $APPEND_##バスティ
 $APPEND_##バダ
@@ -2780,7 +2783,6 @@ $APPEND_##バット
 $APPEND_##バッハ
 $APPEND_##バナ
 $APPEND_##バニア
-$APPEND_##バマ
 $APPEND_##バラ
 $APPEND_##バリ
 $APPEND_##バリー
@@ -2794,6 +2796,7 @@ $APPEND_##バーグ
 $APPEND_##バース
 $APPEND_##バーズ
 $APPEND_##バータ
+$APPEND_##バーツ
 $APPEND_##バート
 $APPEND_##バード
 $APPEND_##バーン
@@ -2851,6 +2854,7 @@ $APPEND_##フ
 $APPEND_##ファ
 $APPEND_##ファイ
 $APPEND_##ファル
+$APPEND_##ファレンス
 $APPEND_##ファン
 $APPEND_##ファー
 $APPEND_##ファーソン
@@ -2865,13 +2869,11 @@ $APPEND_##フィー
 $APPEND_##フィール
 $APPEND_##フィールド
 $APPEND_##フェ
-$APPEND_##フェクト
 $APPEND_##フェリー
 $APPEND_##フェル
 $APPEND_##フェルト
 $APPEND_##フェン
 $APPEND_##フェンス
-$APPEND_##フェース
 $APPEND_##フォ
 $APPEND_##フォル
 $APPEND_##フォルニア
@@ -2879,7 +2881,6 @@ $APPEND_##フォン
 $APPEND_##フォー
 $APPEND_##フォーク
 $APPEND_##フォード
-$APPEND_##フォーマー
 $APPEND_##フォーム
 $APPEND_##フス
 $APPEND_##フスキ
@@ -2900,11 +2901,12 @@ $APPEND_##ブス
 $APPEND_##ブック
 $APPEND_##ブラ
 $APPEND_##ブライ
-$APPEND_##ブランド
 $APPEND_##ブラー
 $APPEND_##ブリ
 $APPEND_##ブリア
 $APPEND_##ブリック
+$APPEND_##ブリッジ
+$APPEND_##ブリッド
 $APPEND_##ブリュ
 $APPEND_##ブリン
 $APPEND_##ブリー
@@ -2928,7 +2930,7 @@ $APPEND_##プトン
 $APPEND_##プラ
 $APPEND_##プライ
 $APPEND_##プライズ
-$APPEND_##プラノ
+$APPEND_##プライン
 $APPEND_##プラー
 $APPEND_##プリ
 $APPEND_##プリング
@@ -2952,6 +2954,7 @@ $APPEND_##ベス
 $APPEND_##ベック
 $APPEND_##ベット
 $APPEND_##ベツ
+$APPEND_##ベニア
 $APPEND_##ベラ
 $APPEND_##ベリ
 $APPEND_##ベリー
@@ -2971,6 +2974,7 @@ $APPEND_##ペクト
 $APPEND_##ペス
 $APPEND_##ペスト
 $APPEND_##ペット
+$APPEND_##ペテルブルク
 $APPEND_##ペディア
 $APPEND_##ペラ
 $APPEND_##ペル
@@ -3002,7 +3006,6 @@ $APPEND_##ボロ
 $APPEND_##ボン
 $APPEND_##ボー
 $APPEND_##ボーイ
-$APPEND_##ボーグ
 $APPEND_##ボード
 $APPEND_##ボール
 $APPEND_##ボーン
@@ -3060,7 +3063,6 @@ $APPEND_##ミネーション
 $APPEND_##ミネート
 $APPEND_##ミヤ
 $APPEND_##ミュ
-$APPEND_##ミュエル
 $APPEND_##ミュー
 $APPEND_##ミル
 $APPEND_##ミン
@@ -3092,6 +3094,7 @@ $APPEND_##メロ
 $APPEND_##メン
 $APPEND_##メンス
 $APPEND_##メンタ
+$APPEND_##メンタリー
 $APPEND_##メンタル
 $APPEND_##メンテ
 $APPEND_##メント
@@ -3155,9 +3158,7 @@ $APPEND_##ライナ
 $APPEND_##ライン
 $APPEND_##ラウ
 $APPEND_##ラク
-$APPEND_##ラクル
 $APPEND_##ラシ
-$APPEND_##ラシア
 $APPEND_##ラス
 $APPEND_##ラスカ
 $APPEND_##ラック
@@ -3245,7 +3246,6 @@ $APPEND_##リング
 $APPEND_##リンゲン
 $APPEND_##リンズ
 $APPEND_##リントン
-$APPEND_##リンピック
 $APPEND_##リー
 $APPEND_##リーガ
 $APPEND_##リーグ
@@ -3267,19 +3267,17 @@ $APPEND_##ルタ
 $APPEND_##ルター
 $APPEND_##ルツ
 $APPEND_##ルツェ
-$APPEND_##ルツブルク
 $APPEND_##ルティング
 $APPEND_##ルト
 $APPEND_##ルトゥ
-$APPEND_##ルトラ
 $APPEND_##ルトン
 $APPEND_##ルド
 $APPEND_##ルドー
 $APPEND_##ルフ
 $APPEND_##ルム
 $APPEND_##ルン
-$APPEND_##ルンベルク
 $APPEND_##ルー
+$APPEND_##ルーン
 $APPEND_##レ
 $APPEND_##レア
 $APPEND_##レアン
@@ -3313,6 +3311,7 @@ $APPEND_##レージ
 $APPEND_##レータ
 $APPEND_##レーター
 $APPEND_##レーツ
+$APPEND_##レーティング
 $APPEND_##レート
 $APPEND_##レード
 $APPEND_##レーナ
@@ -3390,21 +3389,22 @@ $APPEND_##ンジュ
 $APPEND_##ンジン
 $APPEND_##ンジー
 $APPEND_##ンス
+$APPEND_##ンスキー
 $APPEND_##ンスク
-$APPEND_##ンスター
 $APPEND_##ンスト
 $APPEND_##ンズ
 $APPEND_##ンタ
-$APPEND_##ンタル
+$APPEND_##ンタイン
+$APPEND_##ンタム
 $APPEND_##ンター
 $APPEND_##ンダ
-$APPEND_##ンダム
+$APPEND_##ンダル
 $APPEND_##ンチ
 $APPEND_##ンチェ
 $APPEND_##ンチャ
 $APPEND_##ンチョ
-$APPEND_##ンチン
 $APPEND_##ント
+$APPEND_##ントス
 $APPEND_##ントリー
 $APPEND_##ントロ
 $APPEND_##ントン
@@ -3412,7 +3412,6 @@ $APPEND_##ンド
 $APPEND_##ンドゥ
 $APPEND_##ンドラ
 $APPEND_##ンドル
-$APPEND_##ンドルフ
 $APPEND_##ンドロ
 $APPEND_##ンドン
 $APPEND_##ンドー
@@ -3423,7 +3422,6 @@ $APPEND_##ンバーグ
 $APPEND_##ンパ
 $APPEND_##ンパス
 $APPEND_##ンプ
-$APPEND_##ンプル
 $APPEND_##ンマ
 $APPEND_##ン・
 $APPEND_##ヴ
@@ -3559,6 +3557,7 @@ $APPEND_##ーシ
 $APPEND_##ーション
 $APPEND_##ージ
 $APPEND_##ージェ
+$APPEND_##ージナル
 $APPEND_##ージャ
 $APPEND_##ージュ
 $APPEND_##ージョ
@@ -3568,6 +3567,7 @@ $APPEND_##ージー
 $APPEND_##ース
 $APPEND_##ースト
 $APPEND_##ーズ
+$APPEND_##ーズン
 $APPEND_##ータ
 $APPEND_##ータス
 $APPEND_##ータン
@@ -3576,14 +3576,18 @@ $APPEND_##ーダ
 $APPEND_##ーチ
 $APPEND_##ーチン
 $APPEND_##ーツ
+$APPEND_##ーツァ
 $APPEND_##ーツク
 $APPEND_##ート
+$APPEND_##ートル
 $APPEND_##ートン
 $APPEND_##ートー
 $APPEND_##ード
 $APPEND_##ードル
 $APPEND_##ードン
 $APPEND_##ーナ
+$APPEND_##ーナス
+$APPEND_##ーナメント
 $APPEND_##ーニ
 $APPEND_##ーニャ
 $APPEND_##ーニュ
@@ -3601,7 +3605,6 @@ $APPEND_##ーマン
 $APPEND_##ーマー
 $APPEND_##ーム
 $APPEND_##ームス
-$APPEND_##ームズ
 $APPEND_##ーラ
 $APPEND_##ーリ
 $APPEND_##ーリー
@@ -3674,10 +3677,8 @@ $APPEND_##予
 $APPEND_##争
 $APPEND_##事
 $APPEND_##二
-$APPEND_##二つ
 $APPEND_##二郎
 $APPEND_##于
-$APPEND_##云
 $APPEND_##五
 $APPEND_##五郎
 $APPEND_##井
@@ -3687,7 +3688,6 @@ $APPEND_##亞
 $APPEND_##亡
 $APPEND_##交
 $APPEND_##亥
-$APPEND_##亦
 $APPEND_##亨
 $APPEND_##享
 $APPEND_##京
@@ -3696,6 +3696,7 @@ $APPEND_##亮
 $APPEND_##人
 $APPEND_##什
 $APPEND_##仁
+$APPEND_##仄
 $APPEND_##仇
 $APPEND_##今
 $APPEND_##介
@@ -3720,6 +3721,7 @@ $APPEND_##仮名
 $APPEND_##仰
 $APPEND_##仲
 $APPEND_##件
+$APPEND_##价
 $APPEND_##任
 $APPEND_##企
 $APPEND_##伊
@@ -3753,6 +3755,7 @@ $APPEND_##佛
 $APPEND_##作
 $APPEND_##作り
 $APPEND_##你
+$APPEND_##佩
 $APPEND_##佳
 $APPEND_##使
 $APPEND_##侃
@@ -3760,13 +3763,12 @@ $APPEND_##來
 $APPEND_##侈
 $APPEND_##例
 $APPEND_##侍
-$APPEND_##侘
+$APPEND_##侑
 $APPEND_##供
 $APPEND_##依
 $APPEND_##侠
 $APPEND_##価
 $APPEND_##侭
-$APPEND_##侮
 $APPEND_##侯
 $APPEND_##侵
 $APPEND_##侶
@@ -3785,7 +3787,6 @@ $APPEND_##修
 $APPEND_##俳
 $APPEND_##俵
 $APPEND_##俸
-$APPEND_##俺
 $APPEND_##倉
 $APPEND_##個
 $APPEND_##倍
@@ -3831,13 +3832,13 @@ $APPEND_##僚
 $APPEND_##僧
 $APPEND_##儀
 $APPEND_##儁
-$APPEND_##億
 $APPEND_##儒
 $APPEND_##儘
 $APPEND_##償
 $APPEND_##優
 $APPEND_##儲
 $APPEND_##儺
+$APPEND_##兀
 $APPEND_##允
 $APPEND_##元
 $APPEND_##兄
@@ -3862,6 +3863,7 @@ $APPEND_##兩
 $APPEND_##八
 $APPEND_##公
 $APPEND_##六
+$APPEND_##兮
 $APPEND_##共
 $APPEND_##兵
 $APPEND_##兵衛
@@ -3872,25 +3874,22 @@ $APPEND_##兼
 $APPEND_##冀
 $APPEND_##内
 $APPEND_##円
-$APPEND_##冉
 $APPEND_##冊
 $APPEND_##再
 $APPEND_##冑
 $APPEND_##冒
-$APPEND_##冕
 $APPEND_##写
 $APPEND_##冠
-$APPEND_##冤
 $APPEND_##冥
 $APPEND_##冨
 $APPEND_##冬
 $APPEND_##冰
 $APPEND_##冲
-$APPEND_##决
 $APPEND_##冴
 $APPEND_##冶
 $APPEND_##冷
 $APPEND_##凄
+$APPEND_##凉
 $APPEND_##凋
 $APPEND_##凍
 $APPEND_##凛
@@ -3935,7 +3934,6 @@ $APPEND_##別
 $APPEND_##利
 $APPEND_##利き
 $APPEND_##到
-$APPEND_##刳
 $APPEND_##制
 $APPEND_##刷
 $APPEND_##券
@@ -3963,7 +3961,6 @@ $APPEND_##加
 $APPEND_##劣
 $APPEND_##助
 $APPEND_##助け
-$APPEND_##努
 $APPEND_##劫
 $APPEND_##劭
 $APPEND_##励
@@ -3983,7 +3980,6 @@ $APPEND_##勢
 $APPEND_##勤
 $APPEND_##勲
 $APPEND_##勳
-$APPEND_##勿
 $APPEND_##匂
 $APPEND_##包
 $APPEND_##匐
@@ -4098,7 +4094,6 @@ $APPEND_##吟
 $APPEND_##吠
 $APPEND_##否
 $APPEND_##含
-$APPEND_##吸
 $APPEND_##吹
 $APPEND_##吻
 $APPEND_##吼
@@ -4148,12 +4143,14 @@ $APPEND_##唐
 $APPEND_##唖
 $APPEND_##唯
 $APPEND_##唱
+$APPEND_##唹
 $APPEND_##唾
 $APPEND_##商
 $APPEND_##問
 $APPEND_##啓
 $APPEND_##啖
 $APPEND_##啜
+$APPEND_##啼
 $APPEND_##善
 $APPEND_##喆
 $APPEND_##喉
@@ -4221,7 +4218,6 @@ $APPEND_##址
 $APPEND_##坂
 $APPEND_##均
 $APPEND_##坊
-$APPEND_##坎
 $APPEND_##坏
 $APPEND_##坐
 $APPEND_##坑
@@ -4239,7 +4235,6 @@ $APPEND_##埋
 $APPEND_##城
 $APPEND_##埒
 $APPEND_##埔
-$APPEND_##埕
 $APPEND_##埜
 $APPEND_##域
 $APPEND_##埴
@@ -4252,7 +4247,6 @@ $APPEND_##堀
 $APPEND_##堂
 $APPEND_##堅
 $APPEND_##堆
-$APPEND_##堕
 $APPEND_##堡
 $APPEND_##堤
 $APPEND_##堪
@@ -4283,7 +4277,6 @@ $APPEND_##墟
 $APPEND_##墨
 $APPEND_##墳
 $APPEND_##墺
-$APPEND_##墻
 $APPEND_##墾
 $APPEND_##壁
 $APPEND_##壇
@@ -4331,6 +4324,7 @@ $APPEND_##奔
 $APPEND_##奕
 $APPEND_##套
 $APPEND_##奘
+$APPEND_##奚
 $APPEND_##奠
 $APPEND_##奢
 $APPEND_##奥
@@ -4351,7 +4345,6 @@ $APPEND_##妓
 $APPEND_##妖
 $APPEND_##妙
 $APPEND_##妤
-$APPEND_##妨
 $APPEND_##妹
 $APPEND_##妻
 $APPEND_##妾
@@ -4370,7 +4363,10 @@ $APPEND_##姫
 $APPEND_##姿
 $APPEND_##威
 $APPEND_##娃
+$APPEND_##娑
 $APPEND_##娘
+$APPEND_##娜
+$APPEND_##娟
 $APPEND_##娥
 $APPEND_##娩
 $APPEND_##娼
@@ -4394,7 +4390,6 @@ $APPEND_##嬛
 $APPEND_##嬢
 $APPEND_##嬪
 $APPEND_##嬰
-$APPEND_##孁
 $APPEND_##子
 $APPEND_##孔
 $APPEND_##字
@@ -4448,6 +4443,7 @@ $APPEND_##寇
 $APPEND_##富
 $APPEND_##寒
 $APPEND_##寓
+$APPEND_##寔
 $APPEND_##寛
 $APPEND_##寝
 $APPEND_##察
@@ -4458,7 +4454,6 @@ $APPEND_##寨
 $APPEND_##審
 $APPEND_##寮
 $APPEND_##寵
-$APPEND_##寶
 $APPEND_##寸
 $APPEND_##寺
 $APPEND_##対
@@ -4470,6 +4465,7 @@ $APPEND_##将
 $APPEND_##尉
 $APPEND_##尊
 $APPEND_##尋
+$APPEND_##對
 $APPEND_##導
 $APPEND_##小
 $APPEND_##小路
@@ -4479,6 +4475,7 @@ $APPEND_##尚
 $APPEND_##尤
 $APPEND_##尭
 $APPEND_##就
+$APPEND_##尸
 $APPEND_##尹
 $APPEND_##尺
 $APPEND_##尻
@@ -4517,12 +4514,12 @@ $APPEND_##峅
 $APPEND_##峠
 $APPEND_##峡
 $APPEND_##峨
-$APPEND_##峪
 $APPEND_##峯
 $APPEND_##峰
 $APPEND_##島
 $APPEND_##峻
 $APPEND_##崇
+$APPEND_##崋
 $APPEND_##崎
 $APPEND_##崖
 $APPEND_##崗
@@ -4555,9 +4552,9 @@ $APPEND_##巫
 $APPEND_##差
 $APPEND_##差し
 $APPEND_##己
+$APPEND_##已
 $APPEND_##巳
 $APPEND_##巴
-$APPEND_##巷
 $APPEND_##巻
 $APPEND_##巻き
 $APPEND_##巾
@@ -4626,7 +4623,6 @@ $APPEND_##廟
 $APPEND_##廠
 $APPEND_##廣
 $APPEND_##廬
-$APPEND_##廳
 $APPEND_##延
 $APPEND_##延び
 $APPEND_##廷
@@ -4641,7 +4637,6 @@ $APPEND_##弋
 $APPEND_##式
 $APPEND_##弐
 $APPEND_##弓
-$APPEND_##弔
 $APPEND_##引
 $APPEND_##引き
 $APPEND_##弗
@@ -4741,7 +4736,6 @@ $APPEND_##恬
 $APPEND_##恭
 $APPEND_##息
 $APPEND_##息子
-$APPEND_##恰
 $APPEND_##恵
 $APPEND_##恵子
 $APPEND_##悉
@@ -4763,7 +4757,6 @@ $APPEND_##悶
 $APPEND_##悸
 $APPEND_##悼
 $APPEND_##情
-$APPEND_##惇
 $APPEND_##惑
 $APPEND_##惚
 $APPEND_##惜
@@ -4775,12 +4768,14 @@ $APPEND_##惰
 $APPEND_##想
 $APPEND_##愁
 $APPEND_##愈
+$APPEND_##愍
 $APPEND_##意
 $APPEND_##愕
 $APPEND_##愚
 $APPEND_##愛
 $APPEND_##感
 $APPEND_##愴
+$APPEND_##愷
 $APPEND_##愾
 $APPEND_##愿
 $APPEND_##慄
@@ -4804,6 +4799,7 @@ $APPEND_##憐
 $APPEND_##憑
 $APPEND_##憚
 $APPEND_##憤
+$APPEND_##憩
 $APPEND_##憫
 $APPEND_##憬
 $APPEND_##憲
@@ -4818,6 +4814,7 @@ $APPEND_##懣
 $APPEND_##懲
 $APPEND_##懸
 $APPEND_##懼
+$APPEND_##懿
 $APPEND_##戈
 $APPEND_##戌
 $APPEND_##戍
@@ -4833,7 +4830,6 @@ $APPEND_##戦
 $APPEND_##截
 $APPEND_##戮
 $APPEND_##戯
-$APPEND_##戰
 $APPEND_##戴
 $APPEND_##戸
 $APPEND_##戻
@@ -4855,7 +4851,6 @@ $APPEND_##払っ
 $APPEND_##托
 $APPEND_##扱
 $APPEND_##扶
-$APPEND_##扼
 $APPEND_##承
 $APPEND_##技
 $APPEND_##抄
@@ -4868,7 +4863,6 @@ $APPEND_##抜
 $APPEND_##抜き
 $APPEND_##抜け
 $APPEND_##抱
-$APPEND_##抵
 $APPEND_##抹
 $APPEND_##押
 $APPEND_##押し
@@ -4880,6 +4874,7 @@ $APPEND_##拍
 $APPEND_##拐
 $APPEND_##拒
 $APPEND_##拓
+$APPEND_##拔
 $APPEND_##拙
 $APPEND_##招
 $APPEND_##拝
@@ -4890,19 +4885,20 @@ $APPEND_##拭
 $APPEND_##拱
 $APPEND_##拳
 $APPEND_##拵
+$APPEND_##拼
 $APPEND_##拾
 $APPEND_##持
 $APPEND_##持ち
 $APPEND_##持っ
 $APPEND_##持つ
 $APPEND_##指
-$APPEND_##挖
 $APPEND_##挙
 $APPEND_##挟
 $APPEND_##挫
 $APPEND_##振
 $APPEND_##振り
 $APPEND_##挽
+$APPEND_##挿
 $APPEND_##捉
 $APPEND_##捌
 $APPEND_##捐
@@ -4915,7 +4911,6 @@ $APPEND_##捲
 $APPEND_##捷
 $APPEND_##捺
 $APPEND_##捻
-$APPEND_##掃
 $APPEND_##授
 $APPEND_##掌
 $APPEND_##排
@@ -4951,6 +4946,7 @@ $APPEND_##揮
 $APPEND_##援
 $APPEND_##揺
 $APPEND_##損
+$APPEND_##搗
 $APPEND_##搬
 $APPEND_##携
 $APPEND_##搾
@@ -4982,9 +4978,9 @@ $APPEND_##擾
 $APPEND_##攀
 $APPEND_##攘
 $APPEND_##攣
-$APPEND_##攫
 $APPEND_##攬
 $APPEND_##支
+$APPEND_##攷
 $APPEND_##攸
 $APPEND_##改
 $APPEND_##攻
@@ -5013,7 +5009,6 @@ $APPEND_##斐
 $APPEND_##斑
 $APPEND_##斗
 $APPEND_##料
-$APPEND_##斛
 $APPEND_##斜
 $APPEND_##斤
 $APPEND_##斥
@@ -5067,7 +5062,6 @@ $APPEND_##時
 $APPEND_##晃
 $APPEND_##晋
 $APPEND_##晏
-$APPEND_##晒
 $APPEND_##晟
 $APPEND_##晦
 $APPEND_##晩
@@ -5094,8 +5088,10 @@ $APPEND_##暴
 $APPEND_##曁
 $APPEND_##曄
 $APPEND_##曇
+$APPEND_##曙
 $APPEND_##曜
 $APPEND_##曝
+$APPEND_##曰
 $APPEND_##曲
 $APPEND_##曳
 $APPEND_##更
@@ -5110,6 +5106,7 @@ $APPEND_##替
 $APPEND_##替え
 $APPEND_##替える
 $APPEND_##替わり
+$APPEND_##會
 $APPEND_##月
 $APPEND_##有
 $APPEND_##朋
@@ -5141,6 +5138,7 @@ $APPEND_##材
 $APPEND_##村
 $APPEND_##杓
 $APPEND_##杖
+$APPEND_##杙
 $APPEND_##杜
 $APPEND_##束
 $APPEND_##条
@@ -5155,7 +5153,6 @@ $APPEND_##杷
 $APPEND_##杼
 $APPEND_##松
 $APPEND_##板
-$APPEND_##枇
 $APPEND_##析
 $APPEND_##枕
 $APPEND_##林
@@ -5166,6 +5163,7 @@ $APPEND_##枠
 $APPEND_##枡
 $APPEND_##枢
 $APPEND_##枯
+$APPEND_##枳
 $APPEND_##架
 $APPEND_##枷
 $APPEND_##柄
@@ -5174,6 +5172,7 @@ $APPEND_##某
 $APPEND_##柑
 $APPEND_##染
 $APPEND_##柔
+$APPEND_##柚
 $APPEND_##柩
 $APPEND_##柯
 $APPEND_##柱
@@ -5196,11 +5195,13 @@ $APPEND_##栽
 $APPEND_##桁
 $APPEND_##桂
 $APPEND_##桃
+$APPEND_##框
 $APPEND_##案
 $APPEND_##桐
 $APPEND_##桑
 $APPEND_##桓
 $APPEND_##桜
+$APPEND_##桝
 $APPEND_##桟
 $APPEND_##桧
 $APPEND_##桶
@@ -5208,7 +5209,6 @@ $APPEND_##桿
 $APPEND_##梁
 $APPEND_##梅
 $APPEND_##梓
-$APPEND_##梔
 $APPEND_##梗
 $APPEND_##條
 $APPEND_##梠
@@ -5217,6 +5217,7 @@ $APPEND_##梧
 $APPEND_##梨
 $APPEND_##梯
 $APPEND_##械
+$APPEND_##梶
 $APPEND_##棄
 $APPEND_##棋
 $APPEND_##棍
@@ -5237,6 +5238,7 @@ $APPEND_##椎
 $APPEND_##椏
 $APPEND_##椒
 $APPEND_##検
+$APPEND_##椰
 $APPEND_##椿
 $APPEND_##楊
 $APPEND_##楓
@@ -5250,6 +5252,7 @@ $APPEND_##極
 $APPEND_##楷
 $APPEND_##楼
 $APPEND_##楽
+$APPEND_##楽部
 $APPEND_##概
 $APPEND_##榎
 $APPEND_##榑
@@ -5258,10 +5261,12 @@ $APPEND_##榜
 $APPEND_##榮
 $APPEND_##榴
 $APPEND_##槃
+$APPEND_##槊
 $APPEND_##構
 $APPEND_##構え
 $APPEND_##槌
 $APPEND_##槍
+$APPEND_##槐
 $APPEND_##槓
 $APPEND_##様
 $APPEND_##槙
@@ -5269,7 +5274,6 @@ $APPEND_##槨
 $APPEND_##槻
 $APPEND_##槽
 $APPEND_##槿
-$APPEND_##樊
 $APPEND_##樋
 $APPEND_##標
 $APPEND_##模
@@ -5285,7 +5289,6 @@ $APPEND_##橇
 $APPEND_##橋
 $APPEND_##橘
 $APPEND_##機
-$APPEND_##橿
 $APPEND_##檀
 $APPEND_##檗
 $APPEND_##檜
@@ -5343,7 +5346,6 @@ $APPEND_##母
 $APPEND_##毎
 $APPEND_##毒
 $APPEND_##比
-$APPEND_##毗
 $APPEND_##毘
 $APPEND_##毛
 $APPEND_##毫
@@ -5371,16 +5373,15 @@ $APPEND_##江
 $APPEND_##池
 $APPEND_##汰
 $APPEND_##汲
-$APPEND_##汶
 $APPEND_##決
 $APPEND_##決め
 $APPEND_##汽
 $APPEND_##汾
 $APPEND_##沂
 $APPEND_##沃
+$APPEND_##沅
 $APPEND_##沈
 $APPEND_##沌
-$APPEND_##沓
 $APPEND_##沖
 $APPEND_##沙
 $APPEND_##没
@@ -5417,8 +5418,10 @@ $APPEND_##洛
 $APPEND_##洞
 $APPEND_##津
 $APPEND_##津子
+$APPEND_##洩
 $APPEND_##洪
 $APPEND_##洮
+$APPEND_##洱
 $APPEND_##洲
 $APPEND_##活
 $APPEND_##派
@@ -5470,6 +5473,7 @@ $APPEND_##渋
 $APPEND_##渓
 $APPEND_##渕
 $APPEND_##減
+$APPEND_##渟
 $APPEND_##渠
 $APPEND_##渡
 $APPEND_##渡さ
@@ -5483,9 +5487,7 @@ $APPEND_##測
 $APPEND_##渭
 $APPEND_##港
 $APPEND_##游
-$APPEND_##渾
 $APPEND_##湊
-$APPEND_##湍
 $APPEND_##湖
 $APPEND_##湘
 $APPEND_##湛
@@ -5504,6 +5506,7 @@ $APPEND_##溥
 $APPEND_##溪
 $APPEND_##溶
 $APPEND_##溺
+$APPEND_##滄
 $APPEND_##滅
 $APPEND_##滉
 $APPEND_##滋
@@ -5518,6 +5521,7 @@ $APPEND_##漁
 $APPEND_##漆
 $APPEND_##漉
 $APPEND_##漏
+$APPEND_##漑
 $APPEND_##演
 $APPEND_##漕
 $APPEND_##漠
@@ -5525,6 +5529,7 @@ $APPEND_##漢
 $APPEND_##漫
 $APPEND_##漬
 $APPEND_##漬け
+$APPEND_##漱
 $APPEND_##漸
 $APPEND_##漿
 $APPEND_##潔
@@ -5538,20 +5543,19 @@ $APPEND_##潴
 $APPEND_##潼
 $APPEND_##澂
 $APPEND_##澄
-$APPEND_##澗
 $APPEND_##澤
 $APPEND_##澱
 $APPEND_##澳
 $APPEND_##澹
 $APPEND_##激
 $APPEND_##濁
+$APPEND_##濂
 $APPEND_##濃
 $APPEND_##濘
 $APPEND_##濟
 $APPEND_##濠
 $APPEND_##濡
 $APPEND_##濤
-$APPEND_##濫
 $APPEND_##濮
 $APPEND_##濱
 $APPEND_##瀉
@@ -5560,7 +5564,6 @@ $APPEND_##瀚
 $APPEND_##瀛
 $APPEND_##瀝
 $APPEND_##瀞
-$APPEND_##瀟
 $APPEND_##瀧
 $APPEND_##瀬
 $APPEND_##瀾
@@ -5580,12 +5583,12 @@ $APPEND_##炒
 $APPEND_##炙
 $APPEND_##炭
 $APPEND_##炮
+$APPEND_##炯
 $APPEND_##点
 $APPEND_##為
 $APPEND_##烈
 $APPEND_##烏
 $APPEND_##烙
-$APPEND_##烟
 $APPEND_##烹
 $APPEND_##焉
 $APPEND_##焔
@@ -5595,20 +5598,16 @@ $APPEND_##焦
 $APPEND_##然
 $APPEND_##焼
 $APPEND_##焼き
-$APPEND_##煉
 $APPEND_##煌
 $APPEND_##煎
 $APPEND_##煕
 $APPEND_##煙
-$APPEND_##煤
 $APPEND_##煥
 $APPEND_##照
 $APPEND_##煩
 $APPEND_##煮
 $APPEND_##熈
 $APPEND_##熊
-$APPEND_##熏
-$APPEND_##熕
 $APPEND_##熙
 $APPEND_##熟
 $APPEND_##熱
@@ -5619,8 +5618,10 @@ $APPEND_##燈
 $APPEND_##燐
 $APPEND_##燕
 $APPEND_##燗
+$APPEND_##營
 $APPEND_##燥
 $APPEND_##燦
+$APPEND_##燧
 $APPEND_##燭
 $APPEND_##燮
 $APPEND_##燵
@@ -5659,6 +5660,7 @@ $APPEND_##状
 $APPEND_##狂
 $APPEND_##狄
 $APPEND_##狐
+$APPEND_##狗
 $APPEND_##狙
 $APPEND_##狩
 $APPEND_##独
@@ -5678,7 +5680,6 @@ $APPEND_##猷
 $APPEND_##猾
 $APPEND_##猿
 $APPEND_##獄
-$APPEND_##獅
 $APPEND_##獣
 $APPEND_##獪
 $APPEND_##獲
@@ -5687,12 +5688,12 @@ $APPEND_##玄
 $APPEND_##率
 $APPEND_##玉
 $APPEND_##王
+$APPEND_##王子
 $APPEND_##玖
 $APPEND_##玩
 $APPEND_##玲
 $APPEND_##珀
 $APPEND_##珂
-$APPEND_##珉
 $APPEND_##珍
 $APPEND_##珠
 $APPEND_##珥
@@ -5714,7 +5715,6 @@ $APPEND_##琲
 $APPEND_##琳
 $APPEND_##琴
 $APPEND_##瑁
-$APPEND_##瑗
 $APPEND_##瑙
 $APPEND_##瑚
 $APPEND_##瑛
@@ -5724,16 +5724,15 @@ $APPEND_##瑠
 $APPEND_##瑣
 $APPEND_##瑩
 $APPEND_##瑯
-$APPEND_##瑰
 $APPEND_##瑳
 $APPEND_##瑾
 $APPEND_##璃
 $APPEND_##璋
-$APPEND_##璞
+$APPEND_##璜
+$APPEND_##璟
 $APPEND_##璧
 $APPEND_##環
 $APPEND_##璽
-$APPEND_##璿
 $APPEND_##瓊
 $APPEND_##瓏
 $APPEND_##瓜
@@ -5769,7 +5768,6 @@ $APPEND_##畝
 $APPEND_##畠
 $APPEND_##略
 $APPEND_##番
-$APPEND_##畫
 $APPEND_##異
 $APPEND_##畳
 $APPEND_##當
@@ -5777,7 +5775,6 @@ $APPEND_##畷
 $APPEND_##畿
 $APPEND_##疆
 $APPEND_##疇
-$APPEND_##疋
 $APPEND_##疎
 $APPEND_##疏
 $APPEND_##疑
@@ -5858,15 +5855,15 @@ $APPEND_##真
 $APPEND_##真面目
 $APPEND_##眠
 $APPEND_##眩
-$APPEND_##眷
+$APPEND_##眸
 $APPEND_##眼
 $APPEND_##着
 $APPEND_##着い
 $APPEND_##着き
 $APPEND_##着く
 $APPEND_##睡
-$APPEND_##督
 $APPEND_##睦
+$APPEND_##睨
 $APPEND_##睺
 $APPEND_##瞞
 $APPEND_##瞥
@@ -5886,7 +5883,6 @@ $APPEND_##研
 $APPEND_##砕
 $APPEND_##砥
 $APPEND_##砦
-$APPEND_##砧
 $APPEND_##砲
 $APPEND_##破
 $APPEND_##砺
@@ -5895,13 +5891,11 @@ $APPEND_##硫
 $APPEND_##硬
 $APPEND_##硯
 $APPEND_##碁
-$APPEND_##碌
 $APPEND_##碍
 $APPEND_##碑
 $APPEND_##碓
 $APPEND_##碕
 $APPEND_##碗
-$APPEND_##碣
 $APPEND_##碧
 $APPEND_##碩
 $APPEND_##確
@@ -5925,10 +5919,10 @@ $APPEND_##祀
 $APPEND_##祁
 $APPEND_##祇
 $APPEND_##祈
-$APPEND_##祉
 $APPEND_##祐
 $APPEND_##祓
 $APPEND_##祖
+$APPEND_##祗
 $APPEND_##祚
 $APPEND_##祝
 $APPEND_##神
@@ -5939,7 +5933,6 @@ $APPEND_##票
 $APPEND_##祭
 $APPEND_##祭り
 $APPEND_##祷
-$APPEND_##祺
 $APPEND_##禁
 $APPEND_##禄
 $APPEND_##禅
@@ -5952,9 +5945,9 @@ $APPEND_##禰
 $APPEND_##禹
 $APPEND_##禺
 $APPEND_##禽
-$APPEND_##禾
 $APPEND_##秀
 $APPEND_##私
+$APPEND_##秉
 $APPEND_##秋
 $APPEND_##科
 $APPEND_##秒
@@ -5973,7 +5966,7 @@ $APPEND_##稔
 $APPEND_##稙
 $APPEND_##稚
 $APPEND_##稜
-$APPEND_##稟
+$APPEND_##稠
 $APPEND_##種
 $APPEND_##稲
 $APPEND_##稷
@@ -5984,7 +5977,6 @@ $APPEND_##穀
 $APPEND_##穂
 $APPEND_##穆
 $APPEND_##積
-$APPEND_##穎
 $APPEND_##穏
 $APPEND_##穣
 $APPEND_##穴
@@ -6017,12 +6009,12 @@ $APPEND_##竟
 $APPEND_##章
 $APPEND_##童
 $APPEND_##端
-$APPEND_##競
 $APPEND_##竹
 $APPEND_##竺
 $APPEND_##竿
 $APPEND_##笏
 $APPEND_##笑
+$APPEND_##笙
 $APPEND_##笛
 $APPEND_##笠
 $APPEND_##笥
@@ -6035,20 +6027,18 @@ $APPEND_##等
 $APPEND_##筋
 $APPEND_##筌
 $APPEND_##筍
-$APPEND_##筏
 $APPEND_##筐
 $APPEND_##筑
 $APPEND_##筒
 $APPEND_##答
 $APPEND_##策
-$APPEND_##筝
 $APPEND_##筠
 $APPEND_##筮
 $APPEND_##筰
 $APPEND_##筵
 $APPEND_##箇
 $APPEND_##箋
-$APPEND_##箏
+$APPEND_##箍
 $APPEND_##箒
 $APPEND_##箔
 $APPEND_##箕
@@ -6060,11 +6050,11 @@ $APPEND_##箭
 $APPEND_##箱
 $APPEND_##箸
 $APPEND_##節
-$APPEND_##篁
 $APPEND_##範
 $APPEND_##篆
 $APPEND_##篇
 $APPEND_##築
+$APPEND_##篋
 $APPEND_##篠
 $APPEND_##篤
 $APPEND_##篥
@@ -6143,6 +6133,7 @@ $APPEND_##絲
 $APPEND_##絵
 $APPEND_##絶
 $APPEND_##絹
+$APPEND_##綏
 $APPEND_##經
 $APPEND_##継
 $APPEND_##継ぎ
@@ -6151,12 +6142,11 @@ $APPEND_##続き
 $APPEND_##綜
 $APPEND_##綬
 $APPEND_##維
-$APPEND_##綰
 $APPEND_##綱
 $APPEND_##網
 $APPEND_##綴
 $APPEND_##綸
-$APPEND_##綺
+$APPEND_##綽
 $APPEND_##綾
 $APPEND_##綿
 $APPEND_##緊
@@ -6176,8 +6166,6 @@ $APPEND_##緻
 $APPEND_##縁
 $APPEND_##縄
 $APPEND_##縅
-$APPEND_##縊
-$APPEND_##縋
 $APPEND_##縛
 $APPEND_##縞
 $APPEND_##縢
@@ -6187,7 +6175,6 @@ $APPEND_##縫
 $APPEND_##縮
 $APPEND_##縵
 $APPEND_##縷
-$APPEND_##縹
 $APPEND_##總
 $APPEND_##績
 $APPEND_##繁
@@ -6197,6 +6184,7 @@ $APPEND_##繋
 $APPEND_##繍
 $APPEND_##織
 $APPEND_##繕
+$APPEND_##繚
 $APPEND_##繞
 $APPEND_##繭
 $APPEND_##繰
@@ -6206,9 +6194,9 @@ $APPEND_##續
 $APPEND_##纏
 $APPEND_##缶
 $APPEND_##罐
-$APPEND_##网
 $APPEND_##罔
 $APPEND_##罕
+$APPEND_##罠
 $APPEND_##罪
 $APPEND_##置
 $APPEND_##置き
@@ -6235,8 +6223,6 @@ $APPEND_##翠
 $APPEND_##翦
 $APPEND_##翫
 $APPEND_##翰
-$APPEND_##翳
-$APPEND_##翹
 $APPEND_##翻
 $APPEND_##翼
 $APPEND_##耀
@@ -6258,9 +6244,9 @@ $APPEND_##聚
 $APPEND_##聞
 $APPEND_##聡
 $APPEND_##聯
+$APPEND_##聲
 $APPEND_##聴
 $APPEND_##職
-$APPEND_##聾
 $APPEND_##肄
 $APPEND_##肆
 $APPEND_##肉
@@ -6268,6 +6254,7 @@ $APPEND_##肋
 $APPEND_##肌
 $APPEND_##肖
 $APPEND_##肘
+$APPEND_##肛
 $APPEND_##肝
 $APPEND_##股
 $APPEND_##肢
@@ -6284,7 +6271,6 @@ $APPEND_##胆
 $APPEND_##背
 $APPEND_##胎
 $APPEND_##胚
-$APPEND_##胝
 $APPEND_##胞
 $APPEND_##胡
 $APPEND_##胤
@@ -6323,6 +6309,7 @@ $APPEND_##膚
 $APPEND_##膜
 $APPEND_##膝
 $APPEND_##膠
+$APPEND_##膣
 $APPEND_##膨
 $APPEND_##膳
 $APPEND_##膿
@@ -6333,6 +6320,7 @@ $APPEND_##臘
 $APPEND_##臚
 $APPEND_##臣
 $APPEND_##臥
+$APPEND_##臧
 $APPEND_##臨
 $APPEND_##自
 $APPEND_##臭
@@ -6340,7 +6328,6 @@ $APPEND_##至
 $APPEND_##致
 $APPEND_##臺
 $APPEND_##臼
-$APPEND_##舅
 $APPEND_##與
 $APPEND_##興
 $APPEND_##舌
@@ -6380,6 +6367,7 @@ $APPEND_##芽
 $APPEND_##芾
 $APPEND_##苅
 $APPEND_##苑
+$APPEND_##苓
 $APPEND_##苔
 $APPEND_##苗
 $APPEND_##苞
@@ -6390,23 +6378,24 @@ $APPEND_##苫
 $APPEND_##英
 $APPEND_##苺
 $APPEND_##茂
+$APPEND_##茄
 $APPEND_##茅
 $APPEND_##茎
+$APPEND_##茗
 $APPEND_##茨
+$APPEND_##茫
 $APPEND_##茲
 $APPEND_##茶
 $APPEND_##茸
 $APPEND_##茹
 $APPEND_##荃
 $APPEND_##草
-$APPEND_##荊
 $APPEND_##荒
 $APPEND_##荘
 $APPEND_##荷
 $APPEND_##荻
 $APPEND_##荼
 $APPEND_##莉
-$APPEND_##莘
 $APPEND_##莞
 $APPEND_##莢
 $APPEND_##莱
@@ -6421,7 +6410,6 @@ $APPEND_##菜
 $APPEND_##菟
 $APPEND_##菩
 $APPEND_##華
-$APPEND_##菰
 $APPEND_##菱
 $APPEND_##菲
 $APPEND_##菴
@@ -6429,7 +6417,7 @@ $APPEND_##萄
 $APPEND_##萇
 $APPEND_##萊
 $APPEND_##萌
-$APPEND_##萎
+$APPEND_##萍
 $APPEND_##萩
 $APPEND_##萬
 $APPEND_##萱
@@ -6446,9 +6434,11 @@ $APPEND_##葡
 $APPEND_##董
 $APPEND_##葦
 $APPEND_##葬
+$APPEND_##葭
 $APPEND_##葱
 $APPEND_##葵
 $APPEND_##葺
+$APPEND_##蒋
 $APPEND_##蒔
 $APPEND_##蒙
 $APPEND_##蒜
@@ -6460,14 +6450,15 @@ $APPEND_##蓄
 $APPEND_##蓉
 $APPEND_##蓋
 $APPEND_##蓑
-$APPEND_##蓬
 $APPEND_##蓮
+$APPEND_##蓼
 $APPEND_##蔀
 $APPEND_##蔑
 $APPEND_##蔓
 $APPEND_##蔗
 $APPEND_##蔡
 $APPEND_##蔣
+$APPEND_##蔦
 $APPEND_##蔭
 $APPEND_##蔵
 $APPEND_##蔽
@@ -6475,8 +6466,6 @@ $APPEND_##蕃
 $APPEND_##蕉
 $APPEND_##蕊
 $APPEND_##蕎
-$APPEND_##蕗
-$APPEND_##蕙
 $APPEND_##蕨
 $APPEND_##蕩
 $APPEND_##蕷
@@ -6509,10 +6498,10 @@ $APPEND_##蘇
 $APPEND_##蘊
 $APPEND_##蘋
 $APPEND_##蘭
+$APPEND_##蘿
 $APPEND_##虎
 $APPEND_##虐
 $APPEND_##虔
-$APPEND_##處
 $APPEND_##虚
 $APPEND_##虜
 $APPEND_##虞
@@ -6526,9 +6515,8 @@ $APPEND_##蛋
 $APPEND_##蛎
 $APPEND_##蛙
 $APPEND_##蛛
-$APPEND_##蛤
 $APPEND_##蛮
-$APPEND_##蛸
+$APPEND_##蛹
 $APPEND_##蛾
 $APPEND_##蜀
 $APPEND_##蜂
@@ -6539,10 +6527,10 @@ $APPEND_##蜴
 $APPEND_##蜻
 $APPEND_##蝉
 $APPEND_##蝋
+$APPEND_##蝎
 $APPEND_##蝕
 $APPEND_##蝗
 $APPEND_##蝠
-$APPEND_##蝣
 $APPEND_##蝦
 $APPEND_##蝮
 $APPEND_##蝶
@@ -6550,11 +6538,13 @@ $APPEND_##蝿
 $APPEND_##螂
 $APPEND_##融
 $APPEND_##螺
+$APPEND_##蟄
 $APPEND_##蟇
+$APPEND_##蟠
 $APPEND_##蟲
 $APPEND_##蟹
 $APPEND_##蟻
-$APPEND_##蠕
+$APPEND_##蠍
 $APPEND_##蠡
 $APPEND_##蠣
 $APPEND_##蠱
@@ -6574,11 +6564,9 @@ $APPEND_##衞
 $APPEND_##衡
 $APPEND_##衣
 $APPEND_##表
-$APPEND_##衫
 $APPEND_##衰
 $APPEND_##衷
 $APPEND_##衾
-$APPEND_##袂
 $APPEND_##袈
 $APPEND_##袋
 $APPEND_##袍
@@ -6604,7 +6592,6 @@ $APPEND_##褄
 $APPEND_##複
 $APPEND_##褐
 $APPEND_##褒
-$APPEND_##褚
 $APPEND_##褥
 $APPEND_##褪
 $APPEND_##褸
@@ -6628,7 +6615,9 @@ $APPEND_##覧
 $APPEND_##親
 $APPEND_##観
 $APPEND_##覺
+$APPEND_##觀
 $APPEND_##角
+$APPEND_##觚
 $APPEND_##解
 $APPEND_##触
 $APPEND_##言
@@ -6709,7 +6698,6 @@ $APPEND_##諧
 $APPEND_##諫
 $APPEND_##諭
 $APPEND_##諱
-$APPEND_##諶
 $APPEND_##諸
 $APPEND_##諺
 $APPEND_##諾
@@ -6726,6 +6714,7 @@ $APPEND_##謡
 $APPEND_##謨
 $APPEND_##謬
 $APPEND_##謹
+$APPEND_##證
 $APPEND_##識
 $APPEND_##譚
 $APPEND_##譜
@@ -6856,7 +6845,6 @@ $APPEND_##輸
 $APPEND_##輿
 $APPEND_##轄
 $APPEND_##轅
-$APPEND_##轆
 $APPEND_##轍
 $APPEND_##轟
 $APPEND_##轡
@@ -6910,6 +6898,7 @@ $APPEND_##通
 $APPEND_##通し
 $APPEND_##通り
 $APPEND_##逝
+$APPEND_##逞
 $APPEND_##速
 $APPEND_##造
 $APPEND_##逢
@@ -6971,7 +6960,6 @@ $APPEND_##郞
 $APPEND_##郡
 $APPEND_##部
 $APPEND_##郭
-$APPEND_##郵
 $APPEND_##郷
 $APPEND_##都
 $APPEND_##鄙
@@ -6986,7 +6974,6 @@ $APPEND_##酔
 $APPEND_##酘
 $APPEND_##酛
 $APPEND_##酢
-$APPEND_##酪
 $APPEND_##酬
 $APPEND_##酵
 $APPEND_##酷
@@ -7005,6 +6992,7 @@ $APPEND_##里子
 $APPEND_##重
 $APPEND_##野
 $APPEND_##量
+$APPEND_##釐
 $APPEND_##金
 $APPEND_##釗
 $APPEND_##釘
@@ -7018,6 +7006,7 @@ $APPEND_##鈔
 $APPEND_##鈞
 $APPEND_##鈴
 $APPEND_##鈷
+$APPEND_##鈺
 $APPEND_##鈿
 $APPEND_##鉄
 $APPEND_##鉈
@@ -7027,6 +7016,7 @@ $APPEND_##鉛
 $APPEND_##鉞
 $APPEND_##鉢
 $APPEND_##鉤
+$APPEND_##鉦
 $APPEND_##鉱
 $APPEND_##鉾
 $APPEND_##銀
@@ -7062,9 +7052,8 @@ $APPEND_##鍛
 $APPEND_##鍬
 $APPEND_##鍮
 $APPEND_##鍵
-$APPEND_##鍼
-$APPEND_##鍾
 $APPEND_##鎌
+$APPEND_##鎔
 $APPEND_##鎖
 $APPEND_##鎚
 $APPEND_##鎧
@@ -7080,6 +7069,7 @@ $APPEND_##鐡
 $APPEND_##鐵
 $APPEND_##鐸
 $APPEND_##鑑
+$APPEND_##鑒
 $APPEND_##鑚
 $APPEND_##鑰
 $APPEND_##鑼
@@ -7091,7 +7081,6 @@ $APPEND_##閃
 $APPEND_##閉
 $APPEND_##開
 $APPEND_##開き
-$APPEND_##閏
 $APPEND_##閑
 $APPEND_##間
 $APPEND_##閘
@@ -7108,7 +7097,6 @@ $APPEND_##闕
 $APPEND_##闘
 $APPEND_##闡
 $APPEND_##闢
-$APPEND_##闥
 $APPEND_##阜
 $APPEND_##阪
 $APPEND_##阯
@@ -7118,6 +7106,7 @@ $APPEND_##阿
 $APPEND_##陀
 $APPEND_##陂
 $APPEND_##附
+$APPEND_##陋
 $APPEND_##降
 $APPEND_##降り
 $APPEND_##限
@@ -7138,6 +7127,7 @@ $APPEND_##隅
 $APPEND_##隆
 $APPEND_##隈
 $APPEND_##隊
+$APPEND_##隋
 $APPEND_##階
 $APPEND_##随
 $APPEND_##隔
@@ -7162,6 +7152,7 @@ $APPEND_##雌
 $APPEND_##雍
 $APPEND_##雎
 $APPEND_##雑
+$APPEND_##雒
 $APPEND_##雛
 $APPEND_##離
 $APPEND_##離れ
@@ -7173,14 +7164,14 @@ $APPEND_##雷
 $APPEND_##雹
 $APPEND_##電
 $APPEND_##需
-$APPEND_##霆
+$APPEND_##霄
 $APPEND_##震
 $APPEND_##霊
-$APPEND_##霓
 $APPEND_##霖
 $APPEND_##霜
 $APPEND_##霞
 $APPEND_##霧
+$APPEND_##霰
 $APPEND_##露
 $APPEND_##靂
 $APPEND_##青
@@ -7202,13 +7193,12 @@ $APPEND_##鞘
 $APPEND_##鞜
 $APPEND_##鞠
 $APPEND_##鞨
+$APPEND_##鞬
 $APPEND_##鞭
 $APPEND_##鞮
-$APPEND_##鞴
 $APPEND_##韋
 $APPEND_##韓
 $APPEND_##韜
-$APPEND_##韮
 $APPEND_##音
 $APPEND_##韶
 $APPEND_##韻
@@ -7219,18 +7209,19 @@ $APPEND_##項
 $APPEND_##順
 $APPEND_##須
 $APPEND_##須賀
+$APPEND_##頊
 $APPEND_##頌
-$APPEND_##預
 $APPEND_##頓
 $APPEND_##頗
 $APPEND_##領
+$APPEND_##頚
 $APPEND_##頡
-$APPEND_##頤
 $APPEND_##頬
 $APPEND_##頭
 $APPEND_##頸
 $APPEND_##頻
 $APPEND_##頼
+$APPEND_##頽
 $APPEND_##顆
 $APPEND_##題
 $APPEND_##額
@@ -7244,13 +7235,11 @@ $APPEND_##顥
 $APPEND_##顧
 $APPEND_##顯
 $APPEND_##風
-$APPEND_##颪
 $APPEND_##飛
 $APPEND_##飛ばし
 $APPEND_##飛ばす
 $APPEND_##食
 $APPEND_##食い
-$APPEND_##飡
 $APPEND_##飯
 $APPEND_##飲
 $APPEND_##飴
@@ -7265,6 +7254,7 @@ $APPEND_##養
 $APPEND_##餌
 $APPEND_##餐
 $APPEND_##餓
+$APPEND_##餘
 $APPEND_##餡
 $APPEND_##館
 $APPEND_##饌
@@ -7273,8 +7263,10 @@ $APPEND_##首
 $APPEND_##馗
 $APPEND_##香
 $APPEND_##馥
+$APPEND_##馨
 $APPEND_##馬
 $APPEND_##馴
+$APPEND_##馴染
 $APPEND_##駁
 $APPEND_##駄
 $APPEND_##駅
@@ -7285,6 +7277,7 @@ $APPEND_##駒
 $APPEND_##駕
 $APPEND_##駝
 $APPEND_##騎
+$APPEND_##騏
 $APPEND_##騒
 $APPEND_##験
 $APPEND_##騫
@@ -7295,7 +7288,6 @@ $APPEND_##骨
 $APPEND_##骸
 $APPEND_##髄
 $APPEND_##髏
-$APPEND_##體
 $APPEND_##高
 $APPEND_##高い
 $APPEND_##高田
@@ -7321,9 +7313,9 @@ $APPEND_##魔
 $APPEND_##魚
 $APPEND_##魯
 $APPEND_##鮎
+$APPEND_##鮑
 $APPEND_##鮒
 $APPEND_##鮨
-$APPEND_##鮪
 $APPEND_##鮫
 $APPEND_##鮭
 $APPEND_##鮮
@@ -7336,6 +7328,7 @@ $APPEND_##鰐
 $APPEND_##鰓
 $APPEND_##鰭
 $APPEND_##鰯
+$APPEND_##鰹
 $APPEND_##鰻
 $APPEND_##鱈
 $APPEND_##鱒
@@ -7353,6 +7346,7 @@ $APPEND_##鵄
 $APPEND_##鵞
 $APPEND_##鵡
 $APPEND_##鵬
+$APPEND_##鶉
 $APPEND_##鶏
 $APPEND_##鶚
 $APPEND_##鶴
@@ -7364,6 +7358,7 @@ $APPEND_##鷺
 $APPEND_##鸚
 $APPEND_##鸞
 $APPEND_##鹵
+$APPEND_##鹹
 $APPEND_##鹿
 $APPEND_##麓
 $APPEND_##麗
@@ -7378,7 +7373,6 @@ $APPEND_##麻呂
 $APPEND_##麿
 $APPEND_##黄
 $APPEND_##黍
-$APPEND_##黎
 $APPEND_##黒
 $APPEND_##黙
 $APPEND_##鼎
@@ -7418,7 +7412,6 @@ $APPEND_##우
 $APPEND_##울
 $APPEND_##의
 $APPEND_##이
-$APPEND_##장
 $APPEND_##전
 $APPEND_##제
 $APPEND_##중
@@ -8032,6 +8025,7 @@ $APPEND_Ad
 $APPEND_Af
 $APPEND_Ag
 $APPEND_Air
+$APPEND_Airport
 $APPEND_Ak
 $APPEND_Al
 $APPEND_Alb
@@ -8049,6 +8043,7 @@ $APPEND_Android
 $APPEND_Ang
 $APPEND_Angel
 $APPEND_Ann
+$APPEND_Anniversary
 $APPEND_Ap
 $APPEND_App
 $APPEND_Apple
@@ -8059,7 +8054,7 @@ $APPEND_Arm
 $APPEND_Art
 $APPEND_As
 $APPEND_Ass
-$APPEND_Association
+$APPEND_Associ
 $APPEND_At
 $APPEND_Aut
 $APPEND_Av
@@ -8090,6 +8085,7 @@ $APPEND_BT
 $APPEND_Ba
 $APPEND_Bab
 $APPEND_Bal
+$APPEND_Band
 $APPEND_Bar
 $APPEND_Bas
 $APPEND_Batt
@@ -8112,6 +8108,7 @@ $APPEND_Blu
 $APPEND_Blue
 $APPEND_Bo
 $APPEND_Bon
+$APPEND_Book
 $APPEND_Boy
 $APPEND_Br
 $APPEND_Bre
@@ -8162,13 +8159,11 @@ $APPEND_Cas
 $APPEND_Cast
 $APPEND_Cat
 $APPEND_Cent
-$APPEND_Center
 $APPEND_Ch
 $APPEND_Champ
-$APPEND_Champion
+$APPEND_Charl
 $APPEND_Charles
 $APPEND_Che
-$APPEND_Child
 $APPEND_Children
 $APPEND_Christ
 $APPEND_City
@@ -8177,15 +8172,15 @@ $APPEND_Class
 $APPEND_Club
 $APPEND_Co
 $APPEND_Col
-$APPEND_Colle
 $APPEND_College
 $APPEND_Com
 $APPEND_Comm
 $APPEND_Comp
-$APPEND_Company
 $APPEND_Con
 $APPEND_Cont
 $APPEND_Cor
+$APPEND_Count
+$APPEND_County
 $APPEND_Cr
 $APPEND_Cre
 $APPEND_Cry
@@ -8284,7 +8279,6 @@ $APPEND_FBI
 $APPEND_FC
 $APPEND_FD
 $APPEND_FE
-$APPEND_FEST
 $APPEND_FF
 $APPEND_FI
 $APPEND_FIA
@@ -8317,7 +8311,9 @@ $APPEND_Fire
 $APPEND_First
 $APPEND_Fl
 $APPEND_Fly
+$APPEND_Foot
 $APPEND_For
+$APPEND_Found
 $APPEND_Fr
 $APPEND_Fran
 $APPEND_Franc
@@ -8487,6 +8483,7 @@ $APPEND_Joh
 $APPEND_John
 $APPEND_Jose
 $APPEND_Joseph
+$APPEND_Jour
 $APPEND_Jr
 $APPEND_Ju
 $APPEND_Jul
@@ -8494,12 +8491,10 @@ $APPEND_Jun
 $APPEND_Just
 $APPEND_K
 $APPEND_KA
-$APPEND_KAD
 $APPEND_KADOKAWA
 $APPEND_KB
 $APPEND_KBS
 $APPEND_KC
-$APPEND_KDD
 $APPEND_KDDI
 $APPEND_KE
 $APPEND_KING
@@ -8621,7 +8616,6 @@ $APPEND_MiG
 $APPEND_Mic
 $APPEND_Mich
 $APPEND_Michael
-$APPEND_Micros
 $APPEND_Microsoft
 $APPEND_Mil
 $APPEND_Min
@@ -8649,6 +8643,7 @@ $APPEND_NATO
 $APPEND_NBA
 $APPEND_NBC
 $APPEND_NC
+$APPEND_NDL
 $APPEND_NE
 $APPEND_NEC
 $APPEND_NEO
@@ -8660,6 +8655,7 @@ $APPEND_NFL
 $APPEND_NG
 $APPEND_NH
 $APPEND_NHK
+$APPEND_NIGHT
 $APPEND_NK
 $APPEND_NM
 $APPEND_NNN
@@ -8680,6 +8676,7 @@ $APPEND_National
 $APPEND_Nav
 $APPEND_Ne
 $APPEND_Net
+$APPEND_Network
 $APPEND_New
 $APPEND_News
 $APPEND_Night
@@ -8794,6 +8791,7 @@ $APPEND_RC
 $APPEND_RD
 $APPEND_RE
 $APPEND_REC
+$APPEND_RECOR
 $APPEND_RECORDS
 $APPEND_RED
 $APPEND_RF
@@ -8863,10 +8861,8 @@ $APPEND_SO
 $APPEND_SOL
 $APPEND_SON
 $APPEND_SP
-$APPEND_SPEC
 $APPEND_SPECIAL
 $APPEND_SPOR
-$APPEND_SPORTS
 $APPEND_SQ
 $APPEND_SR
 $APPEND_SS
@@ -8910,11 +8906,11 @@ $APPEND_Sn
 $APPEND_Soci
 $APPEND_Soft
 $APPEND_Sol
+$APPEND_Song
 $APPEND_Sou
 $APPEND_Soul
 $APPEND_Sound
 $APPEND_Sp
-$APPEND_Space
 $APPEND_Spec
 $APPEND_Special
 $APPEND_Sports
@@ -8930,7 +8926,6 @@ $APPEND_Street
 $APPEND_Studio
 $APPEND_Su
 $APPEND_Suica
-$APPEND_Sum
 $APPEND_Summer
 $APPEND_Sun
 $APPEND_Super
@@ -9016,7 +9011,6 @@ $APPEND_UTC
 $APPEND_Ult
 $APPEND_Un
 $APPEND_Unic
-$APPEND_United
 $APPEND_Univers
 $APPEND_University
 $APPEND_Up
@@ -9091,7 +9085,6 @@ $APPEND_Y
 $APPEND_YO
 $APPEND_YOU
 $APPEND_YU
-$APPEND_Yah
 $APPEND_Yahoo
 $APPEND_Year
 $APPEND_You
@@ -9202,7 +9195,6 @@ $APPEND_mi
 $APPEND_mix
 $APPEND_ml
 $APPEND_mm
-$APPEND_mmF
 $APPEND_mod
 $APPEND_mol
 $APPEND_mph
@@ -9266,7 +9258,6 @@ $APPEND_v
 $APPEND_var
 $APPEND_ver
 $APPEND_vol
-$APPEND_von
 $APPEND_vs
 $APPEND_w
 $APPEND_web
@@ -9287,122 +9278,119 @@ $APPEND_£
 $APPEND_¥
 $APPEND_§
 $APPEND_«
+$APPEND_¬
 $APPEND_°
 $APPEND_·
 $APPEND_»
 $APPEND_¿
 $APPEND_À
-$APPEND_Á
 $APPEND_Ä
-$APPEND_Æ
 $APPEND_Ç
 $APPEND_É
 $APPEND_Í
-$APPEND_Î
 $APPEND_Ó
 $APPEND_Ö
 $APPEND_×
 $APPEND_Ø
+$APPEND_Ú
 $APPEND_Ü
-$APPEND_Þ
 $APPEND_ß
 $APPEND_à
 $APPEND_á
 $APPEND_â
 $APPEND_ã
 $APPEND_ä
-$APPEND_æ
+$APPEND_å
 $APPEND_ç
 $APPEND_è
 $APPEND_é
 $APPEND_ê
+$APPEND_ë
 $APPEND_ì
 $APPEND_í
 $APPEND_î
 $APPEND_ï
 $APPEND_ñ
 $APPEND_ó
+$APPEND_ô
 $APPEND_õ
 $APPEND_ö
+$APPEND_ø
 $APPEND_ù
 $APPEND_ú
 $APPEND_ü
 $APPEND_þ
 $APPEND_Ā
 $APPEND_ā
-$APPEND_ă
+$APPEND_ą
 $APPEND_Ć
+$APPEND_ć
 $APPEND_Č
 $APPEND_č
+$APPEND_Đ
 $APPEND_đ
 $APPEND_ē
-$APPEND_ė
+$APPEND_ě
+$APPEND_ğ
 $APPEND_Ī
 $APPEND_ī
 $APPEND_İ
 $APPEND_ı
 $APPEND_Ł
 $APPEND_ł
+$APPEND_ń
+$APPEND_ň
 $APPEND_ŋ
 $APPEND_ō
-$APPEND_ŏ
+$APPEND_œ
 $APPEND_ř
 $APPEND_Ś
-$APPEND_ś
-$APPEND_ş
-$APPEND_Š
+$APPEND_Ş
 $APPEND_š
-$APPEND_ũ
-$APPEND_ū
-$APPEND_Ż
 $APPEND_ż
 $APPEND_Ž
 $APPEND_ž
 $APPEND_ư
-$APPEND_ǎ
-$APPEND_ȝ
-$APPEND_ɒ
-$APPEND_ɔ
+$APPEND_ǁ
 $APPEND_ə
-$APPEND_ɛ
-$APPEND_ɣ
 $APPEND_ɪ
-$APPEND_ʕ
-$APPEND_ʼ
+$APPEND_ʃ
+$APPEND_ʊ
 $APPEND_ˈ
+$APPEND_ˌ
 $APPEND_ː
 $APPEND_́
-$APPEND_̩
-$APPEND_Ά
 $APPEND_Α
-$APPEND_Β
-$APPEND_Γ
 $APPEND_Δ
-$APPEND_Ε
 $APPEND_Ζ
 $APPEND_Η
 $APPEND_Θ
 $APPEND_Κ
-$APPEND_Λ
-$APPEND_Μ
 $APPEND_Ν
+$APPEND_Ο
+$APPEND_Ρ
 $APPEND_Χ
 $APPEND_Ω
-$APPEND_ά
+$APPEND_έ
+$APPEND_ή
 $APPEND_α
 $APPEND_β
+$APPEND_γ
+$APPEND_δ
 $APPEND_θ
-$APPEND_ι
 $APPEND_κ
 $APPEND_λ
 $APPEND_μ
+$APPEND_ν
 $APPEND_ο
 $APPEND_π
 $APPEND_ς
 $APPEND_σ
 $APPEND_τ
 $APPEND_φ
+$APPEND_χ
 $APPEND_ω
+$APPEND_Ё
 $APPEND_І
 $APPEND_А
 $APPEND_Б
@@ -9410,7 +9398,6 @@ $APPEND_В
 $APPEND_Г
 $APPEND_Д
 $APPEND_Е
-$APPEND_З
 $APPEND_И
 $APPEND_К
 $APPEND_Л
@@ -9421,12 +9408,11 @@ $APPEND_П
 $APPEND_Р
 $APPEND_С
 $APPEND_Т
-$APPEND_У
 $APPEND_Ф
-$APPEND_Х
-$APPEND_Ц
 $APPEND_Ч
+$APPEND_Ш
 $APPEND_Э
+$APPEND_Ю
 $APPEND_Я
 $APPEND_а
 $APPEND_б
@@ -9434,6 +9420,7 @@ $APPEND_в
 $APPEND_г
 $APPEND_д
 $APPEND_е
+$APPEND_ж
 $APPEND_з
 $APPEND_и
 $APPEND_й
@@ -9451,20 +9438,22 @@ $APPEND_ф
 $APPEND_х
 $APPEND_ц
 $APPEND_ч
+$APPEND_ш
+$APPEND_щ
 $APPEND_ы
+$APPEND_ь
 $APPEND_э
 $APPEND_я
 $APPEND_ա
+$APPEND_ի
+$APPEND_յ
 $APPEND_أ
 $APPEND_ا
-$APPEND_ث
+$APPEND_ب
 $APPEND_خ
-$APPEND_د
-$APPEND_ز
-$APPEND_ع
 $APPEND_ل
 $APPEND_م
-$APPEND_ي
+$APPEND_ن
 $APPEND_ก
 $APPEND_ค
 $APPEND_ง
@@ -9474,6 +9463,7 @@ $APPEND_ณ
 $APPEND_ด
 $APPEND_ต
 $APPEND_ถ
+$APPEND_ธ
 $APPEND_น
 $APPEND_บ
 $APPEND_พ
@@ -9483,26 +9473,33 @@ $APPEND_ร
 $APPEND_ล
 $APPEND_ส
 $APPEND_ห
+$APPEND_ะ
+$APPEND_า
 $APPEND_ิ
+$APPEND_ี
 $APPEND_เ
 $APPEND_แ
 $APPEND_ไ
 $APPEND_์
 $APPEND_ํ
 $APPEND_་
+$APPEND_ག
 $APPEND_ང
-$APPEND_ད
+$APPEND_ན
 $APPEND_བ
+$APPEND_མ
 $APPEND_ར
 $APPEND_ས
 $APPEND_ི
-$APPEND_ོ
-$APPEND_ိ
 $APPEND_ი
 $APPEND_რ
-$APPEND_ᄇ
+$APPEND_្
+$APPEND_Ḥ
+$APPEND_ṅ
 $APPEND_ṣ
+$APPEND_ầ
 $APPEND_ế
+$APPEND_ệ
 $APPEND_‐
 $APPEND_–
 $APPEND_—
@@ -9512,11 +9509,12 @@ $APPEND_‘
 $APPEND_’
 $APPEND_“
 $APPEND_”
-$APPEND_„
+$APPEND_•
 $APPEND_‧
 $APPEND_‰
 $APPEND_′
 $APPEND_※
+$APPEND_⁄
 $APPEND_←
 $APPEND_↑
 $APPEND_→
@@ -9524,12 +9522,10 @@ $APPEND_↓
 $APPEND_⇒
 $APPEND_⇔
 $APPEND_∀
-$APPEND_∃
 $APPEND_∈
-$APPEND_∑
 $APPEND_−
 $APPEND_∞
-$APPEND_∩
+$APPEND_∧
 $APPEND_≒
 $APPEND_≠
 $APPEND_≡
@@ -9538,9 +9534,7 @@ $APPEND_≦
 $APPEND_≧
 $APPEND_≪
 $APPEND_≫
-$APPEND_⊆
-$APPEND_─
-$APPEND_━
+$APPEND_⊂
 $APPEND_■
 $APPEND_□
 $APPEND_▲
@@ -9559,7 +9553,6 @@ $APPEND_♂
 $APPEND_♡
 $APPEND_♥
 $APPEND_♪
-$APPEND_♭
 $APPEND_♯
 $APPEND_、
 $APPEND_。
@@ -9635,6 +9628,7 @@ $APPEND_あめ
 $APPEND_あや
 $APPEND_あゆみ
 $APPEND_あら
+$APPEND_あらか
 $APPEND_あらかじめ
 $APPEND_あらゆる
 $APPEND_あり
@@ -10359,7 +10353,6 @@ $APPEND_ねぇ
 $APPEND_ねえ
 $APPEND_ねこ
 $APPEND_ねじ
-$APPEND_ねじ込み
 $APPEND_ねずみ
 $APPEND_ねん
 $APPEND_の
@@ -10860,6 +10853,7 @@ $APPEND_アド
 $APPEND_アドバイザー
 $APPEND_アドバイス
 $APPEND_アドバンス
+$APPEND_アドベンチ
 $APPEND_アドベンチャー
 $APPEND_アドルフ
 $APPEND_アドレス
@@ -10954,7 +10948,6 @@ $APPEND_アルファベット
 $APPEND_アルフォンソ
 $APPEND_アルフレ
 $APPEND_アルフレッド
-$APPEND_アルブレ
 $APPEND_アルブレヒト
 $APPEND_アルプス
 $APPEND_アルベルト
@@ -10991,7 +10984,6 @@ $APPEND_アンコール
 $APPEND_アンゴラ
 $APPEND_アンサンブル
 $APPEND_アンジェ
-$APPEND_アンソ
 $APPEND_アンソニー
 $APPEND_アンソロジー
 $APPEND_アンダー
@@ -11111,7 +11103,6 @@ $APPEND_イングランド
 $APPEND_イングリッシュ
 $APPEND_インス
 $APPEND_インスト
-$APPEND_インストゥル
 $APPEND_インストゥルメンタル
 $APPEND_インストール
 $APPEND_インタ
@@ -11614,7 +11605,6 @@ $APPEND_カンボ
 $APPEND_カンボジア
 $APPEND_カヴァー
 $APPEND_カー
-$APPEND_カージナル
 $APPEND_カージナルス
 $APPEND_カーズ
 $APPEND_カーター
@@ -11747,6 +11737,7 @@ $APPEND_キール
 $APPEND_ギ
 $APPEND_ギア
 $APPEND_ギガ
+$APPEND_ギタ
 $APPEND_ギタリスト
 $APPEND_ギター
 $APPEND_ギニア
@@ -12030,7 +12021,6 @@ $APPEND_コピー
 $APPEND_コフ
 $APPEND_コブ
 $APPEND_コブラ
-$APPEND_コペン
 $APPEND_コペンハーゲン
 $APPEND_コマ
 $APPEND_コマン
@@ -12073,6 +12063,7 @@ $APPEND_コロ
 $APPEND_コロコロ
 $APPEND_コロナ
 $APPEND_コロニー
+$APPEND_コロム
 $APPEND_コロムビア
 $APPEND_コロラド
 $APPEND_コロン
@@ -12125,6 +12116,7 @@ $APPEND_コンプレックス
 $APPEND_コンペ
 $APPEND_コンボ
 $APPEND_コンポ
+$APPEND_コンポーネ
 $APPEND_コンポーネント
 $APPEND_コー
 $APPEND_コース
@@ -12200,6 +12192,7 @@ $APPEND_サクラ
 $APPEND_サザ
 $APPEND_サザン
 $APPEND_サス
+$APPEND_サスペ
 $APPEND_サスペン
 $APPEND_サスペンション
 $APPEND_サスペンス
@@ -12239,7 +12232,6 @@ $APPEND_サム
 $APPEND_サムライ
 $APPEND_サメ
 $APPEND_サモア
-$APPEND_サヨ
 $APPEND_サヨナラ
 $APPEND_サラ
 $APPEND_サラダ
@@ -12268,7 +12260,6 @@ $APPEND_サント
 $APPEND_サントス
 $APPEND_サントリー
 $APPEND_サンド
-$APPEND_サンパ
 $APPEND_サンパウロ
 $APPEND_サンフランシスコ
 $APPEND_サンプリング
@@ -12427,6 +12418,7 @@ $APPEND_シンデレラ
 $APPEND_シンフォ
 $APPEND_シンプル
 $APPEND_シンボル
+$APPEND_シンポ
 $APPEND_シンポジウム
 $APPEND_シー
 $APPEND_シーク
@@ -12624,6 +12616,7 @@ $APPEND_スターリン
 $APPEND_スターリング
 $APPEND_スチ
 $APPEND_スチュ
+$APPEND_スチュア
 $APPEND_スチュアート
 $APPEND_スチュワート
 $APPEND_スチール
@@ -12853,7 +12846,6 @@ $APPEND_ソナタ
 $APPEND_ソナー
 $APPEND_ソニック
 $APPEND_ソニー
-$APPEND_ソビエ
 $APPEND_ソビエト
 $APPEND_ソフィア
 $APPEND_ソフト
@@ -13396,6 +13388,7 @@ $APPEND_ナイン
 $APPEND_ナウ
 $APPEND_ナオ
 $APPEND_ナガ
+$APPEND_ナゴ
 $APPEND_ナゴヤ
 $APPEND_ナショナ
 $APPEND_ナショナル
@@ -13423,7 +13416,6 @@ $APPEND_ナル
 $APPEND_ナレーション
 $APPEND_ナレーター
 $APPEND_ナン
-$APPEND_ナンバ
 $APPEND_ナンバリング
 $APPEND_ナンバー
 $APPEND_ナー
@@ -13449,7 +13441,6 @@ $APPEND_ニュ
 $APPEND_ニュルンベルク
 $APPEND_ニュー
 $APPEND_ニューイングランド
-$APPEND_ニューオー
 $APPEND_ニューオーリンズ
 $APPEND_ニューギニア
 $APPEND_ニュージャ
@@ -13528,6 +13519,7 @@ $APPEND_ハ
 $APPEND_ハイ
 $APPEND_ハイウェイ
 $APPEND_ハイデ
+$APPEND_ハイデル
 $APPEND_ハイデルベルク
 $APPEND_ハイド
 $APPEND_ハイパー
@@ -13566,7 +13558,6 @@ $APPEND_ハヤ
 $APPEND_ハラ
 $APPEND_ハリ
 $APPEND_ハリウッド
-$APPEND_ハリケ
 $APPEND_ハリケーン
 $APPEND_ハリス
 $APPEND_ハリソン
@@ -14371,6 +14362,7 @@ $APPEND_ペダル
 $APPEND_ペット
 $APPEND_ペトロ
 $APPEND_ペドロ
+$APPEND_ペナル
 $APPEND_ペナルティ
 $APPEND_ペプ
 $APPEND_ペプチド
@@ -14457,7 +14449,6 @@ $APPEND_ボトル
 $APPEND_ボナ
 $APPEND_ボビー
 $APPEND_ボブ
-$APPEND_ボヘ
 $APPEND_ボヘミア
 $APPEND_ボム
 $APPEND_ボラン
@@ -14560,6 +14551,7 @@ $APPEND_マクラーレン
 $APPEND_マクロ
 $APPEND_マクロス
 $APPEND_マグ
+$APPEND_マグニ
 $APPEND_マグニチュード
 $APPEND_マグネ
 $APPEND_マグマ
@@ -14649,7 +14641,6 @@ $APPEND_マルク
 $APPEND_マルクス
 $APPEND_マルコ
 $APPEND_マルス
-$APPEND_マルセイ
 $APPEND_マルセイユ
 $APPEND_マルタ
 $APPEND_マルチ
@@ -14670,7 +14661,6 @@ $APPEND_マー
 $APPEND_マーガ
 $APPEND_マーガレット
 $APPEND_マーク
-$APPEND_マーケ
 $APPEND_マーケット
 $APPEND_マーケティング
 $APPEND_マーシャル
@@ -14694,6 +14684,7 @@ $APPEND_ミサイル
 $APPEND_ミシ
 $APPEND_ミシェル
 $APPEND_ミシガン
+$APPEND_ミシシ
 $APPEND_ミシシッピ
 $APPEND_ミス
 $APPEND_ミスター
@@ -14744,7 +14735,6 @@ $APPEND_ミラージュ
 $APPEND_ミリ
 $APPEND_ミリオン
 $APPEND_ミル
-$APPEND_ミルウォー
 $APPEND_ミルウォーキー
 $APPEND_ミルク
 $APPEND_ミレ
@@ -14933,7 +14923,6 @@ $APPEND_ユン
 $APPEND_ユー
 $APPEND_ユーク
 $APPEND_ユーゴ
-$APPEND_ユーゴスラ
 $APPEND_ユーゴスラビア
 $APPEND_ユーザ
 $APPEND_ユーザー
@@ -14948,6 +14937,7 @@ $APPEND_ヨウ
 $APPEND_ヨコ
 $APPEND_ヨシ
 $APPEND_ヨット
+$APPEND_ヨハ
 $APPEND_ヨハネ
 $APPEND_ヨハネス
 $APPEND_ヨハン
@@ -15767,6 +15757,7 @@ $APPEND_世代
 $APPEND_世俗
 $APPEND_世子
 $APPEND_世帯
+$APPEND_世田
 $APPEND_世田谷
 $APPEND_世界
 $APPEND_世紀
@@ -16191,7 +16182,6 @@ $APPEND_他方
 $APPEND_他界
 $APPEND_他社
 $APPEND_他者
-$APPEND_仗
 $APPEND_付
 $APPEND_付い
 $APPEND_付か
@@ -16487,9 +16477,11 @@ $APPEND_作画
 $APPEND_作者
 $APPEND_作詞
 $APPEND_作風
+$APPEND_佞
 $APPEND_佟
 $APPEND_你
 $APPEND_佩
+$APPEND_佬
 $APPEND_佰
 $APPEND_佳
 $APPEND_佳作
@@ -16546,7 +16538,6 @@ $APPEND_侠
 $APPEND_価
 $APPEND_価値
 $APPEND_価格
-$APPEND_侭
 $APPEND_侮
 $APPEND_侮辱
 $APPEND_侯
@@ -16683,6 +16674,7 @@ $APPEND_倣
 $APPEND_値
 $APPEND_値段
 $APPEND_倦
+$APPEND_倧
 $APPEND_倩
 $APPEND_倪
 $APPEND_倫
@@ -16782,7 +16774,6 @@ $APPEND_僑
 $APPEND_僕
 $APPEND_僖
 $APPEND_僚
-$APPEND_僥
 $APPEND_僧
 $APPEND_僧侶
 $APPEND_僭
@@ -16801,6 +16792,7 @@ $APPEND_儔
 $APPEND_儘
 $APPEND_儚
 $APPEND_償
+$APPEND_儡
 $APPEND_優
 $APPEND_優し
 $APPEND_優しい
@@ -16851,7 +16843,6 @@ $APPEND_充実
 $APPEND_充当
 $APPEND_充電
 $APPEND_兆
-$APPEND_兇
 $APPEND_先
 $APPEND_先代
 $APPEND_先住
@@ -17055,7 +17046,6 @@ $APPEND_六十
 $APPEND_六本木
 $APPEND_六甲
 $APPEND_六角
-$APPEND_兮
 $APPEND_共
 $APPEND_共々
 $APPEND_共作
@@ -17159,7 +17149,6 @@ $APPEND_冑
 $APPEND_冒
 $APPEND_冒険
 $APPEND_冒頭
-$APPEND_冕
 $APPEND_冗
 $APPEND_冗談
 $APPEND_写
@@ -17193,7 +17182,6 @@ $APPEND_冷房
 $APPEND_冷蔵
 $APPEND_冷酷
 $APPEND_冷静
-$APPEND_冼
 $APPEND_凄
 $APPEND_凄まじ
 $APPEND_准
@@ -17291,9 +17279,9 @@ $APPEND_函館
 $APPEND_刀
 $APPEND_刀剣
 $APPEND_刀身
-$APPEND_刁
 $APPEND_刃
 $APPEND_刃物
+$APPEND_刄
 $APPEND_分
 $APPEND_分か
 $APPEND_分かっ
@@ -17449,6 +17437,7 @@ $APPEND_刻
 $APPEND_刻ま
 $APPEND_刻印
 $APPEND_剃
+$APPEND_剄
 $APPEND_則
 $APPEND_削
 $APPEND_削り
@@ -17781,6 +17770,7 @@ $APPEND_升
 $APPEND_午
 $APPEND_午前
 $APPEND_午後
+$APPEND_卉
 $APPEND_半
 $APPEND_半ば
 $APPEND_半分
@@ -18257,6 +18247,7 @@ $APPEND_吉良
 $APPEND_吉野
 $APPEND_吊
 $APPEND_吊り
+$APPEND_吋
 $APPEND_同
 $APPEND_同じ
 $APPEND_同じく
@@ -18436,6 +18427,7 @@ $APPEND_呪
 $APPEND_呪い
 $APPEND_呪文
 $APPEND_呪術
+$APPEND_呰
 $APPEND_味
 $APPEND_味付け
 $APPEND_味噌
@@ -18486,8 +18478,6 @@ $APPEND_咒
 $APPEND_咢
 $APPEND_咥
 $APPEND_咨
-$APPEND_咩
-$APPEND_咫
 $APPEND_咬
 $APPEND_咲
 $APPEND_咲き
@@ -18529,6 +18519,7 @@ $APPEND_唱
 $APPEND_唱え
 $APPEND_唱える
 $APPEND_唸
+$APPEND_唹
 $APPEND_唾
 $APPEND_啄
 $APPEND_商
@@ -18559,6 +18550,7 @@ $APPEND_問題
 $APPEND_啓
 $APPEND_啓発
 $APPEND_啓蒙
+$APPEND_啖
 $APPEND_啜
 $APPEND_啤
 $APPEND_啼
@@ -18567,6 +18559,7 @@ $APPEND_善
 $APPEND_喆
 $APPEND_喇
 $APPEND_喉
+$APPEND_喊
 $APPEND_喋
 $APPEND_喋り
 $APPEND_喋る
@@ -18598,6 +18591,7 @@ $APPEND_営利
 $APPEND_営業
 $APPEND_嗄
 $APPEND_嗅
+$APPEND_嗇
 $APPEND_嗚
 $APPEND_嗜
 $APPEND_嗜好
@@ -18607,7 +18601,6 @@ $APPEND_嘆
 $APPEND_嘆き
 $APPEND_嘉
 $APPEND_嘉永
-$APPEND_嘎
 $APPEND_嘔
 $APPEND_嘗
 $APPEND_嘘
@@ -18618,6 +18611,7 @@ $APPEND_嘱託
 $APPEND_嘲
 $APPEND_嘴
 $APPEND_噂
+$APPEND_噌
 $APPEND_噛
 $APPEND_噛み
 $APPEND_器
@@ -18631,11 +18625,11 @@ $APPEND_噴射
 $APPEND_噴火
 $APPEND_噺
 $APPEND_嚆
+$APPEND_嚇
 $APPEND_嚢
 $APPEND_嚥
 $APPEND_嚮
 $APPEND_嚴
-$APPEND_嚶
 $APPEND_囁
 $APPEND_囂
 $APPEND_囃
@@ -18692,6 +18686,7 @@ $APPEND_団員
 $APPEND_団地
 $APPEND_団結
 $APPEND_団長
+$APPEND_园
 $APPEND_囮
 $APPEND_困
 $APPEND_困っ
@@ -18813,7 +18808,6 @@ $APPEND_在日
 $APPEND_在来
 $APPEND_在籍
 $APPEND_在職
-$APPEND_圩
 $APPEND_圭
 $APPEND_地
 $APPEND_地上
@@ -18879,10 +18873,10 @@ $APPEND_垂直
 $APPEND_型
 $APPEND_型式
 $APPEND_垓
-$APPEND_垠
 $APPEND_垢
 $APPEND_垣
 $APPEND_埃
+$APPEND_埈
 $APPEND_埋
 $APPEND_埋め
 $APPEND_埋める
@@ -18904,7 +18898,6 @@ $APPEND_埔
 $APPEND_埕
 $APPEND_埜
 $APPEND_域
-$APPEND_埠
 $APPEND_埠頭
 $APPEND_埴
 $APPEND_埴輪
@@ -19045,9 +19038,9 @@ $APPEND_壊れ
 $APPEND_壊滅
 $APPEND_壌
 $APPEND_壕
-$APPEND_壙
 $APPEND_壜
 $APPEND_壢
+$APPEND_壩
 $APPEND_士
 $APPEND_士官
 $APPEND_士族
@@ -19535,6 +19528,7 @@ $APPEND_娘
 $APPEND_娘婿
 $APPEND_娜
 $APPEND_娟
+$APPEND_娠
 $APPEND_娥
 $APPEND_娩
 $APPEND_娯楽
@@ -19574,7 +19568,6 @@ $APPEND_嫡
 $APPEND_嫡子
 $APPEND_嫡男
 $APPEND_嫦
-$APPEND_嫩
 $APPEND_嬉
 $APPEND_嬌
 $APPEND_嬢
@@ -20165,7 +20158,6 @@ $APPEND_屍
 $APPEND_屎
 $APPEND_屏
 $APPEND_屑
-$APPEND_屓
 $APPEND_展
 $APPEND_展望
 $APPEND_展示
@@ -20224,7 +20216,6 @@ $APPEND_岌
 $APPEND_岐
 $APPEND_岐阜
 $APPEND_岑
-$APPEND_岔
 $APPEND_岡
 $APPEND_岡山
 $APPEND_岡崎
@@ -20262,6 +20253,7 @@ $APPEND_峠
 $APPEND_峡
 $APPEND_峡谷
 $APPEND_峨
+$APPEND_峪
 $APPEND_峯
 $APPEND_峰
 $APPEND_峴
@@ -20294,18 +20286,15 @@ $APPEND_崩れ
 $APPEND_崩壊
 $APPEND_崩御
 $APPEND_嵆
-$APPEND_嵊
 $APPEND_嵌
 $APPEND_嵐
 $APPEND_嵐山
 $APPEND_嵜
 $APPEND_嵩
 $APPEND_嵬
-$APPEND_嵯
 $APPEND_嵯峨
 $APPEND_嶋
 $APPEND_嶌
-$APPEND_嶝
 $APPEND_嶠
 $APPEND_嶷
 $APPEND_嶺
@@ -20479,8 +20468,6 @@ $APPEND_常陸
 $APPEND_常駐
 $APPEND_帽
 $APPEND_帽子
-$APPEND_幀
-$APPEND_幄
 $APPEND_幅
 $APPEND_幅員
 $APPEND_幅広
@@ -20682,6 +20669,7 @@ $APPEND_廠
 $APPEND_廣
 $APPEND_廩
 $APPEND_廬
+$APPEND_廳
 $APPEND_延
 $APPEND_延び
 $APPEND_延びる
@@ -20716,7 +20704,6 @@ $APPEND_弁当
 $APPEND_弁論
 $APPEND_弁護
 $APPEND_弄
-$APPEND_弈
 $APPEND_弊
 $APPEND_弋
 $APPEND_弌
@@ -20824,7 +20811,6 @@ $APPEND_弾圧
 $APPEND_弾薬
 $APPEND_弾道
 $APPEND_弾頭
-$APPEND_彅
 $APPEND_彊
 $APPEND_彌
 $APPEND_彎
@@ -20850,6 +20836,7 @@ $APPEND_当社
 $APPEND_当該
 $APPEND_当選
 $APPEND_当面
+$APPEND_彗
 $APPEND_彗星
 $APPEND_彙
 $APPEND_彝
@@ -20975,6 +20962,7 @@ $APPEND_御堂
 $APPEND_御影
 $APPEND_御所
 $APPEND_御殿
+$APPEND_徧
 $APPEND_復
 $APPEND_復元
 $APPEND_復刻
@@ -20987,6 +20975,7 @@ $APPEND_復興
 $APPEND_復讐
 $APPEND_循
 $APPEND_循環
+$APPEND_徭
 $APPEND_微
 $APPEND_微分
 $APPEND_微妙
@@ -21160,8 +21149,8 @@ $APPEND_恵比寿
 $APPEND_恵那
 $APPEND_悉
 $APPEND_悌
+$APPEND_悍
 $APPEND_悔
-$APPEND_悝
 $APPEND_悟
 $APPEND_悟り
 $APPEND_悟空
@@ -21171,7 +21160,6 @@ $APPEND_患い
 $APPEND_患っ
 $APPEND_患者
 $APPEND_悦
-$APPEND_悧
 $APPEND_悩
 $APPEND_悩まさ
 $APPEND_悩み
@@ -21209,6 +21197,7 @@ $APPEND_惟
 $APPEND_惠
 $APPEND_惡
 $APPEND_惣
+$APPEND_惧
 $APPEND_惨
 $APPEND_惨敗
 $APPEND_惰
@@ -21271,7 +21260,6 @@ $APPEND_感銘
 $APPEND_愷
 $APPEND_愼
 $APPEND_愿
-$APPEND_慄
 $APPEND_慇
 $APPEND_慈
 $APPEND_慈善
@@ -21315,22 +21303,27 @@ $APPEND_憎悪
 $APPEND_憐
 $APPEND_憑
 $APPEND_憑依
+$APPEND_憔
 $APPEND_憚
 $APPEND_憤
 $APPEND_憤慨
 $APPEND_憧
 $APPEND_憧れ
 $APPEND_憩
+$APPEND_憫
+$APPEND_憬
 $APPEND_憲
 $APPEND_憲兵
 $APPEND_憲政
 $APPEND_憲法
 $APPEND_憲章
 $APPEND_憶
+$APPEND_憺
 $APPEND_憾
 $APPEND_懇
 $APPEND_懇願
 $APPEND_應
+$APPEND_懊
 $APPEND_懋
 $APPEND_懐
 $APPEND_懐疑
@@ -21342,6 +21335,7 @@ $APPEND_懸命
 $APPEND_懸念
 $APPEND_懸賞
 $APPEND_懺
+$APPEND_懼
 $APPEND_懿
 $APPEND_戀
 $APPEND_戈
@@ -21378,11 +21372,11 @@ $APPEND_我が
 $APPEND_我孫子
 $APPEND_我慢
 $APPEND_戒
+$APPEND_戔
 $APPEND_或
 $APPEND_或いは
 $APPEND_战
 $APPEND_戚
-$APPEND_戛
 $APPEND_戟
 $APPEND_戡
 $APPEND_戦
@@ -21677,7 +21671,7 @@ $APPEND_拳
 $APPEND_拳法
 $APPEND_拳銃
 $APPEND_拵
-$APPEND_拷
+$APPEND_拶
 $APPEND_拷問
 $APPEND_拼
 $APPEND_拾
@@ -21727,7 +21721,6 @@ $APPEND_挑む
 $APPEND_挑ん
 $APPEND_挑戦
 $APPEND_挑発
-$APPEND_挖
 $APPEND_挙
 $APPEND_挙がっ
 $APPEND_挙げ
@@ -21740,7 +21733,6 @@ $APPEND_挟
 $APPEND_挟ま
 $APPEND_挟み
 $APPEND_挟ん
-$APPEND_挨
 $APPEND_挨拶
 $APPEND_挫
 $APPEND_挫折
@@ -21762,6 +21754,7 @@ $APPEND_振動
 $APPEND_振替
 $APPEND_振興
 $APPEND_振舞
+$APPEND_挹
 $APPEND_挺
 $APPEND_挽
 $APPEND_挾
@@ -21815,7 +21808,6 @@ $APPEND_授業
 $APPEND_授賞
 $APPEND_掌
 $APPEND_掌握
-$APPEND_掏
 $APPEND_排
 $APPEND_排出
 $APPEND_排気
@@ -21855,6 +21847,7 @@ $APPEND_探検
 $APPEND_探求
 $APPEND_探知
 $APPEND_探索
+$APPEND_掣
 $APPEND_接
 $APPEND_接し
 $APPEND_接する
@@ -21938,7 +21931,6 @@ $APPEND_援
 $APPEND_援助
 $APPEND_援護
 $APPEND_援軍
-$APPEND_揶
 $APPEND_揶揄
 $APPEND_揺
 $APPEND_揺れ
@@ -21964,7 +21956,6 @@ $APPEND_摂
 $APPEND_摂取
 $APPEND_摂政
 $APPEND_摂津
-$APPEND_摔
 $APPEND_摘
 $APPEND_摘発
 $APPEND_摠
@@ -22008,7 +21999,7 @@ $APPEND_擁し
 $APPEND_擁する
 $APPEND_擁立
 $APPEND_擁護
-$APPEND_擅
+$APPEND_擂
 $APPEND_操
 $APPEND_操っ
 $APPEND_操ら
@@ -22024,6 +22015,7 @@ $APPEND_擬
 $APPEND_擬似
 $APPEND_擬態
 $APPEND_擱
+$APPEND_擲
 $APPEND_擲弾
 $APPEND_擾
 $APPEND_攀
@@ -22032,6 +22024,7 @@ $APPEND_攝
 $APPEND_攣
 $APPEND_攪
 $APPEND_攫
+$APPEND_攬
 $APPEND_支
 $APPEND_支え
 $APPEND_支える
@@ -22279,6 +22272,7 @@ $APPEND_斡旋
 $APPEND_斤
 $APPEND_斥
 $APPEND_斧
+$APPEND_斫
 $APPEND_斬
 $APPEND_斬り
 $APPEND_斬新
@@ -22384,7 +22378,6 @@ $APPEND_旗
 $APPEND_旗揚げ
 $APPEND_旗本
 $APPEND_旗艦
-$APPEND_旛
 $APPEND_无
 $APPEND_既
 $APPEND_既に
@@ -22519,6 +22512,7 @@ $APPEND_春日井
 $APPEND_春樹
 $APPEND_春秋
 $APPEND_春風
+$APPEND_昧
 $APPEND_昨
 $APPEND_昨年
 $APPEND_昭
@@ -22552,6 +22546,7 @@ $APPEND_晏
 $APPEND_晒
 $APPEND_晒さ
 $APPEND_晟
+$APPEND_晤
 $APPEND_晦
 $APPEND_晧
 $APPEND_晨
@@ -22569,7 +22564,6 @@ $APPEND_景品
 $APPEND_景気
 $APPEND_景色
 $APPEND_景観
-$APPEND_晰
 $APPEND_晴
 $APPEND_晴れ
 $APPEND_晶
@@ -22637,7 +22631,6 @@ $APPEND_更に
 $APPEND_更新
 $APPEND_更生
 $APPEND_更迭
-$APPEND_曷
 $APPEND_書
 $APPEND_書い
 $APPEND_書か
@@ -22891,6 +22884,7 @@ $APPEND_村落
 $APPEND_村長
 $APPEND_杓
 $APPEND_杖
+$APPEND_杙
 $APPEND_杜
 $APPEND_杞
 $APPEND_束
@@ -22983,6 +22977,7 @@ $APPEND_板橋
 $APPEND_枇
 $APPEND_枋
 $APPEND_析
+$APPEND_枓
 $APPEND_枕
 $APPEND_林
 $APPEND_林家
@@ -23080,6 +23075,7 @@ $APPEND_校章
 $APPEND_校舎
 $APPEND_校長
 $APPEND_栢
+$APPEND_栩
 $APPEND_株
 $APPEND_株主
 $APPEND_株価
@@ -23100,7 +23096,6 @@ $APPEND_格子
 $APPEND_格差
 $APPEND_格納
 $APPEND_格闘
-$APPEND_栽
 $APPEND_栽培
 $APPEND_桀
 $APPEND_桁
@@ -23122,7 +23117,6 @@ $APPEND_桑名
 $APPEND_桑田
 $APPEND_桓
 $APPEND_桔
-$APPEND_桙
 $APPEND_桜
 $APPEND_桜井
 $APPEND_桜木
@@ -23141,7 +23135,6 @@ $APPEND_梃
 $APPEND_梅
 $APPEND_梅田
 $APPEND_梓
-$APPEND_梔
 $APPEND_梗
 $APPEND_梗塞
 $APPEND_條
@@ -23272,6 +23265,7 @@ $APPEND_榊原
 $APPEND_榎
 $APPEND_榎本
 $APPEND_榑
+$APPEND_榔
 $APPEND_榕
 $APPEND_榛
 $APPEND_榜
@@ -23279,6 +23273,7 @@ $APPEND_榧
 $APPEND_榮
 $APPEND_榴
 $APPEND_榴弾
+$APPEND_槃
 $APPEND_槇
 $APPEND_槊
 $APPEND_構
@@ -23389,6 +23384,7 @@ $APPEND_檀
 $APPEND_檄
 $APPEND_檎
 $APPEND_檜
+$APPEND_檢
 $APPEND_檣
 $APPEND_檮
 $APPEND_檳
@@ -23584,7 +23580,6 @@ $APPEND_残虐
 $APPEND_残酷
 $APPEND_残骸
 $APPEND_殖
-$APPEND_殘
 $APPEND_殤
 $APPEND_殲
 $APPEND_殲滅
@@ -23782,7 +23777,6 @@ $APPEND_池袋
 $APPEND_汪
 $APPEND_汰
 $APPEND_汲
-$APPEND_汴
 $APPEND_汶
 $APPEND_決
 $APPEND_決して
@@ -23818,7 +23812,6 @@ $APPEND_沈ん
 $APPEND_沈没
 $APPEND_沈着
 $APPEND_沈黙
-$APPEND_沌
 $APPEND_沐
 $APPEND_沓
 $APPEND_沔
@@ -23961,6 +23954,7 @@ $APPEND_洩
 $APPEND_洪
 $APPEND_洪水
 $APPEND_洮
+$APPEND_洱
 $APPEND_洲
 $APPEND_洵
 $APPEND_洸
@@ -24067,7 +24061,6 @@ $APPEND_海面
 $APPEND_浸
 $APPEND_浸水
 $APPEND_浸透
-$APPEND_涂
 $APPEND_涅
 $APPEND_涇
 $APPEND_消
@@ -24089,7 +24082,6 @@ $APPEND_涌
 $APPEND_涎
 $APPEND_涙
 $APPEND_涛
-$APPEND_涜
 $APPEND_涪
 $APPEND_涯
 $APPEND_液
@@ -24102,9 +24094,7 @@ $APPEND_涼子
 $APPEND_涿
 $APPEND_淀
 $APPEND_淀川
-$APPEND_淄
 $APPEND_淅
-$APPEND_淇
 $APPEND_淋
 $APPEND_淑
 $APPEND_淘
@@ -24116,6 +24106,7 @@ $APPEND_淡路
 $APPEND_淤
 $APPEND_淦
 $APPEND_淨
+$APPEND_淪
 $APPEND_淫
 $APPEND_淮
 $APPEND_深
@@ -24197,7 +24188,6 @@ $APPEND_渡米
 $APPEND_渡航
 $APPEND_渡辺
 $APPEND_渡部
-$APPEND_渣
 $APPEND_渤
 $APPEND_渥
 $APPEND_渥美
@@ -24216,6 +24206,7 @@ $APPEND_港
 $APPEND_港湾
 $APPEND_港町
 $APPEND_游
+$APPEND_渺
 $APPEND_渾
 $APPEND_湊
 $APPEND_湍
@@ -24312,8 +24303,6 @@ $APPEND_滞在
 $APPEND_滬
 $APPEND_滲
 $APPEND_滴
-$APPEND_滷
-$APPEND_滸
 $APPEND_滾
 $APPEND_滿
 $APPEND_漁
@@ -24361,6 +24350,7 @@ $APPEND_漳
 $APPEND_漸
 $APPEND_漿
 $APPEND_潁
+$APPEND_潅
 $APPEND_潔
 $APPEND_潘
 $APPEND_潜
@@ -24399,7 +24389,6 @@ $APPEND_激減
 $APPEND_激突
 $APPEND_激闘
 $APPEND_濁
-$APPEND_濂
 $APPEND_濃
 $APPEND_濃い
 $APPEND_濃く
@@ -24413,7 +24402,6 @@ $APPEND_濤
 $APPEND_濫
 $APPEND_濬
 $APPEND_濮
-$APPEND_濯
 $APPEND_濰
 $APPEND_濱
 $APPEND_濵
@@ -24439,6 +24427,7 @@ $APPEND_灌
 $APPEND_灌漑
 $APPEND_灘
 $APPEND_灣
+$APPEND_灤
 $APPEND_火
 $APPEND_火事
 $APPEND_火力
@@ -24543,7 +24532,6 @@ $APPEND_煌
 $APPEND_煎
 $APPEND_煒
 $APPEND_煕
-$APPEND_煖
 $APPEND_煙
 $APPEND_煙突
 $APPEND_煙草
@@ -24554,6 +24542,7 @@ $APPEND_照
 $APPEND_照射
 $APPEND_照明
 $APPEND_照準
+$APPEND_煨
 $APPEND_煩
 $APPEND_煬
 $APPEND_煮
@@ -24563,6 +24552,7 @@ $APPEND_熊
 $APPEND_熊本
 $APPEND_熊谷
 $APPEND_熊野
+$APPEND_熏
 $APPEND_熔
 $APPEND_熙
 $APPEND_熟
@@ -24594,12 +24584,12 @@ $APPEND_燐
 $APPEND_燕
 $APPEND_燗
 $APPEND_營
-$APPEND_燥
 $APPEND_燦
 $APPEND_燧
 $APPEND_燭
 $APPEND_燮
 $APPEND_燻
+$APPEND_燼
 $APPEND_燾
 $APPEND_燿
 $APPEND_爆
@@ -24628,7 +24618,6 @@ $APPEND_爺
 $APPEND_爻
 $APPEND_爽
 $APPEND_爾
-$APPEND_牆
 $APPEND_片
 $APPEND_片側
 $APPEND_片山
@@ -24780,6 +24769,7 @@ $APPEND_猴
 $APPEND_猶
 $APPEND_猶予
 $APPEND_猷
+$APPEND_猾
 $APPEND_猿
 $APPEND_獄
 $APPEND_獅
@@ -24825,7 +24815,6 @@ $APPEND_玩具
 $APPEND_玫
 $APPEND_玲
 $APPEND_玻
-$APPEND_珀
 $APPEND_珂
 $APPEND_珈
 $APPEND_珉
@@ -24834,7 +24823,6 @@ $APPEND_珍
 $APPEND_珍しい
 $APPEND_珍しく
 $APPEND_珠
-$APPEND_珥
 $APPEND_珪
 $APPEND_班
 $APPEND_現
@@ -24908,6 +24896,8 @@ $APPEND_瑣
 $APPEND_瑤
 $APPEND_瑩
 $APPEND_瑪
+$APPEND_瑰
+$APPEND_瑳
 $APPEND_瑶
 $APPEND_瑾
 $APPEND_璃
@@ -24929,6 +24919,7 @@ $APPEND_璿
 $APPEND_瓊
 $APPEND_瓌
 $APPEND_瓏
+$APPEND_瓔
 $APPEND_瓘
 $APPEND_瓚
 $APPEND_瓜
@@ -24937,7 +24928,6 @@ $APPEND_瓠
 $APPEND_瓢
 $APPEND_瓦
 $APPEND_瓶
-$APPEND_瓷
 $APPEND_甄
 $APPEND_甌
 $APPEND_甑
@@ -25003,7 +24993,6 @@ $APPEND_生身
 $APPEND_生還
 $APPEND_生野
 $APPEND_生駒
-$APPEND_產
 $APPEND_産
 $APPEND_産み
 $APPEND_産む
@@ -25224,7 +25213,6 @@ $APPEND_癒
 $APPEND_癖
 $APPEND_癩
 $APPEND_癪
-$APPEND_癬
 $APPEND_癲
 $APPEND_癸
 $APPEND_発
@@ -25332,7 +25320,6 @@ $APPEND_皮
 $APPEND_皮切り
 $APPEND_皮肉
 $APPEND_皮膚
-$APPEND_皴
 $APPEND_皺
 $APPEND_皿
 $APPEND_盂
@@ -25369,6 +25356,7 @@ $APPEND_監視
 $APPEND_盤
 $APPEND_盥
 $APPEND_盧
+$APPEND_盪
 $APPEND_目
 $APPEND_目さ
 $APPEND_目の
@@ -25447,6 +25435,7 @@ $APPEND_盾
 $APPEND_省
 $APPEND_省庁
 $APPEND_省略
+$APPEND_眈
 $APPEND_眉
 $APPEND_看
 $APPEND_看板
@@ -25488,7 +25477,6 @@ $APPEND_眠り
 $APPEND_眠る
 $APPEND_眩
 $APPEND_眷
-$APPEND_眸
 $APPEND_眺
 $APPEND_眺め
 $APPEND_眼
@@ -25520,6 +25508,8 @@ $APPEND_睾
 $APPEND_睿
 $APPEND_瞑
 $APPEND_瞑想
+$APPEND_瞞
+$APPEND_瞥
 $APPEND_瞬
 $APPEND_瞬時
 $APPEND_瞬間
@@ -25528,6 +25518,7 @@ $APPEND_瞰
 $APPEND_瞳
 $APPEND_瞻
 $APPEND_瞼
+$APPEND_瞽
 $APPEND_瞿
 $APPEND_矗
 $APPEND_矛
@@ -25603,6 +25594,7 @@ $APPEND_砂川
 $APPEND_砂浜
 $APPEND_砂漠
 $APPEND_砂糖
+$APPEND_砌
 $APPEND_砒
 $APPEND_研
 $APPEND_研修
@@ -25680,12 +25672,14 @@ $APPEND_磋
 $APPEND_磐
 $APPEND_磐田
 $APPEND_磔
+$APPEND_磧
 $APPEND_磨
 $APPEND_磯
 $APPEND_磾
 $APPEND_礁
 $APPEND_礎
 $APPEND_礒
+$APPEND_礙
 $APPEND_礦
 $APPEND_礪
 $APPEND_礫
@@ -25698,7 +25692,6 @@ $APPEND_示唆
 $APPEND_礼
 $APPEND_礼儀
 $APPEND_礼拝
-$APPEND_礽
 $APPEND_社
 $APPEND_社交
 $APPEND_社会
@@ -25799,6 +25792,7 @@ $APPEND_福島
 $APPEND_福建
 $APPEND_福澤
 $APPEND_福田
+$APPEND_福知
 $APPEND_福知山
 $APPEND_福祉
 $APPEND_福音
@@ -25809,6 +25803,7 @@ $APPEND_禪
 $APPEND_禮
 $APPEND_禰
 $APPEND_禹
+$APPEND_禺
 $APPEND_禽
 $APPEND_禾
 $APPEND_禿
@@ -25908,7 +25903,6 @@ $APPEND_稲垣
 $APPEND_稲荷
 $APPEND_稲葉
 $APPEND_稷
-$APPEND_稻
 $APPEND_稼
 $APPEND_稼い
 $APPEND_稼ぎ
@@ -25976,7 +25970,6 @@ $APPEND_突起
 $APPEND_突進
 $APPEND_窃
 $APPEND_窃盗
-$APPEND_窄
 $APPEND_窈
 $APPEND_窒
 $APPEND_窒素
@@ -26068,7 +26061,6 @@ $APPEND_笑っ
 $APPEND_笑わ
 $APPEND_笑福亭
 $APPEND_笑顔
-$APPEND_笘
 $APPEND_笙
 $APPEND_笛
 $APPEND_笞
@@ -26114,6 +26106,7 @@ $APPEND_筥
 $APPEND_筧
 $APPEND_筬
 $APPEND_筮
+$APPEND_筰
 $APPEND_筵
 $APPEND_筺
 $APPEND_箆
@@ -26185,7 +26178,6 @@ $APPEND_籌
 $APPEND_籍
 $APPEND_籐
 $APPEND_籔
-$APPEND_籟
 $APPEND_籠
 $APPEND_籠城
 $APPEND_籤
@@ -26198,6 +26190,7 @@ $APPEND_米沢
 $APPEND_米英
 $APPEND_米軍
 $APPEND_籾
+$APPEND_粁
 $APPEND_粂
 $APPEND_粉
 $APPEND_粉末
@@ -26215,7 +26208,6 @@ $APPEND_粛清
 $APPEND_粟
 $APPEND_粤
 $APPEND_粥
-$APPEND_粧
 $APPEND_粲
 $APPEND_粽
 $APPEND_精
@@ -26457,6 +26449,7 @@ $APPEND_続編
 $APPEND_続行
 $APPEND_綜
 $APPEND_綝
+$APPEND_綠
 $APPEND_綫
 $APPEND_綬
 $APPEND_綬章
@@ -26551,7 +26544,6 @@ $APPEND_縋
 $APPEND_縒
 $APPEND_縛
 $APPEND_縞
-$APPEND_縢
 $APPEND_縣
 $APPEND_縦
 $APPEND_縦断
@@ -26560,9 +26552,9 @@ $APPEND_縫
 $APPEND_縮
 $APPEND_縮小
 $APPEND_縯
+$APPEND_縵
 $APPEND_縷
 $APPEND_縹
-$APPEND_縺
 $APPEND_總
 $APPEND_績
 $APPEND_繁
@@ -26580,7 +26572,6 @@ $APPEND_繋がっ
 $APPEND_繋がり
 $APPEND_繋がる
 $APPEND_繋ぐ
-$APPEND_繍
 $APPEND_織
 $APPEND_織り
 $APPEND_織物
@@ -26612,6 +26603,7 @@ $APPEND_线
 $APPEND_缶
 $APPEND_罐
 $APPEND_网
+$APPEND_罔
 $APPEND_罕
 $APPEND_罘
 $APPEND_罠
@@ -26634,6 +26626,7 @@ $APPEND_罵
 $APPEND_罷
 $APPEND_罷免
 $APPEND_罹
+$APPEND_羂
 $APPEND_羅
 $APPEND_羆
 $APPEND_羊
@@ -26708,7 +26701,6 @@ $APPEND_翡
 $APPEND_翫
 $APPEND_翰
 $APPEND_翳
-$APPEND_翹
 $APPEND_翻
 $APPEND_翻弄
 $APPEND_翻訳
@@ -26809,6 +26801,7 @@ $APPEND_肥料
 $APPEND_肥満
 $APPEND_肩
 $APPEND_肩書き
+$APPEND_肪
 $APPEND_肯
 $APPEND_肯定
 $APPEND_肱
@@ -26906,7 +26899,6 @@ $APPEND_腿
 $APPEND_膀
 $APPEND_膂
 $APPEND_膏
-$APPEND_膚
 $APPEND_膜
 $APPEND_膝
 $APPEND_膠
@@ -26929,7 +26921,6 @@ $APPEND_臍
 $APPEND_臓
 $APPEND_臓器
 $APPEND_臘
-$APPEND_臙
 $APPEND_臣
 $APPEND_臣下
 $APPEND_臥
@@ -26997,7 +26988,6 @@ $APPEND_致死
 $APPEND_臺
 $APPEND_臻
 $APPEND_臼
-$APPEND_舁
 $APPEND_舂
 $APPEND_舅
 $APPEND_與
@@ -27166,7 +27156,6 @@ $APPEND_英米
 $APPEND_英訳
 $APPEND_英語
 $APPEND_英雄
-$APPEND_苴
 $APPEND_苺
 $APPEND_苻
 $APPEND_茂
@@ -27184,7 +27173,7 @@ $APPEND_茨
 $APPEND_茨城
 $APPEND_茨木
 $APPEND_茫
-$APPEND_茯
+$APPEND_茱
 $APPEND_茲
 $APPEND_茶
 $APPEND_茶屋
@@ -27215,6 +27204,7 @@ $APPEND_荷重
 $APPEND_荻
 $APPEND_荼
 $APPEND_莆
+$APPEND_莇
 $APPEND_莉
 $APPEND_莊
 $APPEND_莎
@@ -27238,9 +27228,9 @@ $APPEND_菌
 $APPEND_菓
 $APPEND_菓子
 $APPEND_菖
+$APPEND_菘
 $APPEND_菜
 $APPEND_菟
-$APPEND_菩
 $APPEND_菩提
 $APPEND_菩薩
 $APPEND_菫
@@ -27365,11 +27355,12 @@ $APPEND_蕩
 $APPEND_蕪
 $APPEND_蕭
 $APPEND_蕾
+$APPEND_薀
+$APPEND_薁
 $APPEND_薄
 $APPEND_薄い
 $APPEND_薄く
 $APPEND_薇
-$APPEND_薈
 $APPEND_薊
 $APPEND_薔薇
 $APPEND_薗
@@ -27389,6 +27380,7 @@ $APPEND_薬学
 $APPEND_薬局
 $APPEND_薬師
 $APPEND_薬物
+$APPEND_薭
 $APPEND_薮
 $APPEND_薯
 $APPEND_藁
@@ -27450,7 +27442,6 @@ $APPEND_蛋
 $APPEND_蛋白
 $APPEND_蛍
 $APPEND_蛍光
-$APPEND_蛎
 $APPEND_蛙
 $APPEND_蛛
 $APPEND_蛟
@@ -27474,7 +27465,6 @@ $APPEND_蜷
 $APPEND_蜻
 $APPEND_蝉
 $APPEND_蝋
-$APPEND_蝎
 $APPEND_蝕
 $APPEND_蝗
 $APPEND_蝙
@@ -27484,7 +27474,6 @@ $APPEND_蝮
 $APPEND_蝶
 $APPEND_蝸
 $APPEND_蝿
-$APPEND_螂
 $APPEND_融
 $APPEND_融合
 $APPEND_融資
@@ -27599,7 +27588,6 @@ $APPEND_袋
 $APPEND_袍
 $APPEND_袖
 $APPEND_袞
-$APPEND_袢
 $APPEND_被
 $APPEND_被っ
 $APPEND_被る
@@ -27609,7 +27597,6 @@ $APPEND_被弾
 $APPEND_被災
 $APPEND_被爆
 $APPEND_被疑
-$APPEND_袰
 $APPEND_袱
 $APPEND_袴
 $APPEND_袷
@@ -27693,7 +27680,6 @@ $APPEND_襄
 $APPEND_襖
 $APPEND_襞
 $APPEND_襟
-$APPEND_襤
 $APPEND_襦
 $APPEND_襲
 $APPEND_襲い
@@ -27704,6 +27690,7 @@ $APPEND_襲わ
 $APPEND_襲名
 $APPEND_襲撃
 $APPEND_襲来
+$APPEND_襴
 $APPEND_襷
 $APPEND_西
 $APPEND_西ドイツ
@@ -27762,7 +27749,6 @@ $APPEND_覆わ
 $APPEND_覆面
 $APPEND_覇
 $APPEND_覇権
-$APPEND_覈
 $APPEND_見
 $APPEND_見い
 $APPEND_見え
@@ -27854,7 +27840,6 @@ $APPEND_親方
 $APPEND_親族
 $APPEND_親王
 $APPEND_親衛
-$APPEND_覯
 $APPEND_観
 $APPEND_観光
 $APPEND_観客
@@ -27953,7 +27938,6 @@ $APPEND_記録
 $APPEND_訛
 $APPEND_訝
 $APPEND_訟
-$APPEND_訢
 $APPEND_訣
 $APPEND_訥
 $APPEND_訪
@@ -27995,6 +27979,7 @@ $APPEND_証拠
 $APPEND_証明
 $APPEND_証書
 $APPEND_証言
+$APPEND_詁
 $APPEND_詐
 $APPEND_詐欺
 $APPEND_詔
@@ -28064,7 +28049,6 @@ $APPEND_認定
 $APPEND_認知
 $APPEND_認証
 $APPEND_認識
-$APPEND_誑
 $APPEND_誓
 $APPEND_誓い
 $APPEND_誓う
@@ -28092,6 +28076,7 @@ $APPEND_語彙
 $APPEND_語源
 $APPEND_誠
 $APPEND_誠実
+$APPEND_誡
 $APPEND_誣
 $APPEND_誤
 $APPEND_誤っ
@@ -28166,6 +28151,7 @@ $APPEND_論争
 $APPEND_論文
 $APPEND_論理
 $APPEND_諜報
+$APPEND_諝
 $APPEND_諡
 $APPEND_諦
 $APPEND_諦め
@@ -28176,6 +28162,7 @@ $APPEND_諭
 $APPEND_諮
 $APPEND_諮問
 $APPEND_諱
+$APPEND_諳
 $APPEND_諶
 $APPEND_諷
 $APPEND_諸
@@ -28217,7 +28204,6 @@ $APPEND_謳
 $APPEND_謹
 $APPEND_謹慎
 $APPEND_證
-$APPEND_譏
 $APPEND_識
 $APPEND_識別
 $APPEND_譙
@@ -28276,6 +28262,7 @@ $APPEND_谺
 $APPEND_谿
 $APPEND_豆
 $APPEND_豆腐
+$APPEND_豉
 $APPEND_豊
 $APPEND_豊か
 $APPEND_豊中
@@ -28383,7 +28370,6 @@ $APPEND_費用
 $APPEND_貼
 $APPEND_貼ら
 $APPEND_貼り
-$APPEND_貽
 $APPEND_貿
 $APPEND_貿易
 $APPEND_賀
@@ -28404,7 +28390,6 @@ $APPEND_資産
 $APPEND_資金
 $APPEND_賈
 $APPEND_賊
-$APPEND_賎
 $APPEND_賑
 $APPEND_賓
 $APPEND_賛
@@ -28417,6 +28402,7 @@ $APPEND_賞
 $APPEND_賞品
 $APPEND_賞賛
 $APPEND_賞金
+$APPEND_賠
 $APPEND_賠償
 $APPEND_賢
 $APPEND_賢治
@@ -28463,7 +28449,6 @@ $APPEND_赤色
 $APPEND_赤軍
 $APPEND_赤道
 $APPEND_赦
-$APPEND_赧
 $APPEND_赫
 $APPEND_赭
 $APPEND_走
@@ -28528,7 +28513,6 @@ $APPEND_足跡
 $APPEND_趾
 $APPEND_跆
 $APPEND_跋
-$APPEND_跎
 $APPEND_跗
 $APPEND_跛
 $APPEND_距
@@ -28558,15 +28542,11 @@ $APPEND_踏ん
 $APPEND_踏切
 $APPEND_踏襲
 $APPEND_踞
-$APPEND_踰
 $APPEND_踵
 $APPEND_蹂
 $APPEND_蹄
-$APPEND_蹉
-$APPEND_蹊
 $APPEND_蹋
 $APPEND_蹟
-$APPEND_蹠
 $APPEND_蹲
 $APPEND_蹴
 $APPEND_蹴り
@@ -28589,7 +28569,6 @@ $APPEND_身長
 $APPEND_躬
 $APPEND_躯
 $APPEND_躰
-$APPEND_躱
 $APPEND_躾
 $APPEND_軀
 $APPEND_車
@@ -28628,7 +28607,6 @@ $APPEND_軍隊
 $APPEND_軍需
 $APPEND_軒
 $APPEND_軕
-$APPEND_軛
 $APPEND_軟
 $APPEND_軟式
 $APPEND_転
@@ -28700,7 +28678,6 @@ $APPEND_轢
 $APPEND_车
 $APPEND_辛
 $APPEND_辛い
-$APPEND_辜
 $APPEND_辞
 $APPEND_辞し
 $APPEND_辞め
@@ -28711,7 +28688,6 @@ $APPEND_辞職
 $APPEND_辞退
 $APPEND_辟
 $APPEND_辣
-$APPEND_辦
 $APPEND_辨
 $APPEND_辭
 $APPEND_辮
@@ -28793,7 +28769,6 @@ $APPEND_返還
 $APPEND_迢
 $APPEND_迥
 $APPEND_迦
-$APPEND_迩
 $APPEND_迪
 $APPEND_迫
 $APPEND_迫っ
@@ -28972,7 +28947,6 @@ $APPEND_連載
 $APPEND_連邦
 $APPEND_連鎖
 $APPEND_連隊
-$APPEND_逮
 $APPEND_逮捕
 $APPEND_週
 $APPEND_週刊
@@ -29246,8 +29220,8 @@ $APPEND_都心
 $APPEND_都督
 $APPEND_都立
 $APPEND_鄂
-$APPEND_鄄
 $APPEND_鄒
+$APPEND_鄔
 $APPEND_鄖
 $APPEND_鄙
 $APPEND_鄢
@@ -29304,10 +29278,10 @@ $APPEND_酸
 $APPEND_酸化
 $APPEND_酸性
 $APPEND_酸素
+$APPEND_醂
 $APPEND_醇
 $APPEND_醉
 $APPEND_醍醐
-$APPEND_醐
 $APPEND_醒
 $APPEND_醗
 $APPEND_醜
@@ -29416,6 +29390,7 @@ $APPEND_鈞
 $APPEND_鈴
 $APPEND_鈴木
 $APPEND_鈴鹿
+$APPEND_鈷
 $APPEND_鈺
 $APPEND_鈿
 $APPEND_鉄
@@ -29465,7 +29440,6 @@ $APPEND_銕
 $APPEND_銘
 $APPEND_銘打
 $APPEND_銘柄
-$APPEND_銚
 $APPEND_銚子
 $APPEND_銛
 $APPEND_銜
@@ -29490,6 +29464,7 @@ $APPEND_錐
 $APPEND_錘
 $APPEND_錚
 $APPEND_錠
+$APPEND_錢
 $APPEND_錣
 $APPEND_錦
 $APPEND_錨
@@ -29547,7 +29522,6 @@ $APPEND_鑑定
 $APPEND_鑑賞
 $APPEND_鑒
 $APPEND_鑓
-$APPEND_鑚
 $APPEND_鑢
 $APPEND_鑫
 $APPEND_鑰
@@ -29704,6 +29678,8 @@ $APPEND_閼
 $APPEND_閾
 $APPEND_闇
 $APPEND_闊
+$APPEND_闍
+$APPEND_闐
 $APPEND_闓
 $APPEND_闕
 $APPEND_闖
@@ -29713,6 +29689,7 @@ $APPEND_闘争
 $APPEND_闘士
 $APPEND_關
 $APPEND_闡
+$APPEND_闢
 $APPEND_闥
 $APPEND_阜
 $APPEND_阪
@@ -29775,6 +29752,7 @@ $APPEND_限る
 $APPEND_限定
 $APPEND_限度
 $APPEND_限界
+$APPEND_陕
 $APPEND_陘
 $APPEND_陛
 $APPEND_陛下
@@ -29813,11 +29791,13 @@ $APPEND_陵
 $APPEND_陶
 $APPEND_陶器
 $APPEND_陶芸
+$APPEND_陷
 $APPEND_陸
 $APPEND_陸上
 $APPEND_陸地
 $APPEND_陸奥
 $APPEND_陸戦
+$APPEND_陸海
 $APPEND_陸海軍
 $APPEND_陸軍
 $APPEND_険
@@ -29849,7 +29829,6 @@ $APPEND_隔
 $APPEND_隔て
 $APPEND_隔週
 $APPEND_隔離
-$APPEND_隕
 $APPEND_隕石
 $APPEND_隗
 $APPEND_隘
@@ -29989,6 +29968,7 @@ $APPEND_震災
 $APPEND_霊
 $APPEND_霊場
 $APPEND_霍
+$APPEND_霓
 $APPEND_霖
 $APPEND_霜
 $APPEND_霞
@@ -29998,7 +29978,6 @@ $APPEND_霰
 $APPEND_露
 $APPEND_露出
 $APPEND_霸
-$APPEND_霹
 $APPEND_霽
 $APPEND_靄
 $APPEND_靈
@@ -30060,7 +30039,6 @@ $APPEND_鞍
 $APPEND_鞏
 $APPEND_鞘
 $APPEND_鞠
-$APPEND_鞬
 $APPEND_鞭
 $APPEND_鞮
 $APPEND_鞴
@@ -30290,7 +30268,6 @@ $APPEND_館山
 $APPEND_館林
 $APPEND_館長
 $APPEND_饅
-$APPEND_饋
 $APPEND_饌
 $APPEND_饒
 $APPEND_饗
@@ -30349,6 +30326,8 @@ $APPEND_駐車
 $APPEND_駒
 $APPEND_駕
 $APPEND_駙
+$APPEND_駝
+$APPEND_駢
 $APPEND_駱
 $APPEND_駿
 $APPEND_駿河
@@ -30382,7 +30361,6 @@ $APPEND_驚き
 $APPEND_驚く
 $APPEND_驚異
 $APPEND_驛
-$APPEND_驟
 $APPEND_驢
 $APPEND_驤
 $APPEND_驥
@@ -30394,6 +30372,7 @@ $APPEND_骨格
 $APPEND_骨髄
 $APPEND_骸
 $APPEND_髄
+$APPEND_髏
 $APPEND_髑
 $APPEND_體
 $APPEND_高
@@ -30452,11 +30431,13 @@ $APPEND_高麗
 $APPEND_高齢
 $APPEND_髙
 $APPEND_髠
+$APPEND_髢
 $APPEND_髣
 $APPEND_髦
 $APPEND_髪
 $APPEND_髪型
 $APPEND_髭
+$APPEND_髯
 $APPEND_髷
 $APPEND_髻
 $APPEND_鬆
@@ -30465,18 +30446,18 @@ $APPEND_鬚
 $APPEND_鬢
 $APPEND_鬣
 $APPEND_鬨
-$APPEND_鬬
 $APPEND_鬱
+$APPEND_鬲
 $APPEND_鬼
 $APPEND_鬼太郎
 $APPEND_魁
 $APPEND_魂
+$APPEND_魃
 $APPEND_魄
 $APPEND_魅
 $APPEND_魅了
 $APPEND_魅力
 $APPEND_魍
-$APPEND_魎
 $APPEND_魏
 $APPEND_魑
 $APPEND_魔
@@ -30509,7 +30490,6 @@ $APPEND_鮮
 $APPEND_鮮やか
 $APPEND_鮮明
 $APPEND_鯉
-$APPEND_鯏
 $APPEND_鯖
 $APPEND_鯛
 $APPEND_鯨
@@ -30521,6 +30501,7 @@ $APPEND_鰍
 $APPEND_鰐
 $APPEND_鰒
 $APPEND_鰓
+$APPEND_鰕
 $APPEND_鰭
 $APPEND_鰯
 $APPEND_鰹
@@ -30555,10 +30536,8 @@ $APPEND_鴦
 $APPEND_鴨
 $APPEND_鴨川
 $APPEND_鴫
-$APPEND_鴬
 $APPEND_鴻
 $APPEND_鵜
-$APPEND_鵝
 $APPEND_鵞
 $APPEND_鵠
 $APPEND_鵡
@@ -30586,12 +30565,15 @@ $APPEND_鸚
 $APPEND_鸞
 $APPEND_鹵
 $APPEND_鹵獲
+$APPEND_鹸
 $APPEND_鹹
 $APPEND_鹽
 $APPEND_鹿
+$APPEND_鹿児
 $APPEND_鹿児島
 $APPEND_鹿屋
 $APPEND_鹿島
+$APPEND_麁
 $APPEND_麒
 $APPEND_麓
 $APPEND_麗
@@ -30616,6 +30598,7 @@ $APPEND_麻里
 $APPEND_麻雀
 $APPEND_麾
 $APPEND_麿
+$APPEND_黃
 $APPEND_黄
 $APPEND_黄色
 $APPEND_黄色い
@@ -30667,9 +30650,9 @@ $APPEND_龍馬
 $APPEND_龐
 $APPEND_龔
 $APPEND_龕
-$APPEND_龗
 $APPEND_龙
 $APPEND_龜
+$APPEND_고
 $APPEND_곡
 $APPEND_국
 $APPEND_김
@@ -30687,17 +30670,12 @@ $APPEND_으
 $APPEND_음
 $APPEND_의
 $APPEND_이
-$APPEND_일
 $APPEND_진
 $APPEND_집
 $APPEND_표
 $APPEND_홍
 $APPEND_﨑
 $APPEND_﨟
-$APPEND_󠄁
-$DELETE
-$KEEP
-$REPLACE_
 $REPLACE_!
 $REPLACE_"
 $REPLACE_"(
@@ -30707,6 +30685,7 @@ $REPLACE_"」
 $REPLACE_#
 $REPLACE_##!
 $REPLACE_##"
+$REPLACE_###
 $REPLACE_##%
 $REPLACE_##&
 $REPLACE_##'
@@ -31613,6 +31592,7 @@ $REPLACE_##oth
 $REPLACE_##other
 $REPLACE_##oto
 $REPLACE_##ott
+$REPLACE_##otten
 $REPLACE_##ou
 $REPLACE_##oud
 $REPLACE_##ough
@@ -31683,7 +31663,6 @@ $REPLACE_##ross
 $REPLACE_##row
 $REPLACE_##ru
 $REPLACE_##rum
-$REPLACE_##rumental
 $REPLACE_##ry
 $REPLACE_##s
 $REPLACE_##sch
@@ -31806,16 +31785,16 @@ $REPLACE_##}
 $REPLACE_##~
 $REPLACE_##¥
 $REPLACE_##°
+$REPLACE_##±
 $REPLACE_##»
-$REPLACE_##Á
+$REPLACE_##Ä
 $REPLACE_##É
 $REPLACE_##×
-$REPLACE_##Ü
+$REPLACE_##Ø
 $REPLACE_##ß
 $REPLACE_##à
 $REPLACE_##á
 $REPLACE_##án
-$REPLACE_##â
 $REPLACE_##ã
 $REPLACE_##ä
 $REPLACE_##å
@@ -31824,10 +31803,9 @@ $REPLACE_##ç
 $REPLACE_##è
 $REPLACE_##é
 $REPLACE_##ê
+$REPLACE_##ë
 $REPLACE_##ì
 $REPLACE_##í
-$REPLACE_##î
-$REPLACE_##ï
 $REPLACE_##ð
 $REPLACE_##ñ
 $REPLACE_##ò
@@ -31835,52 +31813,55 @@ $REPLACE_##ó
 $REPLACE_##ón
 $REPLACE_##ö
 $REPLACE_##ø
+$REPLACE_##ù
 $REPLACE_##ú
-$REPLACE_##û
 $REPLACE_##ü
 $REPLACE_##ür
 $REPLACE_##ý
 $REPLACE_##ā
-$REPLACE_##ă
 $REPLACE_##ć
+$REPLACE_##č
+$REPLACE_##ē
 $REPLACE_##ě
-$REPLACE_##ĩ
 $REPLACE_##ī
 $REPLACE_##ı
 $REPLACE_##ń
 $REPLACE_##ō
-$REPLACE_##ř
-$REPLACE_##š
 $REPLACE_##ū
 $REPLACE_##ż
 $REPLACE_##ž
 $REPLACE_##ư
+$REPLACE_##ǎ
 $REPLACE_##ǐ
+$REPLACE_##ɡ
 $REPLACE_##Ζ
+$REPLACE_##Κ
+$REPLACE_##Μ
 $REPLACE_##Φ
 $REPLACE_##α
+$REPLACE_##β
+$REPLACE_##γ
 $REPLACE_##δ
 $REPLACE_##ε
 $REPLACE_##η
 $REPLACE_##ι
-$REPLACE_##κ
 $REPLACE_##λ
 $REPLACE_##μ
 $REPLACE_##ν
 $REPLACE_##ξ
+$REPLACE_##ο
 $REPLACE_##ρ
 $REPLACE_##σ
 $REPLACE_##τ
 $REPLACE_##υ
-$REPLACE_##φ
-$REPLACE_##ψ
 $REPLACE_##ω
-$REPLACE_##ώ
-$REPLACE_##М
-$REPLACE_##Р
+$REPLACE_##Г
+$REPLACE_##П
+$REPLACE_##Х
 $REPLACE_##а
 $REPLACE_##ан
 $REPLACE_##ар
+$REPLACE_##б
 $REPLACE_##г
 $REPLACE_##д
 $REPLACE_##е
@@ -31893,6 +31874,7 @@ $REPLACE_##и
 $REPLACE_##ий
 $REPLACE_##ин
 $REPLACE_##ич
+$REPLACE_##й
 $REPLACE_##к
 $REPLACE_##ка
 $REPLACE_##л
@@ -31919,6 +31901,8 @@ $REPLACE_##ы
 $REPLACE_##ь
 $REPLACE_##ю
 $REPLACE_##я
+$REPLACE_##ו
+$REPLACE_##ל
 $REPLACE_##و
 $REPLACE_##ก
 $REPLACE_##ง
@@ -31944,29 +31928,29 @@ $REPLACE_##แ
 $REPLACE_##่
 $REPLACE_##้
 $REPLACE_##ํ
+$REPLACE_##ṭ
 $REPLACE_##ả
 $REPLACE_##ấ
 $REPLACE_##ế
 $REPLACE_##ờ
-$REPLACE_##–
 $REPLACE_##—
 $REPLACE_##―
 $REPLACE_##‘
 $REPLACE_##“
 $REPLACE_##”
+$REPLACE_##•
 $REPLACE_##※
 $REPLACE_##←
 $REPLACE_##→
 $REPLACE_##⇒
 $REPLACE_##∀
 $REPLACE_##−
+$REPLACE_##√
 $REPLACE_##∞
-$REPLACE_##≤
 $REPLACE_##△
 $REPLACE_##○
 $REPLACE_##☆
 $REPLACE_##♪
-$REPLACE_##⟨
 $REPLACE_##、
 $REPLACE_##。
 $REPLACE_##々
@@ -31976,7 +31960,6 @@ $REPLACE_##々木
 $REPLACE_##〆
 $REPLACE_##〈
 $REPLACE_##〉
-$REPLACE_##《
 $REPLACE_##「
 $REPLACE_##」
 $REPLACE_##『
@@ -32448,6 +32431,7 @@ $REPLACE_##ァ
 $REPLACE_##ア
 $REPLACE_##アイ
 $REPLACE_##アイランド
+$REPLACE_##アイレス
 $REPLACE_##アウト
 $REPLACE_##アス
 $REPLACE_##アップ
@@ -32533,7 +32517,7 @@ $REPLACE_##ウル
 $REPLACE_##ウルス
 $REPLACE_##ウロ
 $REPLACE_##ウン
-$REPLACE_##ウンサー
+$REPLACE_##ウンス
 $REPLACE_##ウンテン
 $REPLACE_##ウント
 $REPLACE_##ウンド
@@ -32581,6 +32565,7 @@ $REPLACE_##カット
 $REPLACE_##カップ
 $REPLACE_##カデ
 $REPLACE_##カナ
+$REPLACE_##カナル
 $REPLACE_##カミ
 $REPLACE_##カム
 $REPLACE_##カヤ
@@ -32608,6 +32593,7 @@ $REPLACE_##ガイ
 $REPLACE_##ガイモ
 $REPLACE_##ガキ
 $REPLACE_##ガス
+$REPLACE_##ガスカル
 $REPLACE_##ガタ
 $REPLACE_##ガニ
 $REPLACE_##ガメ
@@ -32666,6 +32652,7 @@ $REPLACE_##クション
 $REPLACE_##クス
 $REPLACE_##クスピア
 $REPLACE_##クセン
+$REPLACE_##クセンブルク
 $REPLACE_##クソン
 $REPLACE_##クタ
 $REPLACE_##クター
@@ -32746,7 +32733,9 @@ $REPLACE_##コラ
 $REPLACE_##コル
 $REPLACE_##コロ
 $REPLACE_##コン
+$REPLACE_##コンシン
 $REPLACE_##コンド
+$REPLACE_##コンドリア
 $REPLACE_##コー
 $REPLACE_##コース
 $REPLACE_##コード
@@ -32856,6 +32845,7 @@ $REPLACE_##シング
 $REPLACE_##シー
 $REPLACE_##ジ
 $REPLACE_##ジア
+$REPLACE_##ジアナ
 $REPLACE_##ジアム
 $REPLACE_##ジウム
 $REPLACE_##ジェ
@@ -32920,6 +32910,7 @@ $REPLACE_##ストリー
 $REPLACE_##ストル
 $REPLACE_##ストレーション
 $REPLACE_##ストロ
+$REPLACE_##ストロング
 $REPLACE_##ストン
 $REPLACE_##スパ
 $REPLACE_##スラ
@@ -33231,6 +33222,7 @@ $REPLACE_##ディーン
 $REPLACE_##デイ
 $REPLACE_##デオ
 $REPLACE_##デシュ
+$REPLACE_##デジャネイロ
 $REPLACE_##デス
 $REPLACE_##デスリーガ
 $REPLACE_##デター
@@ -33350,7 +33342,6 @@ $REPLACE_##ニバル
 $REPLACE_##ニャ
 $REPLACE_##ニヤ
 $REPLACE_##ニュ
-$REPLACE_##ニュメント
 $REPLACE_##ニュー
 $REPLACE_##ニョ
 $REPLACE_##ニル
@@ -33409,7 +33400,6 @@ $REPLACE_##ハイム
 $REPLACE_##ハウ
 $REPLACE_##ハウス
 $REPLACE_##ハウゼン
-$REPLACE_##ハッタン
 $REPLACE_##ハマ
 $REPLACE_##ハム
 $REPLACE_##ハメ
@@ -33424,12 +33414,10 @@ $REPLACE_##ハーゲン
 $REPLACE_##バ
 $REPLACE_##バイ
 $REPLACE_##バイザー
-$REPLACE_##バイジャン
 $REPLACE_##バイス
 $REPLACE_##バイバル
 $REPLACE_##バオ
 $REPLACE_##バキア
-$REPLACE_##バシー
 $REPLACE_##バス
 $REPLACE_##バスティ
 $REPLACE_##バダ
@@ -33738,6 +33726,7 @@ $REPLACE_##ミネーション
 $REPLACE_##ミネート
 $REPLACE_##ミヤ
 $REPLACE_##ミュ
+$REPLACE_##ミュエル
 $REPLACE_##ミュー
 $REPLACE_##ミル
 $REPLACE_##ミン
@@ -33962,6 +33951,7 @@ $REPLACE_##ルドー
 $REPLACE_##ルフ
 $REPLACE_##ルム
 $REPLACE_##ルン
+$REPLACE_##ルンベルク
 $REPLACE_##ルー
 $REPLACE_##ルーン
 $REPLACE_##レ
@@ -33990,6 +33980,7 @@ $REPLACE_##レンジ
 $REPLACE_##レンジャー
 $REPLACE_##レンス
 $REPLACE_##レンツ
+$REPLACE_##レンツェ
 $REPLACE_##レント
 $REPLACE_##レー
 $REPLACE_##レーション
@@ -34070,7 +34061,6 @@ $REPLACE_##ンシー
 $REPLACE_##ンジ
 $REPLACE_##ンジェ
 $REPLACE_##ンジャ
-$REPLACE_##ンジャミン
 $REPLACE_##ンジャー
 $REPLACE_##ンジャーズ
 $REPLACE_##ンジュ
@@ -34115,7 +34105,6 @@ $REPLACE_##ンバラ
 $REPLACE_##ンバー
 $REPLACE_##ンバーグ
 $REPLACE_##ンパ
-$REPLACE_##ンパイア
 $REPLACE_##ンパス
 $REPLACE_##ンプ
 $REPLACE_##ンプソン
@@ -34253,7 +34242,6 @@ $REPLACE_##ーク
 $REPLACE_##ークス
 $REPLACE_##ークル
 $REPLACE_##ーグ
-$REPLACE_##ーグナー
 $REPLACE_##ーグル
 $REPLACE_##ーシ
 $REPLACE_##ーション
@@ -34386,7 +34374,6 @@ $REPLACE_##二
 $REPLACE_##二つ
 $REPLACE_##二郎
 $REPLACE_##于
-$REPLACE_##云
 $REPLACE_##五
 $REPLACE_##五郎
 $REPLACE_##井
@@ -34430,6 +34417,7 @@ $REPLACE_##仮名
 $REPLACE_##仰
 $REPLACE_##仲
 $REPLACE_##件
+$REPLACE_##价
 $REPLACE_##任
 $REPLACE_##企
 $REPLACE_##伊
@@ -34462,8 +34450,8 @@ $REPLACE_##佚
 $REPLACE_##佛
 $REPLACE_##作
 $REPLACE_##作り
+$REPLACE_##佩
 $REPLACE_##佳
-$REPLACE_##併
 $REPLACE_##使
 $REPLACE_##侃
 $REPLACE_##來
@@ -34471,7 +34459,6 @@ $REPLACE_##侈
 $REPLACE_##例
 $REPLACE_##侍
 $REPLACE_##侑
-$REPLACE_##侘
 $REPLACE_##供
 $REPLACE_##依
 $REPLACE_##侠
@@ -34505,7 +34492,6 @@ $REPLACE_##倖
 $REPLACE_##候
 $REPLACE_##倚
 $REPLACE_##借
-$REPLACE_##倣
 $REPLACE_##値
 $REPLACE_##倩
 $REPLACE_##倫
@@ -34530,6 +34516,7 @@ $REPLACE_##傘
 $REPLACE_##備
 $REPLACE_##催
 $REPLACE_##傭
+$REPLACE_##傳
 $REPLACE_##債
 $REPLACE_##傷
 $REPLACE_##傾
@@ -34542,10 +34529,10 @@ $REPLACE_##僚
 $REPLACE_##僧
 $REPLACE_##儀
 $REPLACE_##儁
+$REPLACE_##億
 $REPLACE_##儒
 $REPLACE_##儘
 $REPLACE_##償
-$REPLACE_##儡
 $REPLACE_##優
 $REPLACE_##儲
 $REPLACE_##儺
@@ -34586,6 +34573,7 @@ $REPLACE_##内
 $REPLACE_##円
 $REPLACE_##冉
 $REPLACE_##冊
+$REPLACE_##册
 $REPLACE_##再
 $REPLACE_##冑
 $REPLACE_##冒
@@ -34603,17 +34591,15 @@ $REPLACE_##冷
 $REPLACE_##凄
 $REPLACE_##准
 $REPLACE_##凉
-$REPLACE_##凋
-$REPLACE_##凌
 $REPLACE_##凍
 $REPLACE_##凛
-$REPLACE_##凜
 $REPLACE_##凝
 $REPLACE_##几
 $REPLACE_##凡
 $REPLACE_##処
 $REPLACE_##凧
 $REPLACE_##凪
+$REPLACE_##凰
 $REPLACE_##凱
 $REPLACE_##凶
 $REPLACE_##凸
@@ -34648,7 +34634,6 @@ $REPLACE_##別
 $REPLACE_##利
 $REPLACE_##利き
 $REPLACE_##到
-$REPLACE_##刳
 $REPLACE_##制
 $REPLACE_##刷
 $REPLACE_##券
@@ -34674,6 +34659,7 @@ $REPLACE_##力
 $REPLACE_##功
 $REPLACE_##加
 $REPLACE_##劣
+$REPLACE_##动
 $REPLACE_##助
 $REPLACE_##助け
 $REPLACE_##努
@@ -34694,7 +34680,6 @@ $REPLACE_##勝
 $REPLACE_##募
 $REPLACE_##勢
 $REPLACE_##勤
-$REPLACE_##勧
 $REPLACE_##勲
 $REPLACE_##勳
 $REPLACE_##勿
@@ -34704,7 +34689,6 @@ $REPLACE_##匐
 $REPLACE_##化
 $REPLACE_##北
 $REPLACE_##匙
-$REPLACE_##匝
 $REPLACE_##匠
 $REPLACE_##匡
 $REPLACE_##匪
@@ -34783,12 +34767,12 @@ $REPLACE_##叩
 $REPLACE_##只
 $REPLACE_##叫
 $REPLACE_##召
-$REPLACE_##叭
 $REPLACE_##可
 $REPLACE_##台
 $REPLACE_##史
 $REPLACE_##右
 $REPLACE_##右衛門
+$REPLACE_##叶
 $REPLACE_##号
 $REPLACE_##司
 $REPLACE_##合
@@ -34819,7 +34803,6 @@ $REPLACE_##吻
 $REPLACE_##吼
 $REPLACE_##吽
 $REPLACE_##吾
-$REPLACE_##呀
 $REPLACE_##呂
 $REPLACE_##呆
 $REPLACE_##呈
@@ -34869,10 +34852,13 @@ $REPLACE_##商
 $REPLACE_##問
 $REPLACE_##啓
 $REPLACE_##啖
+$REPLACE_##啜
+$REPLACE_##啼
+$REPLACE_##喀
 $REPLACE_##善
 $REPLACE_##喆
 $REPLACE_##喉
-$REPLACE_##喊
+$REPLACE_##喙
 $REPLACE_##喚
 $REPLACE_##喜
 $REPLACE_##喝
@@ -34889,7 +34875,6 @@ $REPLACE_##嗣
 $REPLACE_##嗽
 $REPLACE_##嘆
 $REPLACE_##嘉
-$REPLACE_##嘎
 $REPLACE_##嘗
 $REPLACE_##嘱
 $REPLACE_##嘲
@@ -34914,6 +34899,7 @@ $REPLACE_##回り
 $REPLACE_##回る
 $REPLACE_##因
 $REPLACE_##団
+$REPLACE_##困
 $REPLACE_##囲
 $REPLACE_##図
 $REPLACE_##固
@@ -34957,6 +34943,7 @@ $REPLACE_##埜
 $REPLACE_##域
 $REPLACE_##埠
 $REPLACE_##埴
+$REPLACE_##埵
 $REPLACE_##執
 $REPLACE_##培
 $REPLACE_##基
@@ -34965,7 +34952,6 @@ $REPLACE_##堀
 $REPLACE_##堂
 $REPLACE_##堅
 $REPLACE_##堆
-$REPLACE_##堕
 $REPLACE_##堡
 $REPLACE_##堤
 $REPLACE_##堪
@@ -34997,6 +34983,8 @@ $REPLACE_##墟
 $REPLACE_##墨
 $REPLACE_##墳
 $REPLACE_##墺
+$REPLACE_##墻
+$REPLACE_##墾
 $REPLACE_##壁
 $REPLACE_##壇
 $REPLACE_##壊
@@ -35038,6 +35026,7 @@ $REPLACE_##奈子
 $REPLACE_##奉
 $REPLACE_##奎
 $REPLACE_##奏
+$REPLACE_##契
 $REPLACE_##奔
 $REPLACE_##奕
 $REPLACE_##套
@@ -35062,7 +35051,6 @@ $REPLACE_##妊
 $REPLACE_##妓
 $REPLACE_##妖
 $REPLACE_##妙
-$REPLACE_##妤
 $REPLACE_##妨
 $REPLACE_##妹
 $REPLACE_##妻
@@ -35082,12 +35070,10 @@ $REPLACE_##姫
 $REPLACE_##姿
 $REPLACE_##威
 $REPLACE_##娃
-$REPLACE_##娑
 $REPLACE_##娘
-$REPLACE_##娜
 $REPLACE_##娥
 $REPLACE_##娩
-$REPLACE_##娶
+$REPLACE_##娯
 $REPLACE_##娼
 $REPLACE_##婁
 $REPLACE_##婆
@@ -35103,6 +35089,7 @@ $REPLACE_##嫌
 $REPLACE_##嫌い
 $REPLACE_##嫡
 $REPLACE_##嬌
+$REPLACE_##嬛
 $REPLACE_##嬢
 $REPLACE_##嬪
 $REPLACE_##嬰
@@ -35120,7 +35107,6 @@ $REPLACE_##学
 $REPLACE_##孫
 $REPLACE_##孫子
 $REPLACE_##學
-$REPLACE_##孺
 $REPLACE_##宅
 $REPLACE_##宇
 $REPLACE_##守
@@ -35173,7 +35159,6 @@ $REPLACE_##寨
 $REPLACE_##審
 $REPLACE_##寮
 $REPLACE_##寵
-$REPLACE_##寶
 $REPLACE_##寸
 $REPLACE_##寺
 $REPLACE_##対
@@ -35185,6 +35170,7 @@ $REPLACE_##将
 $REPLACE_##尉
 $REPLACE_##尊
 $REPLACE_##尋
+$REPLACE_##對
 $REPLACE_##導
 $REPLACE_##小
 $REPLACE_##小路
@@ -35237,11 +35223,9 @@ $REPLACE_##峨
 $REPLACE_##峪
 $REPLACE_##峯
 $REPLACE_##峰
-$REPLACE_##峴
 $REPLACE_##島
 $REPLACE_##峻
 $REPLACE_##崇
-$REPLACE_##崋
 $REPLACE_##崎
 $REPLACE_##崖
 $REPLACE_##崗
@@ -35251,15 +35235,15 @@ $REPLACE_##崩
 $REPLACE_##嵌
 $REPLACE_##嵐
 $REPLACE_##嵩
-$REPLACE_##嵬
 $REPLACE_##嵯
 $REPLACE_##嶋
 $REPLACE_##嶌
+$REPLACE_##嶠
 $REPLACE_##嶺
 $REPLACE_##嶼
 $REPLACE_##嶽
 $REPLACE_##巌
-$REPLACE_##巒
+$REPLACE_##巍
 $REPLACE_##川
 $REPLACE_##川原
 $REPLACE_##州
@@ -35299,7 +35283,6 @@ $REPLACE_##帷
 $REPLACE_##常
 $REPLACE_##帽
 $REPLACE_##幀
-$REPLACE_##幄
 $REPLACE_##幅
 $REPLACE_##幇
 $REPLACE_##幌
@@ -35317,6 +35300,7 @@ $REPLACE_##幻
 $REPLACE_##幼
 $REPLACE_##幽
 $REPLACE_##幾
+$REPLACE_##广
 $REPLACE_##庁
 $REPLACE_##広
 $REPLACE_##広島
@@ -35371,7 +35355,6 @@ $REPLACE_##弟
 $REPLACE_##弥
 $REPLACE_##弦
 $REPLACE_##弧
-$REPLACE_##弩
 $REPLACE_##弯
 $REPLACE_##弱
 $REPLACE_##張
@@ -35446,10 +35429,12 @@ $REPLACE_##性
 $REPLACE_##怨
 $REPLACE_##怪
 $REPLACE_##怯
+$REPLACE_##恂
 $REPLACE_##恋
 $REPLACE_##恐
 $REPLACE_##恒
 $REPLACE_##恕
+$REPLACE_##恤
 $REPLACE_##恥
 $REPLACE_##恨
 $REPLACE_##恩
@@ -35460,6 +35445,7 @@ $REPLACE_##息子
 $REPLACE_##恵
 $REPLACE_##恵子
 $REPLACE_##悉
+$REPLACE_##悌
 $REPLACE_##悍
 $REPLACE_##悔
 $REPLACE_##悛
@@ -35476,7 +35462,6 @@ $REPLACE_##悶
 $REPLACE_##悸
 $REPLACE_##悼
 $REPLACE_##情
-$REPLACE_##惇
 $REPLACE_##惑
 $REPLACE_##惚
 $REPLACE_##惜
@@ -35488,6 +35473,7 @@ $REPLACE_##惰
 $REPLACE_##想
 $REPLACE_##愁
 $REPLACE_##愈
+$REPLACE_##愍
 $REPLACE_##意
 $REPLACE_##愕
 $REPLACE_##愚
@@ -35496,13 +35482,13 @@ $REPLACE_##感
 $REPLACE_##愴
 $REPLACE_##愷
 $REPLACE_##愾
-$REPLACE_##愿
 $REPLACE_##慄
 $REPLACE_##慈
 $REPLACE_##態
 $REPLACE_##慌
 $REPLACE_##慎
 $REPLACE_##慕
+$REPLACE_##慟
 $REPLACE_##慢
 $REPLACE_##慣
 $REPLACE_##慧
@@ -35524,12 +35510,15 @@ $REPLACE_##憲
 $REPLACE_##憶
 $REPLACE_##憺
 $REPLACE_##憾
+$REPLACE_##懃
 $REPLACE_##懇
 $REPLACE_##應
 $REPLACE_##懐
+$REPLACE_##懣
 $REPLACE_##懲
 $REPLACE_##懸
 $REPLACE_##懼
+$REPLACE_##懿
 $REPLACE_##戈
 $REPLACE_##戌
 $REPLACE_##戍
@@ -35539,7 +35528,6 @@ $REPLACE_##我
 $REPLACE_##我部
 $REPLACE_##戒
 $REPLACE_##戔
-$REPLACE_##战
 $REPLACE_##戚
 $REPLACE_##戟
 $REPLACE_##戦
@@ -35561,11 +35549,13 @@ $REPLACE_##扈
 $REPLACE_##扉
 $REPLACE_##手
 $REPLACE_##才
+$REPLACE_##扎
 $REPLACE_##打
 $REPLACE_##打ち
 $REPLACE_##払
 $REPLACE_##払い
 $REPLACE_##払っ
+$REPLACE_##托
 $REPLACE_##扱
 $REPLACE_##扶
 $REPLACE_##扼
@@ -35580,7 +35570,6 @@ $REPLACE_##折
 $REPLACE_##抜
 $REPLACE_##抜き
 $REPLACE_##抜け
-$REPLACE_##択
 $REPLACE_##抱
 $REPLACE_##抹
 $REPLACE_##押
@@ -35609,6 +35598,7 @@ $REPLACE_##持ち
 $REPLACE_##持っ
 $REPLACE_##持つ
 $REPLACE_##指
+$REPLACE_##挖
 $REPLACE_##挙
 $REPLACE_##挟
 $REPLACE_##挫
@@ -35707,10 +35697,8 @@ $REPLACE_##攻
 $REPLACE_##放
 $REPLACE_##政
 $REPLACE_##故
-$REPLACE_##敎
 $REPLACE_##敏
 $REPLACE_##救
-$REPLACE_##敖
 $REPLACE_##敗
 $REPLACE_##教
 $REPLACE_##敢
@@ -35762,6 +35750,8 @@ $REPLACE_##旻
 $REPLACE_##昂
 $REPLACE_##昆
 $REPLACE_##昇
+$REPLACE_##昉
+$REPLACE_##昊
 $REPLACE_##昌
 $REPLACE_##明
 $REPLACE_##明け
@@ -35785,6 +35775,7 @@ $REPLACE_##晏
 $REPLACE_##晒
 $REPLACE_##晟
 $REPLACE_##晩
+$REPLACE_##普
 $REPLACE_##景
 $REPLACE_##晰
 $REPLACE_##晴
@@ -35810,7 +35801,6 @@ $REPLACE_##曇
 $REPLACE_##曙
 $REPLACE_##曜
 $REPLACE_##曝
-$REPLACE_##曰
 $REPLACE_##曲
 $REPLACE_##曳
 $REPLACE_##更
@@ -35865,7 +35855,6 @@ $REPLACE_##来
 $REPLACE_##杭
 $REPLACE_##杯
 $REPLACE_##東
-$REPLACE_##杲
 $REPLACE_##杵
 $REPLACE_##杷
 $REPLACE_##杼
@@ -35915,6 +35904,7 @@ $REPLACE_##栽
 $REPLACE_##桁
 $REPLACE_##桂
 $REPLACE_##桃
+$REPLACE_##框
 $REPLACE_##案
 $REPLACE_##桐
 $REPLACE_##桑
@@ -35936,10 +35926,10 @@ $REPLACE_##梧
 $REPLACE_##梨
 $REPLACE_##梯
 $REPLACE_##械
+$REPLACE_##梱
 $REPLACE_##梶
 $REPLACE_##棄
 $REPLACE_##棋
-$REPLACE_##棍
 $REPLACE_##棒
 $REPLACE_##棗
 $REPLACE_##棘
@@ -35971,25 +35961,23 @@ $REPLACE_##極
 $REPLACE_##楷
 $REPLACE_##楼
 $REPLACE_##楽
-$REPLACE_##楽部
 $REPLACE_##概
-$REPLACE_##榎
 $REPLACE_##榑
+$REPLACE_##榔
 $REPLACE_##榜
 $REPLACE_##榮
 $REPLACE_##榴
 $REPLACE_##槃
-$REPLACE_##槊
 $REPLACE_##構
 $REPLACE_##構え
 $REPLACE_##槌
 $REPLACE_##槍
 $REPLACE_##槓
 $REPLACE_##様
-$REPLACE_##槙
 $REPLACE_##槨
 $REPLACE_##槻
 $REPLACE_##槽
+$REPLACE_##槿
 $REPLACE_##樊
 $REPLACE_##樋
 $REPLACE_##標
@@ -36006,7 +35994,6 @@ $REPLACE_##橇
 $REPLACE_##橋
 $REPLACE_##橘
 $REPLACE_##機
-$REPLACE_##橿
 $REPLACE_##檀
 $REPLACE_##檗
 $REPLACE_##檜
@@ -36020,7 +36007,6 @@ $REPLACE_##櫛
 $REPLACE_##櫨
 $REPLACE_##櫻
 $REPLACE_##欄
-$REPLACE_##欅
 $REPLACE_##欒
 $REPLACE_##欠
 $REPLACE_##次
@@ -36038,16 +36024,17 @@ $REPLACE_##止め
 $REPLACE_##止める
 $REPLACE_##正
 $REPLACE_##此
+$REPLACE_##步
 $REPLACE_##武
 $REPLACE_##歩
 $REPLACE_##歩い
 $REPLACE_##歩き
-$REPLACE_##歪
 $REPLACE_##歯
 $REPLACE_##歳
 $REPLACE_##歴
 $REPLACE_##死
 $REPLACE_##歿
+$REPLACE_##殆
 $REPLACE_##殊
 $REPLACE_##残
 $REPLACE_##残し
@@ -36064,6 +36051,7 @@ $REPLACE_##母
 $REPLACE_##毎
 $REPLACE_##毒
 $REPLACE_##比
+$REPLACE_##毗
 $REPLACE_##毘
 $REPLACE_##毛
 $REPLACE_##毫
@@ -36071,7 +36059,6 @@ $REPLACE_##毬
 $REPLACE_##毯
 $REPLACE_##氈
 $REPLACE_##氏
-$REPLACE_##氐
 $REPLACE_##民
 $REPLACE_##気
 $REPLACE_##氣
@@ -36098,13 +36085,12 @@ $REPLACE_##汾
 $REPLACE_##沂
 $REPLACE_##沃
 $REPLACE_##沈
-$REPLACE_##沌
 $REPLACE_##沖
 $REPLACE_##沙
 $REPLACE_##没
 $REPLACE_##沢
-$REPLACE_##沪
 $REPLACE_##沫
+$REPLACE_##沮
 $REPLACE_##河
 $REPLACE_##河内
 $REPLACE_##河原
@@ -36113,6 +36099,7 @@ $REPLACE_##油
 $REPLACE_##治
 $REPLACE_##沼
 $REPLACE_##沽
+$REPLACE_##沿
 $REPLACE_##沿い
 $REPLACE_##況
 $REPLACE_##泄
@@ -36140,6 +36127,7 @@ $REPLACE_##津子
 $REPLACE_##洩
 $REPLACE_##洪
 $REPLACE_##洮
+$REPLACE_##洱
 $REPLACE_##洲
 $REPLACE_##活
 $REPLACE_##派
@@ -36179,7 +36167,6 @@ $REPLACE_##深
 $REPLACE_##淳
 $REPLACE_##淵
 $REPLACE_##混
-$REPLACE_##淹
 $REPLACE_##添
 $REPLACE_##清
 $REPLACE_##清水
@@ -36207,6 +36194,7 @@ $REPLACE_##港
 $REPLACE_##游
 $REPLACE_##渾
 $REPLACE_##湊
+$REPLACE_##湍
 $REPLACE_##湖
 $REPLACE_##湘
 $REPLACE_##湛
@@ -36239,6 +36227,7 @@ $REPLACE_##漁
 $REPLACE_##漆
 $REPLACE_##漉
 $REPLACE_##漏
+$REPLACE_##漑
 $REPLACE_##演
 $REPLACE_##漕
 $REPLACE_##漠
@@ -36257,7 +36246,7 @@ $REPLACE_##潭
 $REPLACE_##潮
 $REPLACE_##潰
 $REPLACE_##潴
-$REPLACE_##澂
+$REPLACE_##潼
 $REPLACE_##澄
 $REPLACE_##澗
 $REPLACE_##澤
@@ -36278,6 +36267,7 @@ $REPLACE_##濯
 $REPLACE_##濱
 $REPLACE_##瀉
 $REPLACE_##瀑
+$REPLACE_##瀚
 $REPLACE_##瀛
 $REPLACE_##瀝
 $REPLACE_##瀞
@@ -36286,12 +36276,10 @@ $REPLACE_##瀬
 $REPLACE_##瀾
 $REPLACE_##灌
 $REPLACE_##灘
-$REPLACE_##灣
 $REPLACE_##火
 $REPLACE_##灯
 $REPLACE_##灰
 $REPLACE_##灸
-$REPLACE_##灼
 $REPLACE_##災
 $REPLACE_##炉
 $REPLACE_##炊
@@ -36300,12 +36288,12 @@ $REPLACE_##炒
 $REPLACE_##炙
 $REPLACE_##炭
 $REPLACE_##炮
-$REPLACE_##炯
 $REPLACE_##点
 $REPLACE_##為
 $REPLACE_##烈
 $REPLACE_##烏
 $REPLACE_##烙
+$REPLACE_##烟
 $REPLACE_##烹
 $REPLACE_##焉
 $REPLACE_##焔
@@ -36315,7 +36303,6 @@ $REPLACE_##焦
 $REPLACE_##然
 $REPLACE_##焼
 $REPLACE_##焼き
-$REPLACE_##煉
 $REPLACE_##煌
 $REPLACE_##煎
 $REPLACE_##煕
@@ -36324,8 +36311,8 @@ $REPLACE_##煥
 $REPLACE_##照
 $REPLACE_##煩
 $REPLACE_##煮
+$REPLACE_##熈
 $REPLACE_##熊
-$REPLACE_##熏
 $REPLACE_##熕
 $REPLACE_##熙
 $REPLACE_##熟
@@ -36336,17 +36323,15 @@ $REPLACE_##燃
 $REPLACE_##燈
 $REPLACE_##燐
 $REPLACE_##燕
-$REPLACE_##營
+$REPLACE_##燗
 $REPLACE_##燥
 $REPLACE_##燦
 $REPLACE_##燭
-$REPLACE_##燮
 $REPLACE_##燵
 $REPLACE_##燼
 $REPLACE_##燾
 $REPLACE_##爆
 $REPLACE_##爛
-$REPLACE_##爨
 $REPLACE_##爪
 $REPLACE_##爬
 $REPLACE_##爲
@@ -36356,7 +36341,6 @@ $REPLACE_##爺
 $REPLACE_##爻
 $REPLACE_##爽
 $REPLACE_##爾
-$REPLACE_##牆
 $REPLACE_##片
 $REPLACE_##版
 $REPLACE_##牌
@@ -36367,12 +36351,14 @@ $REPLACE_##牛
 $REPLACE_##牝
 $REPLACE_##牟
 $REPLACE_##牟田
+$REPLACE_##牡
 $REPLACE_##牢
 $REPLACE_##牧
 $REPLACE_##物
 $REPLACE_##特
 $REPLACE_##犀
 $REPLACE_##犠
+$REPLACE_##犢
 $REPLACE_##犬
 $REPLACE_##犯
 $REPLACE_##状
@@ -36390,18 +36376,15 @@ $REPLACE_##狽
 $REPLACE_##猛
 $REPLACE_##猟
 $REPLACE_##猥
-$REPLACE_##猩
 $REPLACE_##猪
 $REPLACE_##猫
 $REPLACE_##献
 $REPLACE_##猴
 $REPLACE_##猷
-$REPLACE_##猾
 $REPLACE_##猿
 $REPLACE_##獄
 $REPLACE_##獅
 $REPLACE_##獣
-$REPLACE_##獪
 $REPLACE_##獲
 $REPLACE_##獺
 $REPLACE_##玄
@@ -36431,6 +36414,7 @@ $REPLACE_##琦
 $REPLACE_##琨
 $REPLACE_##琬
 $REPLACE_##琮
+$REPLACE_##琰
 $REPLACE_##琲
 $REPLACE_##琳
 $REPLACE_##琴
@@ -36442,21 +36426,20 @@ $REPLACE_##瑜
 $REPLACE_##瑞
 $REPLACE_##瑟
 $REPLACE_##瑠
+$REPLACE_##瑣
 $REPLACE_##瑤
-$REPLACE_##瑩
+$REPLACE_##瑯
 $REPLACE_##瑰
 $REPLACE_##瑳
 $REPLACE_##瑶
 $REPLACE_##瑾
 $REPLACE_##璃
-$REPLACE_##璇
 $REPLACE_##璋
 $REPLACE_##璜
 $REPLACE_##璞
 $REPLACE_##璧
 $REPLACE_##環
 $REPLACE_##璽
-$REPLACE_##璿
 $REPLACE_##瓊
 $REPLACE_##瓏
 $REPLACE_##瓜
@@ -36468,6 +36451,7 @@ $REPLACE_##甑
 $REPLACE_##甕
 $REPLACE_##甘
 $REPLACE_##甚
+$REPLACE_##甜
 $REPLACE_##生
 $REPLACE_##産
 $REPLACE_##甥
@@ -36521,7 +36505,6 @@ $REPLACE_##痕
 $REPLACE_##痘
 $REPLACE_##痛
 $REPLACE_##痢
-$REPLACE_##痣
 $REPLACE_##痩
 $REPLACE_##痰
 $REPLACE_##痴
@@ -36534,6 +36517,7 @@ $REPLACE_##癇
 $REPLACE_##癌
 $REPLACE_##癒
 $REPLACE_##癖
+$REPLACE_##癩
 $REPLACE_##癪
 $REPLACE_##癬
 $REPLACE_##発
@@ -36563,6 +36547,7 @@ $REPLACE_##盞
 $REPLACE_##盟
 $REPLACE_##監
 $REPLACE_##盤
+$REPLACE_##盥
 $REPLACE_##盧
 $REPLACE_##盪
 $REPLACE_##目
@@ -36582,7 +36567,6 @@ $REPLACE_##真
 $REPLACE_##真面目
 $REPLACE_##眠
 $REPLACE_##眩
-$REPLACE_##眷
 $REPLACE_##眸
 $REPLACE_##眼
 $REPLACE_##着
@@ -36592,6 +36576,7 @@ $REPLACE_##着く
 $REPLACE_##睡
 $REPLACE_##督
 $REPLACE_##睦
+$REPLACE_##睨
 $REPLACE_##睺
 $REPLACE_##瞞
 $REPLACE_##瞥
@@ -36611,6 +36596,7 @@ $REPLACE_##研
 $REPLACE_##砕
 $REPLACE_##砥
 $REPLACE_##砦
+$REPLACE_##砧
 $REPLACE_##砲
 $REPLACE_##破
 $REPLACE_##砺
@@ -36628,7 +36614,6 @@ $REPLACE_##碧
 $REPLACE_##碩
 $REPLACE_##確
 $REPLACE_##磁
-$REPLACE_##磊
 $REPLACE_##磋
 $REPLACE_##磐
 $REPLACE_##磨
@@ -36661,6 +36646,7 @@ $REPLACE_##票
 $REPLACE_##祭
 $REPLACE_##祭り
 $REPLACE_##祷
+$REPLACE_##祺
 $REPLACE_##禁
 $REPLACE_##禄
 $REPLACE_##禅
@@ -36668,12 +36654,11 @@ $REPLACE_##禍
 $REPLACE_##禎
 $REPLACE_##福
 $REPLACE_##禦
-$REPLACE_##禧
 $REPLACE_##禰
 $REPLACE_##禹
 $REPLACE_##禺
 $REPLACE_##禽
-$REPLACE_##禿
+$REPLACE_##禾
 $REPLACE_##秀
 $REPLACE_##私
 $REPLACE_##秉
@@ -36695,7 +36680,6 @@ $REPLACE_##稔
 $REPLACE_##稙
 $REPLACE_##稚
 $REPLACE_##稜
-$REPLACE_##稟
 $REPLACE_##稠
 $REPLACE_##種
 $REPLACE_##稲
@@ -36716,7 +36700,6 @@ $REPLACE_##究
 $REPLACE_##穹
 $REPLACE_##空
 $REPLACE_##突
-$REPLACE_##窃
 $REPLACE_##窄
 $REPLACE_##窒
 $REPLACE_##窓
@@ -36741,13 +36724,11 @@ $REPLACE_##竟
 $REPLACE_##章
 $REPLACE_##童
 $REPLACE_##端
-$REPLACE_##競
 $REPLACE_##竹
 $REPLACE_##竺
 $REPLACE_##竿
 $REPLACE_##笏
 $REPLACE_##笑
-$REPLACE_##笙
 $REPLACE_##笛
 $REPLACE_##笠
 $REPLACE_##笥
@@ -36758,12 +36739,12 @@ $REPLACE_##筆
 $REPLACE_##筈
 $REPLACE_##等
 $REPLACE_##筋
+$REPLACE_##筌
 $REPLACE_##筐
 $REPLACE_##筑
 $REPLACE_##筒
 $REPLACE_##答
 $REPLACE_##策
-$REPLACE_##筝
 $REPLACE_##筰
 $REPLACE_##筵
 $REPLACE_##箇
@@ -36788,12 +36769,9 @@ $REPLACE_##築
 $REPLACE_##篋
 $REPLACE_##篠
 $REPLACE_##篤
-$REPLACE_##篥
 $REPLACE_##篭
 $REPLACE_##簀
 $REPLACE_##簡
-$REPLACE_##簪
-$REPLACE_##簫
 $REPLACE_##簾
 $REPLACE_##簿
 $REPLACE_##籃
@@ -36858,12 +36836,12 @@ $REPLACE_##結
 $REPLACE_##絞
 $REPLACE_##絡
 $REPLACE_##給
+$REPLACE_##絨
 $REPLACE_##統
 $REPLACE_##絲
 $REPLACE_##絵
 $REPLACE_##絶
 $REPLACE_##絹
-$REPLACE_##綏
 $REPLACE_##經
 $REPLACE_##継
 $REPLACE_##継ぎ
@@ -36881,6 +36859,7 @@ $REPLACE_##綺
 $REPLACE_##綽
 $REPLACE_##綾
 $REPLACE_##綿
+$REPLACE_##緋
 $REPLACE_##総
 $REPLACE_##緑
 $REPLACE_##緒
@@ -36895,6 +36874,7 @@ $REPLACE_##練
 $REPLACE_##緻
 $REPLACE_##縁
 $REPLACE_##縄
+$REPLACE_##縅
 $REPLACE_##縋
 $REPLACE_##縒
 $REPLACE_##縛
@@ -36906,7 +36886,6 @@ $REPLACE_##縫
 $REPLACE_##縮
 $REPLACE_##縵
 $REPLACE_##縷
-$REPLACE_##縹
 $REPLACE_##總
 $REPLACE_##績
 $REPLACE_##繁
@@ -36974,7 +36953,6 @@ $REPLACE_##聖
 $REPLACE_##聘
 $REPLACE_##聚
 $REPLACE_##聞
-$REPLACE_##聟
 $REPLACE_##聡
 $REPLACE_##聯
 $REPLACE_##聲
@@ -37018,7 +36996,6 @@ $REPLACE_##脆
 $REPLACE_##脇
 $REPLACE_##脈
 $REPLACE_##脚
-$REPLACE_##脛
 $REPLACE_##脩
 $REPLACE_##脱
 $REPLACE_##脳
@@ -37053,6 +37030,7 @@ $REPLACE_##臘
 $REPLACE_##臚
 $REPLACE_##臣
 $REPLACE_##臥
+$REPLACE_##臧
 $REPLACE_##臨
 $REPLACE_##自
 $REPLACE_##臭
@@ -37084,11 +37062,10 @@ $REPLACE_##良
 $REPLACE_##色
 $REPLACE_##艶
 $REPLACE_##芋
-$REPLACE_##芒
 $REPLACE_##芝
 $REPLACE_##芥
 $REPLACE_##芦
-$REPLACE_##芬
+$REPLACE_##芮
 $REPLACE_##芯
 $REPLACE_##花
 $REPLACE_##芳
@@ -37099,15 +37076,12 @@ $REPLACE_##芽
 $REPLACE_##芾
 $REPLACE_##苅
 $REPLACE_##苑
-$REPLACE_##苓
 $REPLACE_##苔
 $REPLACE_##苗
 $REPLACE_##苛
 $REPLACE_##苞
 $REPLACE_##若
 $REPLACE_##苦
-$REPLACE_##苧
-$REPLACE_##苫
 $REPLACE_##英
 $REPLACE_##苺
 $REPLACE_##茂
@@ -37123,16 +37097,15 @@ $REPLACE_##茸
 $REPLACE_##茹
 $REPLACE_##荃
 $REPLACE_##草
-$REPLACE_##荊
 $REPLACE_##荒
 $REPLACE_##荘
 $REPLACE_##荷
 $REPLACE_##荻
 $REPLACE_##荼
 $REPLACE_##莉
+$REPLACE_##莘
 $REPLACE_##莞
 $REPLACE_##莢
-$REPLACE_##莫
 $REPLACE_##莱
 $REPLACE_##莽
 $REPLACE_##菅
@@ -37140,12 +37113,10 @@ $REPLACE_##菊
 $REPLACE_##菌
 $REPLACE_##菓
 $REPLACE_##菖
-$REPLACE_##菘
 $REPLACE_##菜
 $REPLACE_##菟
 $REPLACE_##菩
 $REPLACE_##華
-$REPLACE_##菰
 $REPLACE_##菱
 $REPLACE_##菴
 $REPLACE_##萄
@@ -37156,6 +37127,7 @@ $REPLACE_##萎
 $REPLACE_##萩
 $REPLACE_##萬
 $REPLACE_##萱
+$REPLACE_##萸
 $REPLACE_##落
 $REPLACE_##落ち
 $REPLACE_##落と
@@ -37178,15 +37150,14 @@ $REPLACE_##蒙
 $REPLACE_##蒜
 $REPLACE_##蒲
 $REPLACE_##蒸
-$REPLACE_##蒻
 $REPLACE_##蒼
 $REPLACE_##蓄
 $REPLACE_##蓉
 $REPLACE_##蓋
 $REPLACE_##蓑
+$REPLACE_##蓬
 $REPLACE_##蓮
 $REPLACE_##蓼
-$REPLACE_##蔀
 $REPLACE_##蔑
 $REPLACE_##蔓
 $REPLACE_##蔗
@@ -37200,6 +37171,7 @@ $REPLACE_##蕃
 $REPLACE_##蕉
 $REPLACE_##蕊
 $REPLACE_##蕎
+$REPLACE_##蕗
 $REPLACE_##蕙
 $REPLACE_##蕩
 $REPLACE_##蕪
@@ -37211,6 +37183,7 @@ $REPLACE_##薗
 $REPLACE_##薙
 $REPLACE_##薦
 $REPLACE_##薩
+$REPLACE_##薪
 $REPLACE_##薫
 $REPLACE_##薬
 $REPLACE_##薮
@@ -37231,6 +37204,7 @@ $REPLACE_##蘇
 $REPLACE_##蘊
 $REPLACE_##蘋
 $REPLACE_##蘭
+$REPLACE_##蘿
 $REPLACE_##虎
 $REPLACE_##虐
 $REPLACE_##虔
@@ -37244,10 +37218,11 @@ $REPLACE_##蚊
 $REPLACE_##蚕
 $REPLACE_##蛇
 $REPLACE_##蛉
+$REPLACE_##蛋
+$REPLACE_##蛎
 $REPLACE_##蛙
 $REPLACE_##蛛
 $REPLACE_##蛮
-$REPLACE_##蛹
 $REPLACE_##蛾
 $REPLACE_##蜀
 $REPLACE_##蜂
@@ -37255,20 +37230,19 @@ $REPLACE_##蜘
 $REPLACE_##蜜
 $REPLACE_##蜥
 $REPLACE_##蜴
+$REPLACE_##蜻
 $REPLACE_##蝉
 $REPLACE_##蝋
 $REPLACE_##蝕
 $REPLACE_##蝗
 $REPLACE_##蝠
-$REPLACE_##蝣
-$REPLACE_##蝦
 $REPLACE_##蝮
 $REPLACE_##蝶
 $REPLACE_##蝿
 $REPLACE_##螂
 $REPLACE_##融
 $REPLACE_##螺
-$REPLACE_##蟠
+$REPLACE_##蟇
 $REPLACE_##蟲
 $REPLACE_##蟹
 $REPLACE_##蟻
@@ -37280,6 +37254,7 @@ $REPLACE_##衆
 $REPLACE_##行
 $REPLACE_##行き
 $REPLACE_##衍
+$REPLACE_##衒
 $REPLACE_##術
 $REPLACE_##街
 $REPLACE_##衙
@@ -37293,7 +37268,6 @@ $REPLACE_##表
 $REPLACE_##衰
 $REPLACE_##衷
 $REPLACE_##衾
-$REPLACE_##衿
 $REPLACE_##袈
 $REPLACE_##袋
 $REPLACE_##袍
@@ -37323,6 +37297,7 @@ $REPLACE_##褒
 $REPLACE_##褚
 $REPLACE_##褥
 $REPLACE_##褪
+$REPLACE_##褸
 $REPLACE_##褻
 $REPLACE_##襄
 $REPLACE_##襖
@@ -37330,6 +37305,7 @@ $REPLACE_##襟
 $REPLACE_##襦
 $REPLACE_##襲
 $REPLACE_##襴
+$REPLACE_##襷
 $REPLACE_##西
 $REPLACE_##要
 $REPLACE_##覆
@@ -37344,7 +37320,6 @@ $REPLACE_##覯
 $REPLACE_##観
 $REPLACE_##覺
 $REPLACE_##角
-$REPLACE_##觚
 $REPLACE_##解
 $REPLACE_##触
 $REPLACE_##言
@@ -37361,6 +37336,7 @@ $REPLACE_##記
 $REPLACE_##訛
 $REPLACE_##訝
 $REPLACE_##訟
+$REPLACE_##訢
 $REPLACE_##訣
 $REPLACE_##訥
 $REPLACE_##訪
@@ -37416,15 +37392,16 @@ $REPLACE_##調
 $REPLACE_##調べ
 $REPLACE_##談
 $REPLACE_##請
-$REPLACE_##諌
 $REPLACE_##諏
 $REPLACE_##論
 $REPLACE_##諜
 $REPLACE_##諡
 $REPLACE_##諦
 $REPLACE_##諧
+$REPLACE_##諫
 $REPLACE_##諭
 $REPLACE_##諱
+$REPLACE_##諶
 $REPLACE_##諸
 $REPLACE_##諺
 $REPLACE_##諾
@@ -37440,7 +37417,6 @@ $REPLACE_##謝
 $REPLACE_##謡
 $REPLACE_##謨
 $REPLACE_##謬
-$REPLACE_##謹
 $REPLACE_##證
 $REPLACE_##識
 $REPLACE_##譚
@@ -37448,6 +37424,7 @@ $REPLACE_##譜
 $REPLACE_##警
 $REPLACE_##議
 $REPLACE_##譲
+$REPLACE_##譴
 $REPLACE_##護
 $REPLACE_##讃
 $REPLACE_##讐
@@ -37479,7 +37456,6 @@ $REPLACE_##買
 $REPLACE_##貸
 $REPLACE_##費
 $REPLACE_##貼
-$REPLACE_##貿
 $REPLACE_##賀
 $REPLACE_##賁
 $REPLACE_##賃
@@ -37499,7 +37475,7 @@ $REPLACE_##賤
 $REPLACE_##賦
 $REPLACE_##質
 $REPLACE_##賽
-$REPLACE_##贅
+$REPLACE_##贄
 $REPLACE_##贈
 $REPLACE_##贋
 $REPLACE_##贛
@@ -37516,22 +37492,17 @@ $REPLACE_##越
 $REPLACE_##越え
 $REPLACE_##越し
 $REPLACE_##趣
-$REPLACE_##趨
 $REPLACE_##足
 $REPLACE_##趾
 $REPLACE_##跋
-$REPLACE_##跎
 $REPLACE_##跏
 $REPLACE_##距
 $REPLACE_##跡
-$REPLACE_##跪
 $REPLACE_##路
 $REPLACE_##跳
 $REPLACE_##践
 $REPLACE_##踊
 $REPLACE_##踏
-$REPLACE_##踞
-$REPLACE_##踪
 $REPLACE_##蹄
 $REPLACE_##蹊
 $REPLACE_##蹟
@@ -37540,10 +37511,14 @@ $REPLACE_##蹴
 $REPLACE_##蹴り
 $REPLACE_##躁
 $REPLACE_##躅
+$REPLACE_##躍
+$REPLACE_##躑
+$REPLACE_##躙
 $REPLACE_##身
 $REPLACE_##躬
 $REPLACE_##躯
 $REPLACE_##躾
+$REPLACE_##軀
 $REPLACE_##車
 $REPLACE_##軌
 $REPLACE_##軍
@@ -37567,6 +37542,7 @@ $REPLACE_##輸
 $REPLACE_##輿
 $REPLACE_##轄
 $REPLACE_##轍
+$REPLACE_##轟
 $REPLACE_##轡
 $REPLACE_##轢
 $REPLACE_##辛
@@ -37649,7 +37625,6 @@ $REPLACE_##遥
 $REPLACE_##適
 $REPLACE_##遭
 $REPLACE_##遮
-$REPLACE_##遵
 $REPLACE_##遷
 $REPLACE_##選
 $REPLACE_##遺
@@ -37683,7 +37658,6 @@ $REPLACE_##郵
 $REPLACE_##郷
 $REPLACE_##都
 $REPLACE_##鄙
-$REPLACE_##鄧
 $REPLACE_##鄭
 $REPLACE_##鄰
 $REPLACE_##鄲
@@ -37722,10 +37696,12 @@ $REPLACE_##針
 $REPLACE_##釣
 $REPLACE_##釧
 $REPLACE_##鈍
+$REPLACE_##鈑
 $REPLACE_##鈔
 $REPLACE_##鈞
 $REPLACE_##鈴
 $REPLACE_##鈷
+$REPLACE_##鈺
 $REPLACE_##鈿
 $REPLACE_##鉄
 $REPLACE_##鉈
@@ -37734,6 +37710,7 @@ $REPLACE_##鉛
 $REPLACE_##鉞
 $REPLACE_##鉢
 $REPLACE_##鉤
+$REPLACE_##鉦
 $REPLACE_##鉱
 $REPLACE_##鉾
 $REPLACE_##銀
@@ -37742,6 +37719,7 @@ $REPLACE_##銅
 $REPLACE_##銑
 $REPLACE_##銘
 $REPLACE_##銭
+$REPLACE_##鋏
 $REPLACE_##鋒
 $REPLACE_##鋪
 $REPLACE_##鋭
@@ -37768,9 +37746,7 @@ $REPLACE_##鍬
 $REPLACE_##鍮
 $REPLACE_##鍵
 $REPLACE_##鍼
-$REPLACE_##鍾
 $REPLACE_##鎌
-$REPLACE_##鎔
 $REPLACE_##鎖
 $REPLACE_##鎚
 $REPLACE_##鎧
@@ -37779,7 +37755,7 @@ $REPLACE_##鎮
 $REPLACE_##鏃
 $REPLACE_##鏑
 $REPLACE_##鏡
-$REPLACE_##鐐
+$REPLACE_##鏢
 $REPLACE_##鐘
 $REPLACE_##鐡
 $REPLACE_##鐵
@@ -37808,13 +37784,12 @@ $REPLACE_##閲
 $REPLACE_##闇
 $REPLACE_##闊
 $REPLACE_##闍
-$REPLACE_##闐
 $REPLACE_##闕
 $REPLACE_##闘
 $REPLACE_##闢
-$REPLACE_##闥
 $REPLACE_##阜
 $REPLACE_##阪
+$REPLACE_##阯
 $REPLACE_##防
 $REPLACE_##阻
 $REPLACE_##阿
@@ -37853,6 +37828,7 @@ $REPLACE_##障
 $REPLACE_##隠
 $REPLACE_##隠し
 $REPLACE_##隣
+$REPLACE_##隨
 $REPLACE_##隷
 $REPLACE_##隻
 $REPLACE_##雀
@@ -37863,9 +37839,9 @@ $REPLACE_##集
 $REPLACE_##雇
 $REPLACE_##雉
 $REPLACE_##雌
-$REPLACE_##雍
 $REPLACE_##雎
 $REPLACE_##雑
+$REPLACE_##雒
 $REPLACE_##雛
 $REPLACE_##離
 $REPLACE_##離れ
@@ -37874,6 +37850,7 @@ $REPLACE_##雨
 $REPLACE_##雪
 $REPLACE_##雲
 $REPLACE_##雷
+$REPLACE_##雹
 $REPLACE_##電
 $REPLACE_##需
 $REPLACE_##震
@@ -37883,6 +37860,7 @@ $REPLACE_##霖
 $REPLACE_##霜
 $REPLACE_##霞
 $REPLACE_##霧
+$REPLACE_##霰
 $REPLACE_##露
 $REPLACE_##靂
 $REPLACE_##靄
@@ -37896,6 +37874,7 @@ $REPLACE_##革
 $REPLACE_##靭
 $REPLACE_##靱
 $REPLACE_##靴
+$REPLACE_##靼
 $REPLACE_##鞅
 $REPLACE_##鞋
 $REPLACE_##鞍
@@ -37922,7 +37901,6 @@ $REPLACE_##須
 $REPLACE_##須賀
 $REPLACE_##頊
 $REPLACE_##頌
-$REPLACE_##預
 $REPLACE_##頓
 $REPLACE_##頗
 $REPLACE_##領
@@ -37946,7 +37924,6 @@ $REPLACE_##願
 $REPLACE_##類
 $REPLACE_##顥
 $REPLACE_##顧
-$REPLACE_##顯
 $REPLACE_##風
 $REPLACE_##颯
 $REPLACE_##飛
@@ -37955,7 +37932,6 @@ $REPLACE_##飛ばす
 $REPLACE_##食
 $REPLACE_##食い
 $REPLACE_##飡
-$REPLACE_##飢
 $REPLACE_##飯
 $REPLACE_##飲
 $REPLACE_##飴
@@ -38045,6 +38021,7 @@ $REPLACE_##鯱
 $REPLACE_##鰐
 $REPLACE_##鰭
 $REPLACE_##鰯
+$REPLACE_##鰹
 $REPLACE_##鱈
 $REPLACE_##鱒
 $REPLACE_##鱗
@@ -38052,23 +38029,27 @@ $REPLACE_##鳥
 $REPLACE_##鳩
 $REPLACE_##鳳
 $REPLACE_##鳴
+$REPLACE_##鳶
 $REPLACE_##鴉
 $REPLACE_##鴎
 $REPLACE_##鴨
 $REPLACE_##鴻
 $REPLACE_##鵄
+$REPLACE_##鵞
 $REPLACE_##鵡
 $REPLACE_##鵬
+$REPLACE_##鶉
 $REPLACE_##鶏
+$REPLACE_##鶚
 $REPLACE_##鶴
 $REPLACE_##鷗
 $REPLACE_##鷯
 $REPLACE_##鷲
 $REPLACE_##鷹
 $REPLACE_##鷺
+$REPLACE_##鸚
 $REPLACE_##鸞
 $REPLACE_##鹵
-$REPLACE_##鹹
 $REPLACE_##鹿
 $REPLACE_##麓
 $REPLACE_##麗
@@ -38090,10 +38071,10 @@ $REPLACE_##黙
 $REPLACE_##鼎
 $REPLACE_##鼓
 $REPLACE_##鼠
-$REPLACE_##鼬
 $REPLACE_##鼻
 $REPLACE_##齋
 $REPLACE_##齢
+$REPLACE_##齬
 $REPLACE_##龍
 $REPLACE_##龕
 $REPLACE_##龗
@@ -38937,7 +38918,6 @@ $REPLACE_Dr
 $REPLACE_Dream
 $REPLACE_Du
 $REPLACE_E
-$REPLACE_EAN
 $REPLACE_EC
 $REPLACE_ED
 $REPLACE_EF
@@ -39203,6 +39183,7 @@ $REPLACE_Jun
 $REPLACE_Just
 $REPLACE_K
 $REPLACE_KA
+$REPLACE_KAD
 $REPLACE_KADOKAWA
 $REPLACE_KB
 $REPLACE_KBS
@@ -39331,6 +39312,7 @@ $REPLACE_MiG
 $REPLACE_Mic
 $REPLACE_Mich
 $REPLACE_Michael
+$REPLACE_Micros
 $REPLACE_Microsoft
 $REPLACE_Mil
 $REPLACE_Min
@@ -39814,6 +39796,7 @@ $REPLACE_Yah
 $REPLACE_Yahoo
 $REPLACE_Year
 $REPLACE_You
+$REPLACE_YouT
 $REPLACE_YouTube
 $REPLACE_Your
 $REPLACE_Z
@@ -40001,11 +39984,10 @@ $REPLACE_{
 $REPLACE_|
 $REPLACE_}
 $REPLACE_~
-$REPLACE_¢
 $REPLACE_¥
 $REPLACE_©
 $REPLACE_«
-$REPLACE_®
+$REPLACE_¬
 $REPLACE_°
 $REPLACE_±
 $REPLACE_·
@@ -40015,13 +39997,14 @@ $REPLACE_À
 $REPLACE_Á
 $REPLACE_Ä
 $REPLACE_Å
-$REPLACE_Æ
+$REPLACE_Ç
 $REPLACE_É
-$REPLACE_Í
 $REPLACE_Î
 $REPLACE_Ó
 $REPLACE_Ö
 $REPLACE_×
+$REPLACE_Ø
+$REPLACE_Ú
 $REPLACE_Ü
 $REPLACE_ß
 $REPLACE_à
@@ -40037,7 +40020,7 @@ $REPLACE_é
 $REPLACE_ê
 $REPLACE_ì
 $REPLACE_í
-$REPLACE_ï
+$REPLACE_î
 $REPLACE_ñ
 $REPLACE_ò
 $REPLACE_ó
@@ -40045,14 +40028,12 @@ $REPLACE_ô
 $REPLACE_õ
 $REPLACE_ö
 $REPLACE_÷
-$REPLACE_ø
 $REPLACE_ù
 $REPLACE_ú
 $REPLACE_ü
 $REPLACE_ý
 $REPLACE_þ
 $REPLACE_ā
-$REPLACE_ă
 $REPLACE_ą
 $REPLACE_Ć
 $REPLACE_Č
@@ -40062,74 +40043,72 @@ $REPLACE_đ
 $REPLACE_ē
 $REPLACE_ę
 $REPLACE_ě
-$REPLACE_ĝ
-$REPLACE_ğ
 $REPLACE_ĩ
 $REPLACE_ī
+$REPLACE_İ
 $REPLACE_ı
 $REPLACE_Ł
 $REPLACE_ł
 $REPLACE_ń
 $REPLACE_ŋ
 $REPLACE_ō
+$REPLACE_ő
+$REPLACE_œ
 $REPLACE_ř
 $REPLACE_ś
+$REPLACE_Ş
 $REPLACE_ş
 $REPLACE_Š
 $REPLACE_š
 $REPLACE_ū
 $REPLACE_ů
+$REPLACE_Ż
 $REPLACE_Ž
 $REPLACE_ž
 $REPLACE_ơ
 $REPLACE_ư
 $REPLACE_ǎ
-$REPLACE_ǰ
 $REPLACE_ɑ
 $REPLACE_ɒ
 $REPLACE_ə
 $REPLACE_ɛ
-$REPLACE_ɦ
+$REPLACE_ɣ
 $REPLACE_ɪ
-$REPLACE_ɾ
+$REPLACE_ɴ
 $REPLACE_ʃ
-$REPLACE_ʊ
 $REPLACE_ʌ
 $REPLACE_ʒ
-$REPLACE_ʼ
 $REPLACE_ˈ
-$REPLACE_ˌ
 $REPLACE_ː
 $REPLACE_́
 $REPLACE_̈
-$REPLACE_̝
-$REPLACE_̯
+$REPLACE_͡
+$REPLACE_Α
+$REPLACE_Γ
 $REPLACE_Δ
+$REPLACE_Ε
 $REPLACE_Ζ
-$REPLACE_Η
-$REPLACE_Κ
 $REPLACE_Λ
-$REPLACE_Ν
-$REPLACE_Π
 $REPLACE_Σ
 $REPLACE_Τ
+$REPLACE_Χ
 $REPLACE_Ω
+$REPLACE_ή
 $REPLACE_α
-$REPLACE_β
-$REPLACE_γ
+$REPLACE_δ
 $REPLACE_θ
 $REPLACE_ι
 $REPLACE_κ
 $REPLACE_μ
 $REPLACE_ν
 $REPLACE_ο
+$REPLACE_π
 $REPLACE_ρ
 $REPLACE_ς
 $REPLACE_σ
 $REPLACE_τ
-$REPLACE_υ
 $REPLACE_φ
-$REPLACE_χ
+$REPLACE_ψ
 $REPLACE_ω
 $REPLACE_ό
 $REPLACE_А
@@ -40140,6 +40119,7 @@ $REPLACE_Д
 $REPLACE_Е
 $REPLACE_З
 $REPLACE_И
+$REPLACE_Й
 $REPLACE_К
 $REPLACE_Л
 $REPLACE_М
@@ -40179,25 +40159,22 @@ $REPLACE_ц
 $REPLACE_ч
 $REPLACE_ш
 $REPLACE_щ
+$REPLACE_ъ
 $REPLACE_ы
 $REPLACE_ь
 $REPLACE_э
-$REPLACE_ю
 $REPLACE_я
-$REPLACE_ё
 $REPLACE_і
 $REPLACE_ա
+$REPLACE_ի
 $REPLACE_յ
 $REPLACE_ն
 $REPLACE_ո
 $REPLACE_տ
 $REPLACE_ւ
-$REPLACE_ה
-$REPLACE_ט
 $REPLACE_י
-$REPLACE_פ
-$REPLACE_ת
-$REPLACE_آ
+$REPLACE_ע
+$REPLACE_ר
 $REPLACE_أ
 $REPLACE_ئ
 $REPLACE_ا
@@ -40207,12 +40184,10 @@ $REPLACE_ت
 $REPLACE_ث
 $REPLACE_ج
 $REPLACE_ح
-$REPLACE_خ
 $REPLACE_د
 $REPLACE_ر
 $REPLACE_ز
 $REPLACE_س
-$REPLACE_ش
 $REPLACE_ص
 $REPLACE_ض
 $REPLACE_ط
@@ -40230,7 +40205,6 @@ $REPLACE_و
 $REPLACE_ي
 $REPLACE_َ
 $REPLACE_ْ
-$REPLACE_پ
 $REPLACE_ک
 $REPLACE_ی
 $REPLACE_ە
@@ -40314,11 +40288,11 @@ $REPLACE_რ
 $REPLACE_ს
 $REPLACE_უ
 $REPLACE_ქ
+$REPLACE_ន
 $REPLACE_្
 $REPLACE_Ḥ
-$REPLACE_ḫ
+$REPLACE_ḥ
 $REPLACE_ṅ
-$REPLACE_ṭ
 $REPLACE_ạ
 $REPLACE_ả
 $REPLACE_ầ
@@ -40339,6 +40313,7 @@ $REPLACE_‘
 $REPLACE_’
 $REPLACE_“
 $REPLACE_”
+$REPLACE_†
 $REPLACE_•
 $REPLACE_‰
 $REPLACE_′
@@ -40353,23 +40328,24 @@ $REPLACE_⇔
 $REPLACE_∀
 $REPLACE_∑
 $REPLACE_−
+$REPLACE_∗
 $REPLACE_∞
 $REPLACE_∠
-$REPLACE_∩
-$REPLACE_∽
 $REPLACE_≒
 $REPLACE_≠
 $REPLACE_≤
-$REPLACE_≥
 $REPLACE_≦
 $REPLACE_≧
 $REPLACE_≪
-$REPLACE_≫
+$REPLACE_⊿
+$REPLACE_⋅
 $REPLACE_─
+$REPLACE_━
 $REPLACE_■
 $REPLACE_□
 $REPLACE_▲
 $REPLACE_△
+$REPLACE_▼
 $REPLACE_◆
 $REPLACE_◇
 $REPLACE_○
@@ -40378,17 +40354,14 @@ $REPLACE_●
 $REPLACE_◯
 $REPLACE_★
 $REPLACE_☆
+$REPLACE_♂
 $REPLACE_♡
 $REPLACE_♥
 $REPLACE_♪
 $REPLACE_♭
-$REPLACE_♯
-$REPLACE_✩
-$REPLACE_⟨
 $REPLACE_、
 $REPLACE_。
 $REPLACE_々
-$REPLACE_〆
 $REPLACE_〇
 $REPLACE_〈
 $REPLACE_〉
@@ -40927,6 +40900,7 @@ $REPLACE_そちら
 $REPLACE_そっくり
 $REPLACE_その
 $REPLACE_そば
+$REPLACE_そも
 $REPLACE_そもそも
 $REPLACE_そら
 $REPLACE_それ
@@ -40991,7 +40965,6 @@ $REPLACE_だろう
 $REPLACE_だん
 $REPLACE_ち
 $REPLACE_ちか
-$REPLACE_ちな
 $REPLACE_ちなみ
 $REPLACE_ちなむ
 $REPLACE_ちなん
@@ -41534,7 +41507,6 @@ $REPLACE_れん
 $REPLACE_ろ
 $REPLACE_ろう
 $REPLACE_ろく
-$REPLACE_ゎ
 $REPLACE_わ
 $REPLACE_わか
 $REPLACE_わかっ
@@ -42109,7 +42081,6 @@ $REPLACE_エスパー
 $REPLACE_エスペ
 $REPLACE_エタ
 $REPLACE_エタノール
-$REPLACE_エチオ
 $REPLACE_エチオピア
 $REPLACE_エッ
 $REPLACE_エックス
@@ -42197,6 +42168,7 @@ $REPLACE_エンブレム
 $REPLACE_エヴァ
 $REPLACE_エー
 $REPLACE_エーカー
+$REPLACE_エージェ
 $REPLACE_エージェンシー
 $REPLACE_エージェント
 $REPLACE_エース
@@ -42443,6 +42415,7 @@ $REPLACE_カンボ
 $REPLACE_カンボジア
 $REPLACE_カヴァー
 $REPLACE_カー
+$REPLACE_カージナル
 $REPLACE_カージナルス
 $REPLACE_カーズ
 $REPLACE_カーター
@@ -42882,7 +42855,6 @@ $REPLACE_コムーネ
 $REPLACE_コメ
 $REPLACE_コメディ
 $REPLACE_コメディアン
-$REPLACE_コメンテ
 $REPLACE_コメンテーター
 $REPLACE_コメント
 $REPLACE_コモ
@@ -42926,6 +42898,7 @@ $REPLACE_コンセプト
 $REPLACE_コンソール
 $REPLACE_コンタ
 $REPLACE_コンタクト
+$REPLACE_コンチネ
 $REPLACE_コンチネンタル
 $REPLACE_コンテ
 $REPLACE_コンティ
@@ -43020,6 +42993,7 @@ $REPLACE_サイヤ
 $REPLACE_サイレント
 $REPLACE_サイン
 $REPLACE_サウ
+$REPLACE_サウジア
 $REPLACE_サウジアラビア
 $REPLACE_サウス
 $REPLACE_サウスカロライナ
@@ -43253,6 +43227,7 @@ $REPLACE_シンクロ
 $REPLACE_シング
 $REPLACE_シングル
 $REPLACE_シングルス
+$REPLACE_シンシナ
 $REPLACE_シンシナティ
 $REPLACE_シンジ
 $REPLACE_シンセ
@@ -43460,6 +43435,7 @@ $REPLACE_スターリン
 $REPLACE_スターリング
 $REPLACE_スチ
 $REPLACE_スチュ
+$REPLACE_スチュア
 $REPLACE_スチュアート
 $REPLACE_スチュワート
 $REPLACE_スチール
@@ -44285,6 +44261,7 @@ $REPLACE_ニャン
 $REPLACE_ニュ
 $REPLACE_ニュルンベルク
 $REPLACE_ニュー
+$REPLACE_ニューイング
 $REPLACE_ニューイングランド
 $REPLACE_ニューオー
 $REPLACE_ニューオーリンズ
@@ -44396,7 +44373,6 @@ $REPLACE_ハビ
 $REPLACE_ハピ
 $REPLACE_ハブ
 $REPLACE_ハプ
-$REPLACE_ハプス
 $REPLACE_ハプスブルク
 $REPLACE_ハマ
 $REPLACE_ハミ
@@ -45215,6 +45191,7 @@ $REPLACE_ペダル
 $REPLACE_ペット
 $REPLACE_ペトロ
 $REPLACE_ペドロ
+$REPLACE_ペナル
 $REPLACE_ペナルティ
 $REPLACE_ペプ
 $REPLACE_ペプチド
@@ -45722,6 +45699,7 @@ $REPLACE_モンゴル
 $REPLACE_モンスター
 $REPLACE_モンタ
 $REPLACE_モンテ
+$REPLACE_モンテネ
 $REPLACE_モンテネグロ
 $REPLACE_モント
 $REPLACE_モントリオール
@@ -45960,7 +45938,6 @@ $REPLACE_リニューアル
 $REPLACE_リハ
 $REPLACE_リハビリ
 $REPLACE_リハビリテーション
-$REPLACE_リハー
 $REPLACE_リハーサル
 $REPLACE_リバ
 $REPLACE_リバウンド
@@ -46780,11 +46757,11 @@ $REPLACE_久美
 $REPLACE_久美子
 $REPLACE_么
 $REPLACE_之
-$REPLACE_乍
 $REPLACE_乎
 $REPLACE_乏
 $REPLACE_乏しい
 $REPLACE_乏しく
+$REPLACE_乐
 $REPLACE_乖
 $REPLACE_乗
 $REPLACE_乗じ
@@ -46821,6 +46798,7 @@ $REPLACE_九州
 $REPLACE_九郎
 $REPLACE_乞
 $REPLACE_也
+$REPLACE_乭
 $REPLACE_乱
 $REPLACE_乱れ
 $REPLACE_乱入
@@ -47040,6 +47018,7 @@ $REPLACE_他方
 $REPLACE_他界
 $REPLACE_他社
 $REPLACE_他者
+$REPLACE_仗
 $REPLACE_付
 $REPLACE_付い
 $REPLACE_付か
@@ -47265,6 +47244,7 @@ $REPLACE_住職
 $REPLACE_佐
 $REPLACE_佐々
 $REPLACE_佐々木
+$REPLACE_佐世
 $REPLACE_佐世保
 $REPLACE_佐久
 $REPLACE_佐久間
@@ -47339,6 +47319,7 @@ $REPLACE_佞
 $REPLACE_佟
 $REPLACE_你
 $REPLACE_佩
+$REPLACE_佬
 $REPLACE_佰
 $REPLACE_佳
 $REPLACE_佳作
@@ -47369,7 +47350,6 @@ $REPLACE_使者
 $REPLACE_侂
 $REPLACE_侃
 $REPLACE_來
-$REPLACE_侈
 $REPLACE_例
 $REPLACE_例え
 $REPLACE_例えば
@@ -47511,6 +47491,7 @@ $REPLACE_個展
 $REPLACE_個性
 $REPLACE_倍
 $REPLACE_倍率
+$REPLACE_們
 $REPLACE_倒
 $REPLACE_倒さ
 $REPLACE_倒し
@@ -47527,11 +47508,11 @@ $REPLACE_借
 $REPLACE_借り
 $REPLACE_借用
 $REPLACE_借金
-$REPLACE_倡
 $REPLACE_倣
 $REPLACE_値
 $REPLACE_値段
 $REPLACE_倦
+$REPLACE_倧
 $REPLACE_倩
 $REPLACE_倪
 $REPLACE_倫
@@ -47580,7 +47561,6 @@ $REPLACE_偽り
 $REPLACE_偽名
 $REPLACE_偽装
 $REPLACE_偽造
-$REPLACE_傀
 $REPLACE_傀儡
 $REPLACE_傅
 $REPLACE_傍
@@ -47699,7 +47679,6 @@ $REPLACE_充実
 $REPLACE_充当
 $REPLACE_充電
 $REPLACE_兆
-$REPLACE_兇
 $REPLACE_先
 $REPLACE_先代
 $REPLACE_先住
@@ -48017,6 +47996,7 @@ $REPLACE_写っ
 $REPLACE_写像
 $REPLACE_写本
 $REPLACE_写真
+$REPLACE_军
 $REPLACE_冠
 $REPLACE_冠し
 $REPLACE_冤
@@ -48373,6 +48353,7 @@ $REPLACE_創立
 $REPLACE_創設
 $REPLACE_創造
 $REPLACE_剽
+$REPLACE_劃
 $REPLACE_劇
 $REPLACE_劇中
 $REPLACE_劇作
@@ -48439,6 +48420,7 @@ $REPLACE_効
 $REPLACE_効力
 $REPLACE_効果
 $REPLACE_効率
+$REPLACE_劾
 $REPLACE_勁
 $REPLACE_勃
 $REPLACE_勃発
@@ -48480,6 +48462,7 @@ $REPLACE_勘違い
 $REPLACE_務
 $REPLACE_務め
 $REPLACE_務める
+$REPLACE_勛
 $REPLACE_勝
 $REPLACE_勝ち
 $REPLACE_勝ち点
@@ -48501,7 +48484,6 @@ $REPLACE_募集
 $REPLACE_勢
 $REPLACE_勢い
 $REPLACE_勢力
-$REPLACE_勣
 $REPLACE_勤
 $REPLACE_勤め
 $REPLACE_勤める
@@ -48576,13 +48558,13 @@ $REPLACE_北部
 $REPLACE_北野
 $REPLACE_北陸
 $REPLACE_北魏
+$REPLACE_匙
 $REPLACE_匝
 $REPLACE_匠
 $REPLACE_匡
 $REPLACE_匣
 $REPLACE_匪
 $REPLACE_匯
-$REPLACE_匱
 $REPLACE_匹
 $REPLACE_匹敵
 $REPLACE_区
@@ -48639,7 +48621,6 @@ $REPLACE_半田
 $REPLACE_半蔵
 $REPLACE_半身
 $REPLACE_卍
-$REPLACE_华
 $REPLACE_卑
 $REPLACE_卒
 $REPLACE_卒業
@@ -49283,6 +49264,7 @@ $REPLACE_呪
 $REPLACE_呪い
 $REPLACE_呪文
 $REPLACE_呪術
+$REPLACE_呰
 $REPLACE_味
 $REPLACE_味付け
 $REPLACE_味噌
@@ -49333,6 +49315,7 @@ $REPLACE_咒
 $REPLACE_咥
 $REPLACE_咨
 $REPLACE_咩
+$REPLACE_咫
 $REPLACE_咬
 $REPLACE_咲
 $REPLACE_咲き
@@ -49354,12 +49337,12 @@ $REPLACE_哨
 $REPLACE_哨戒
 $REPLACE_哩
 $REPLACE_哭
-$REPLACE_哮
 $REPLACE_哲
 $REPLACE_哲也
 $REPLACE_哲哉
 $REPLACE_哲学
 $REPLACE_哲郎
+$REPLACE_哺
 $REPLACE_哺乳
 $REPLACE_唄
 $REPLACE_唆
@@ -49404,7 +49387,7 @@ $REPLACE_啓
 $REPLACE_啓発
 $REPLACE_啓蒙
 $REPLACE_啖
-$REPLACE_啤
+$REPLACE_啜
 $REPLACE_啼
 $REPLACE_喀
 $REPLACE_善
@@ -49446,7 +49429,6 @@ $REPLACE_嗅
 $REPLACE_嗚
 $REPLACE_嗜
 $REPLACE_嗜好
-$REPLACE_嗟
 $REPLACE_嗣
 $REPLACE_嗣子
 $REPLACE_嗽
@@ -49454,6 +49436,7 @@ $REPLACE_嘆
 $REPLACE_嘆き
 $REPLACE_嘉
 $REPLACE_嘉永
+$REPLACE_嘎
 $REPLACE_嘔
 $REPLACE_嘗
 $REPLACE_嘘
@@ -49464,28 +49447,27 @@ $REPLACE_嘱託
 $REPLACE_嘲
 $REPLACE_嘴
 $REPLACE_噂
+$REPLACE_噌
 $REPLACE_噛
 $REPLACE_噛み
 $REPLACE_器
 $REPLACE_器具
 $REPLACE_器官
 $REPLACE_器用
+$REPLACE_噲
 $REPLACE_噴
 $REPLACE_噴出
 $REPLACE_噴射
 $REPLACE_噴火
 $REPLACE_噺
 $REPLACE_嚆
-$REPLACE_嚇
 $REPLACE_嚢
 $REPLACE_嚥
 $REPLACE_嚮
 $REPLACE_嚴
-$REPLACE_嚶
 $REPLACE_囁
 $REPLACE_囂
 $REPLACE_囃
-$REPLACE_囎
 $REPLACE_囚
 $REPLACE_囚われ
 $REPLACE_囚人
@@ -49660,7 +49642,6 @@ $REPLACE_在日
 $REPLACE_在来
 $REPLACE_在籍
 $REPLACE_在職
-$REPLACE_圩
 $REPLACE_圭
 $REPLACE_地
 $REPLACE_地上
@@ -49694,7 +49675,6 @@ $REPLACE_地雷
 $REPLACE_地震
 $REPLACE_地面
 $REPLACE_地頭
-$REPLACE_圳
 $REPLACE_圻
 $REPLACE_址
 $REPLACE_坂
@@ -49711,6 +49691,7 @@ $REPLACE_均衡
 $REPLACE_坊
 $REPLACE_坊主
 $REPLACE_坎
+$REPLACE_坏
 $REPLACE_坐
 $REPLACE_坐像
 $REPLACE_坑
@@ -49718,7 +49699,6 @@ $REPLACE_坡
 $REPLACE_坤
 $REPLACE_坦
 $REPLACE_坪
-$REPLACE_坳
 $REPLACE_垂
 $REPLACE_垂れ
 $REPLACE_垂直
@@ -49751,7 +49731,6 @@ $REPLACE_埔
 $REPLACE_埕
 $REPLACE_埜
 $REPLACE_域
-$REPLACE_埠
 $REPLACE_埠頭
 $REPLACE_埴
 $REPLACE_埴輪
@@ -49846,7 +49825,6 @@ $REPLACE_境
 $REPLACE_境内
 $REPLACE_境界
 $REPLACE_境遇
-$REPLACE_墉
 $REPLACE_墓
 $REPLACE_墓地
 $REPLACE_墓所
@@ -49875,6 +49853,7 @@ $REPLACE_墜
 $REPLACE_墜落
 $REPLACE_墟
 $REPLACE_墨
+$REPLACE_墩
 $REPLACE_墳
 $REPLACE_墳丘
 $REPLACE_墺
@@ -49890,8 +49869,10 @@ $REPLACE_壊れ
 $REPLACE_壊滅
 $REPLACE_壌
 $REPLACE_壕
+$REPLACE_壙
 $REPLACE_壜
 $REPLACE_壢
+$REPLACE_壩
 $REPLACE_士
 $REPLACE_士官
 $REPLACE_士族
@@ -50260,7 +50241,6 @@ $REPLACE_奔
 $REPLACE_奔走
 $REPLACE_奕
 $REPLACE_套
-$REPLACE_奘
 $REPLACE_奚
 $REPLACE_奠
 $REPLACE_奢
@@ -50337,7 +50317,6 @@ $REPLACE_妹
 $REPLACE_妻
 $REPLACE_妻子
 $REPLACE_妾
-$REPLACE_姆
 $REPLACE_姉
 $REPLACE_姉妹
 $REPLACE_姉弟
@@ -50364,7 +50343,6 @@ $REPLACE_姚
 $REPLACE_姜
 $REPLACE_姥
 $REPLACE_姦
-$REPLACE_姨
 $REPLACE_姪
 $REPLACE_姫
 $REPLACE_姫路
@@ -50379,10 +50357,8 @@ $REPLACE_娑
 $REPLACE_娘
 $REPLACE_娘婿
 $REPLACE_娜
-$REPLACE_娟
 $REPLACE_娥
 $REPLACE_娩
-$REPLACE_娯
 $REPLACE_娯楽
 $REPLACE_娶
 $REPLACE_娼
@@ -50426,7 +50402,6 @@ $REPLACE_嬢
 $REPLACE_嬪
 $REPLACE_嬬
 $REPLACE_嬰
-$REPLACE_嬲
 $REPLACE_嬴
 $REPLACE_子
 $REPLACE_子ども
@@ -50489,6 +50464,7 @@ $REPLACE_学説
 $REPLACE_学部
 $REPLACE_学長
 $REPLACE_学院
+$REPLACE_孩
 $REPLACE_孫
 $REPLACE_孫娘
 $REPLACE_孫権
@@ -51005,7 +50981,6 @@ $REPLACE_屋外
 $REPLACE_屋敷
 $REPLACE_屋根
 $REPLACE_屍
-$REPLACE_屎
 $REPLACE_屏
 $REPLACE_屑
 $REPLACE_展
@@ -51098,7 +51073,6 @@ $REPLACE_岷
 $REPLACE_岸
 $REPLACE_岸和田
 $REPLACE_岸田
-$REPLACE_峅
 $REPLACE_峙
 $REPLACE_峠
 $REPLACE_峡
@@ -51130,7 +51104,6 @@ $REPLACE_崔
 $REPLACE_崖
 $REPLACE_崗
 $REPLACE_崙
-$REPLACE_崧
 $REPLACE_崩
 $REPLACE_崩し
 $REPLACE_崩れ
@@ -51143,6 +51116,7 @@ $REPLACE_嵐
 $REPLACE_嵐山
 $REPLACE_嵜
 $REPLACE_嵩
+$REPLACE_嵯
 $REPLACE_嵯峨
 $REPLACE_嶋
 $REPLACE_嶌
@@ -51268,6 +51242,8 @@ $REPLACE_希
 $REPLACE_希少
 $REPLACE_希望
 $REPLACE_帖
+$REPLACE_帙
+$REPLACE_帚
 $REPLACE_帛
 $REPLACE_帝
 $REPLACE_帝京
@@ -51318,6 +51294,7 @@ $REPLACE_常陸
 $REPLACE_常駐
 $REPLACE_帽
 $REPLACE_帽子
+$REPLACE_幄
 $REPLACE_幅
 $REPLACE_幅員
 $REPLACE_幅広
@@ -51406,6 +51383,7 @@ $REPLACE_幹
 $REPLACE_幹事
 $REPLACE_幹線
 $REPLACE_幹部
+$REPLACE_幺
 $REPLACE_幻
 $REPLACE_幻影
 $REPLACE_幻想
@@ -51517,7 +51495,6 @@ $REPLACE_廠
 $REPLACE_廣
 $REPLACE_廩
 $REPLACE_廬
-$REPLACE_廳
 $REPLACE_延
 $REPLACE_延び
 $REPLACE_延びる
@@ -51553,6 +51530,7 @@ $REPLACE_弁論
 $REPLACE_弁護
 $REPLACE_弄
 $REPLACE_弈
+$REPLACE_弉
 $REPLACE_弊
 $REPLACE_弋
 $REPLACE_弌
@@ -51599,7 +51577,6 @@ $REPLACE_引っ
 $REPLACE_引っ越し
 $REPLACE_引用
 $REPLACE_引退
-$REPLACE_弖
 $REPLACE_弗
 $REPLACE_弘
 $REPLACE_弘仁
@@ -51609,7 +51586,6 @@ $REPLACE_弘文
 $REPLACE_弛
 $REPLACE_弟
 $REPLACE_弟子
-$REPLACE_张
 $REPLACE_弥
 $REPLACE_弥生
 $REPLACE_弦
@@ -51661,7 +51637,6 @@ $REPLACE_弾圧
 $REPLACE_弾薬
 $REPLACE_弾道
 $REPLACE_弾頭
-$REPLACE_彊
 $REPLACE_彌
 $REPLACE_彎
 $REPLACE_当
@@ -51686,6 +51661,7 @@ $REPLACE_当社
 $REPLACE_当該
 $REPLACE_当選
 $REPLACE_当面
+$REPLACE_彗
 $REPLACE_彗星
 $REPLACE_彙
 $REPLACE_彝
@@ -51696,9 +51672,9 @@ $REPLACE_形態
 $REPLACE_形成
 $REPLACE_形状
 $REPLACE_形質
-$REPLACE_彤
 $REPLACE_彦
 $REPLACE_彦根
+$REPLACE_彧
 $REPLACE_彩
 $REPLACE_彩色
 $REPLACE_彪
@@ -51809,7 +51785,6 @@ $REPLACE_御堂
 $REPLACE_御影
 $REPLACE_御所
 $REPLACE_御殿
-$REPLACE_徧
 $REPLACE_復
 $REPLACE_復元
 $REPLACE_復刻
@@ -51982,7 +51957,6 @@ $REPLACE_恩師
 $REPLACE_恩恵
 $REPLACE_恪
 $REPLACE_恫
-$REPLACE_恬
 $REPLACE_恭
 $REPLACE_恭子
 $REPLACE_息
@@ -51998,6 +51972,7 @@ $REPLACE_悉
 $REPLACE_悌
 $REPLACE_悍
 $REPLACE_悔
+$REPLACE_悝
 $REPLACE_悟
 $REPLACE_悟り
 $REPLACE_悟空
@@ -52046,7 +52021,6 @@ $REPLACE_惟
 $REPLACE_惠
 $REPLACE_惡
 $REPLACE_惣
-$REPLACE_惧
 $REPLACE_惨
 $REPLACE_惨敗
 $REPLACE_惰
@@ -52107,6 +52081,7 @@ $REPLACE_感謝
 $REPLACE_感銘
 $REPLACE_愷
 $REPLACE_愼
+$REPLACE_愿
 $REPLACE_慄
 $REPLACE_慇
 $REPLACE_慈
@@ -52158,7 +52133,7 @@ $REPLACE_憤慨
 $REPLACE_憧
 $REPLACE_憧れ
 $REPLACE_憩
-$REPLACE_憮
+$REPLACE_憬
 $REPLACE_憲
 $REPLACE_憲兵
 $REPLACE_憲政
@@ -52218,10 +52193,8 @@ $REPLACE_我が
 $REPLACE_我孫子
 $REPLACE_我慢
 $REPLACE_戒
-$REPLACE_戔
 $REPLACE_或
 $REPLACE_或いは
-$REPLACE_战
 $REPLACE_戚
 $REPLACE_戟
 $REPLACE_戡
@@ -52480,6 +52453,7 @@ $REPLACE_拒否
 $REPLACE_拒絶
 $REPLACE_拓
 $REPLACE_拓也
+$REPLACE_拔
 $REPLACE_拗
 $REPLACE_拘
 $REPLACE_拘束
@@ -52508,7 +52482,7 @@ $REPLACE_括
 $REPLACE_括弧
 $REPLACE_拭
 $REPLACE_拮
-$REPLACE_拱
+$REPLACE_拯
 $REPLACE_拳
 $REPLACE_拳法
 $REPLACE_拳銃
@@ -52520,7 +52494,6 @@ $REPLACE_拼
 $REPLACE_拾
 $REPLACE_拾っ
 $REPLACE_拾わ
-$REPLACE_拿
 $REPLACE_拿捕
 $REPLACE_持
 $REPLACE_持た
@@ -52541,7 +52514,6 @@ $REPLACE_持て
 $REPLACE_持参
 $REPLACE_持株
 $REPLACE_持続
-$REPLACE_挂
 $REPLACE_指
 $REPLACE_指し
 $REPLACE_指す
@@ -52564,6 +52536,7 @@ $REPLACE_挑む
 $REPLACE_挑ん
 $REPLACE_挑戦
 $REPLACE_挑発
+$REPLACE_挖
 $REPLACE_挙
 $REPLACE_挙がっ
 $REPLACE_挙げ
@@ -52597,6 +52570,7 @@ $REPLACE_振動
 $REPLACE_振替
 $REPLACE_振興
 $REPLACE_振舞
+$REPLACE_挹
 $REPLACE_挺
 $REPLACE_挽
 $REPLACE_挾
@@ -52799,6 +52773,7 @@ $REPLACE_摂
 $REPLACE_摂取
 $REPLACE_摂政
 $REPLACE_摂津
+$REPLACE_摔
 $REPLACE_摘
 $REPLACE_摘発
 $REPLACE_摠
@@ -52816,7 +52791,6 @@ $REPLACE_撃墜
 $REPLACE_撃沈
 $REPLACE_撃破
 $REPLACE_撃退
-$REPLACE_撈
 $REPLACE_撒
 $REPLACE_撓
 $REPLACE_撚
@@ -53068,6 +53042,7 @@ $REPLACE_敷き
 $REPLACE_敷地
 $REPLACE_敷設
 $REPLACE_數
+$REPLACE_斂
 $REPLACE_斃
 $REPLACE_文
 $REPLACE_文久
@@ -53111,7 +53086,6 @@ $REPLACE_斛
 $REPLACE_斜
 $REPLACE_斜め
 $REPLACE_斜面
-$REPLACE_斟
 $REPLACE_斡
 $REPLACE_斡旋
 $REPLACE_斤
@@ -53223,7 +53197,6 @@ $REPLACE_旗
 $REPLACE_旗揚げ
 $REPLACE_旗本
 $REPLACE_旗艦
-$REPLACE_旛
 $REPLACE_无
 $REPLACE_既
 $REPLACE_既に
@@ -53339,7 +53312,6 @@ $REPLACE_明記
 $REPLACE_昏
 $REPLACE_易
 $REPLACE_昔
-$REPLACE_昕
 $REPLACE_星
 $REPLACE_星団
 $REPLACE_星座
@@ -53409,6 +53381,7 @@ $REPLACE_景品
 $REPLACE_景気
 $REPLACE_景色
 $REPLACE_景観
+$REPLACE_晰
 $REPLACE_晴
 $REPLACE_晴れ
 $REPLACE_晶
@@ -53450,6 +53423,7 @@ $REPLACE_暴行
 $REPLACE_暴走
 $REPLACE_暴露
 $REPLACE_暴風
+$REPLACE_暹
 $REPLACE_曁
 $REPLACE_曄
 $REPLACE_曇
@@ -53696,7 +53670,6 @@ $REPLACE_本館
 $REPLACE_札
 $REPLACE_札幌
 $REPLACE_札所
-$REPLACE_朮
 $REPLACE_朱
 $REPLACE_朱印
 $REPLACE_朴
@@ -53749,6 +53722,7 @@ $REPLACE_来訪
 $REPLACE_杭
 $REPLACE_杮
 $REPLACE_杯
+$REPLACE_杰
 $REPLACE_東
 $REPLACE_東ドイツ
 $REPLACE_東上
@@ -53818,7 +53792,7 @@ $REPLACE_板
 $REPLACE_板倉
 $REPLACE_板垣
 $REPLACE_板橋
-$REPLACE_枉
+$REPLACE_枇
 $REPLACE_枋
 $REPLACE_析
 $REPLACE_枓
@@ -53949,6 +53923,7 @@ $REPLACE_桃
 $REPLACE_桃太郎
 $REPLACE_桃子
 $REPLACE_桃山
+$REPLACE_框
 $REPLACE_案
 $REPLACE_案じ
 $REPLACE_案件
@@ -53989,6 +53964,7 @@ $REPLACE_梠
 $REPLACE_梢
 $REPLACE_梧
 $REPLACE_梨
+$REPLACE_梭
 $REPLACE_梯
 $REPLACE_械
 $REPLACE_梱
@@ -54037,7 +54013,6 @@ $REPLACE_椎
 $REPLACE_椎名
 $REPLACE_椒
 $REPLACE_椙
-$REPLACE_椚
 $REPLACE_椛
 $REPLACE_検
 $REPLACE_検事
@@ -54052,11 +54027,11 @@ $REPLACE_検討
 $REPLACE_検証
 $REPLACE_検閲
 $REPLACE_椰
+$REPLACE_椴
 $REPLACE_椿
 $REPLACE_楊
 $REPLACE_楓
 $REPLACE_楔
-$REPLACE_楕
 $REPLACE_楕円
 $REPLACE_楚
 $REPLACE_楠
@@ -54113,11 +54088,11 @@ $REPLACE_榎本
 $REPLACE_榑
 $REPLACE_榕
 $REPLACE_榛
+$REPLACE_榜
 $REPLACE_榧
 $REPLACE_榮
 $REPLACE_榴
 $REPLACE_榴弾
-$REPLACE_槃
 $REPLACE_槇
 $REPLACE_槊
 $REPLACE_構
@@ -54225,9 +54200,10 @@ $REPLACE_橿
 $REPLACE_橿原
 $REPLACE_檀
 $REPLACE_檄
-$REPLACE_檎
 $REPLACE_檜
+$REPLACE_檢
 $REPLACE_檣
+$REPLACE_檮
 $REPLACE_檸
 $REPLACE_檻
 $REPLACE_櫂
@@ -54235,6 +54211,7 @@ $REPLACE_櫃
 $REPLACE_櫓
 $REPLACE_櫛
 $REPLACE_櫟
+$REPLACE_櫨
 $REPLACE_櫻
 $REPLACE_櫻井
 $REPLACE_欄
@@ -54419,6 +54396,7 @@ $REPLACE_残虐
 $REPLACE_残酷
 $REPLACE_残骸
 $REPLACE_殖
+$REPLACE_殘
 $REPLACE_殤
 $REPLACE_殲
 $REPLACE_殲滅
@@ -54475,7 +54453,9 @@ $REPLACE_毘
 $REPLACE_毛
 $REPLACE_毛利
 $REPLACE_毛皮
+$REPLACE_毫
 $REPLACE_毬
+$REPLACE_毯
 $REPLACE_氈
 $REPLACE_氏
 $REPLACE_氏名
@@ -54581,7 +54561,6 @@ $REPLACE_永正
 $REPLACE_永田
 $REPLACE_永禄
 $REPLACE_永遠
-$REPLACE_氾
 $REPLACE_氾濫
 $REPLACE_汀
 $REPLACE_汁
@@ -54678,7 +54657,6 @@ $REPLACE_沢東
 $REPLACE_沢田
 $REPLACE_沫
 $REPLACE_沮
-$REPLACE_沱
 $REPLACE_河
 $REPLACE_河内
 $REPLACE_河出
@@ -54743,7 +54721,6 @@ $REPLACE_法華
 $REPLACE_法規
 $REPLACE_泗
 $REPLACE_泛
-$REPLACE_泠
 $REPLACE_泡
 $REPLACE_波
 $REPLACE_波動
@@ -54764,15 +54741,14 @@ $REPLACE_注文
 $REPLACE_注目
 $REPLACE_注釈
 $REPLACE_泪
+$REPLACE_泮
 $REPLACE_泰
 $REPLACE_泳
-$REPLACE_洄
 $REPLACE_洋
 $REPLACE_洋上
 $REPLACE_洋子
 $REPLACE_洋楽
 $REPLACE_洋画
-$REPLACE_洌
 $REPLACE_洒
 $REPLACE_洗
 $REPLACE_洗い
@@ -54798,7 +54774,6 @@ $REPLACE_洪水
 $REPLACE_洮
 $REPLACE_洱
 $REPLACE_洲
-$REPLACE_洵
 $REPLACE_洸
 $REPLACE_活
 $REPLACE_活かし
@@ -54808,6 +54783,7 @@ $REPLACE_活性
 $REPLACE_活用
 $REPLACE_活発
 $REPLACE_活躍
+$REPLACE_洽
 $REPLACE_派
 $REPLACE_派出
 $REPLACE_派手
@@ -54948,7 +54924,9 @@ $REPLACE_淞
 $REPLACE_淡
 $REPLACE_淡水
 $REPLACE_淡路
+$REPLACE_淤
 $REPLACE_淦
+$REPLACE_淨
 $REPLACE_淫
 $REPLACE_淮
 $REPLACE_深
@@ -55004,6 +54982,7 @@ $REPLACE_渋谷
 $REPLACE_渓
 $REPLACE_渓谷
 $REPLACE_渕
+$REPLACE_渙
 $REPLACE_渚
 $REPLACE_減
 $REPLACE_減っ
@@ -55049,6 +55028,7 @@ $REPLACE_游
 $REPLACE_渺
 $REPLACE_渾
 $REPLACE_湊
+$REPLACE_湍
 $REPLACE_湖
 $REPLACE_湖北
 $REPLACE_湖南
@@ -55142,7 +55122,6 @@ $REPLACE_滞在
 $REPLACE_滬
 $REPLACE_滲
 $REPLACE_滴
-$REPLACE_滷
 $REPLACE_滸
 $REPLACE_滿
 $REPLACE_漁
@@ -55205,11 +55184,10 @@ $REPLACE_潤
 $REPLACE_潭
 $REPLACE_潮
 $REPLACE_潰
-$REPLACE_潴
 $REPLACE_潼
 $REPLACE_澁
-$REPLACE_澂
 $REPLACE_澄
+$REPLACE_澈
 $REPLACE_澎
 $REPLACE_澗
 $REPLACE_澤
@@ -55255,9 +55233,9 @@ $REPLACE_瀑
 $REPLACE_瀕
 $REPLACE_瀕死
 $REPLACE_瀘
+$REPLACE_瀚
 $REPLACE_瀛
 $REPLACE_瀝
-$REPLACE_瀞
 $REPLACE_瀟
 $REPLACE_瀧
 $REPLACE_瀬
@@ -55267,7 +55245,6 @@ $REPLACE_瀾
 $REPLACE_灌
 $REPLACE_灌漑
 $REPLACE_灘
-$REPLACE_灞
 $REPLACE_灣
 $REPLACE_灤
 $REPLACE_火
@@ -55291,6 +55268,7 @@ $REPLACE_灼
 $REPLACE_災
 $REPLACE_災い
 $REPLACE_災害
+$REPLACE_炅
 $REPLACE_炉
 $REPLACE_炊
 $REPLACE_炎
@@ -55372,8 +55350,8 @@ $REPLACE_煉
 $REPLACE_煉瓦
 $REPLACE_煌
 $REPLACE_煎
+$REPLACE_煒
 $REPLACE_煕
-$REPLACE_煖
 $REPLACE_煙
 $REPLACE_煙突
 $REPLACE_煙草
@@ -55393,6 +55371,7 @@ $REPLACE_熊
 $REPLACE_熊本
 $REPLACE_熊谷
 $REPLACE_熊野
+$REPLACE_熏
 $REPLACE_熔
 $REPLACE_熙
 $REPLACE_熟
@@ -55423,7 +55402,7 @@ $REPLACE_燎
 $REPLACE_燐
 $REPLACE_燕
 $REPLACE_燗
-$REPLACE_燥
+$REPLACE_營
 $REPLACE_燦
 $REPLACE_燧
 $REPLACE_燭
@@ -55443,6 +55422,7 @@ $REPLACE_爆風
 $REPLACE_爛
 $REPLACE_爨
 $REPLACE_爪
+$REPLACE_爬
 $REPLACE_爬虫
 $REPLACE_爲
 $REPLACE_爵
@@ -55651,7 +55631,6 @@ $REPLACE_玩具
 $REPLACE_玫
 $REPLACE_玲
 $REPLACE_玻
-$REPLACE_珂
 $REPLACE_珈
 $REPLACE_珉
 $REPLACE_珊
@@ -55713,9 +55692,7 @@ $REPLACE_琰
 $REPLACE_琳
 $REPLACE_琴
 $REPLACE_琴平
-$REPLACE_琵
 $REPLACE_琵琶
-$REPLACE_琶
 $REPLACE_琺
 $REPLACE_琿
 $REPLACE_瑁
@@ -55744,8 +55721,6 @@ $REPLACE_璐
 $REPLACE_璜
 $REPLACE_璞
 $REPLACE_璟
-$REPLACE_璠
-$REPLACE_璧
 $REPLACE_環
 $REPLACE_環境
 $REPLACE_環状
@@ -55827,7 +55802,6 @@ $REPLACE_生身
 $REPLACE_生還
 $REPLACE_生野
 $REPLACE_生駒
-$REPLACE_產
 $REPLACE_産
 $REPLACE_産み
 $REPLACE_産む
@@ -55931,12 +55905,14 @@ $REPLACE_留め
 $REPLACE_留学
 $REPLACE_留守
 $REPLACE_留置
+$REPLACE_畚
 $REPLACE_畜
 $REPLACE_畜産
 $REPLACE_畝
 $REPLACE_畠
 $REPLACE_畠山
 $REPLACE_畢
+$REPLACE_畤
 $REPLACE_略
 $REPLACE_略し
 $REPLACE_略奪
@@ -55974,9 +55950,9 @@ $REPLACE_異議
 $REPLACE_畳
 $REPLACE_當
 $REPLACE_畷
-$REPLACE_畸
 $REPLACE_畿
 $REPLACE_畿内
+$REPLACE_疆
 $REPLACE_疇
 $REPLACE_疋
 $REPLACE_疎
@@ -56025,6 +56001,7 @@ $REPLACE_痙
 $REPLACE_痛
 $REPLACE_痛み
 $REPLACE_痛め
+$REPLACE_痢
 $REPLACE_痣
 $REPLACE_痩
 $REPLACE_痰
@@ -56185,7 +56162,9 @@ $REPLACE_監督
 $REPLACE_監禁
 $REPLACE_監視
 $REPLACE_盤
+$REPLACE_盥
 $REPLACE_盧
+$REPLACE_盪
 $REPLACE_目
 $REPLACE_目さ
 $REPLACE_目の
@@ -56264,6 +56243,7 @@ $REPLACE_盾
 $REPLACE_省
 $REPLACE_省庁
 $REPLACE_省略
+$REPLACE_眈
 $REPLACE_眉
 $REPLACE_看
 $REPLACE_看板
@@ -56305,6 +56285,7 @@ $REPLACE_眠り
 $REPLACE_眠る
 $REPLACE_眩
 $REPLACE_眷
+$REPLACE_眸
 $REPLACE_眺
 $REPLACE_眺め
 $REPLACE_眼
@@ -56340,6 +56321,7 @@ $REPLACE_瞬
 $REPLACE_瞬時
 $REPLACE_瞬間
 $REPLACE_瞭
+$REPLACE_瞰
 $REPLACE_瞳
 $REPLACE_瞻
 $REPLACE_瞼
@@ -56472,6 +56454,7 @@ $REPLACE_碗
 $REPLACE_碣
 $REPLACE_碧
 $REPLACE_碩
+$REPLACE_碭
 $REPLACE_確
 $REPLACE_確か
 $REPLACE_確保
@@ -56489,7 +56472,6 @@ $REPLACE_磁場
 $REPLACE_磁気
 $REPLACE_磁石
 $REPLACE_磊
-$REPLACE_磋
 $REPLACE_磐
 $REPLACE_磐田
 $REPLACE_磔
@@ -56512,6 +56494,7 @@ $REPLACE_示唆
 $REPLACE_礼
 $REPLACE_礼儀
 $REPLACE_礼拝
+$REPLACE_礽
 $REPLACE_社
 $REPLACE_社交
 $REPLACE_社会
@@ -56534,6 +56517,7 @@ $REPLACE_祈
 $REPLACE_祈り
 $REPLACE_祈祷
 $REPLACE_祈願
+$REPLACE_祉
 $REPLACE_祐
 $REPLACE_祓
 $REPLACE_祖
@@ -56622,6 +56606,7 @@ $REPLACE_禪
 $REPLACE_禮
 $REPLACE_禰
 $REPLACE_禹
+$REPLACE_禺
 $REPLACE_禽
 $REPLACE_禾
 $REPLACE_禿
@@ -56656,7 +56641,6 @@ $REPLACE_秘密
 $REPLACE_秘書
 $REPLACE_租
 $REPLACE_租税
-$REPLACE_秣
 $REPLACE_秤
 $REPLACE_秦
 $REPLACE_秩
@@ -56787,21 +56771,18 @@ $REPLACE_突起
 $REPLACE_突進
 $REPLACE_窃
 $REPLACE_窃盗
-$REPLACE_窄
-$REPLACE_窈
 $REPLACE_窒
 $REPLACE_窒素
 $REPLACE_窓
 $REPLACE_窓口
-$REPLACE_窘
 $REPLACE_窟
-$REPLACE_窠
 $REPLACE_窩
 $REPLACE_窪
 $REPLACE_窮
 $REPLACE_窮地
 $REPLACE_窯
 $REPLACE_窺
+$REPLACE_竃
 $REPLACE_竇
 $REPLACE_竈
 $REPLACE_立
@@ -56849,6 +56830,7 @@ $REPLACE_竪
 $REPLACE_端
 $REPLACE_端子
 $REPLACE_端末
+$REPLACE_竴
 $REPLACE_競
 $REPLACE_競い
 $REPLACE_競う
@@ -56879,6 +56861,7 @@ $REPLACE_笑っ
 $REPLACE_笑わ
 $REPLACE_笑福亭
 $REPLACE_笑顔
+$REPLACE_笘
 $REPLACE_笙
 $REPLACE_笛
 $REPLACE_笞
@@ -56898,6 +56881,7 @@ $REPLACE_等しい
 $REPLACE_等級
 $REPLACE_筋
 $REPLACE_筋肉
+$REPLACE_筌
 $REPLACE_筍
 $REPLACE_筏
 $REPLACE_筐
@@ -56923,8 +56907,10 @@ $REPLACE_筥
 $REPLACE_筧
 $REPLACE_筬
 $REPLACE_筮
+$REPLACE_筰
 $REPLACE_筵
 $REPLACE_筺
+$REPLACE_箆
 $REPLACE_箇
 $REPLACE_箇所
 $REPLACE_箋
@@ -56967,12 +56953,13 @@ $REPLACE_築く
 $REPLACE_築地
 $REPLACE_築城
 $REPLACE_築造
+$REPLACE_篋
+$REPLACE_篝
 $REPLACE_篠
 $REPLACE_篠原
 $REPLACE_篠山
 $REPLACE_篤
 $REPLACE_篩
-$REPLACE_篪
 $REPLACE_篭
 $REPLACE_篳
 $REPLACE_簀
@@ -57264,6 +57251,7 @@ $REPLACE_続投
 $REPLACE_続編
 $REPLACE_続行
 $REPLACE_綜
+$REPLACE_綝
 $REPLACE_綠
 $REPLACE_綫
 $REPLACE_綬
@@ -57278,7 +57266,6 @@ $REPLACE_網走
 $REPLACE_綴
 $REPLACE_綴っ
 $REPLACE_綴り
-$REPLACE_綵
 $REPLACE_綸
 $REPLACE_綺
 $REPLACE_綺麗
@@ -57315,7 +57302,6 @@ $REPLACE_緑地
 $REPLACE_緑色
 $REPLACE_緒
 $REPLACE_緒方
-$REPLACE_緘
 $REPLACE_線
 $REPLACE_線型
 $REPLACE_線形
@@ -57367,7 +57353,6 @@ $REPLACE_縮
 $REPLACE_縮小
 $REPLACE_縯
 $REPLACE_縷
-$REPLACE_縹
 $REPLACE_縺
 $REPLACE_總
 $REPLACE_績
@@ -57386,7 +57371,6 @@ $REPLACE_繋がっ
 $REPLACE_繋がり
 $REPLACE_繋がる
 $REPLACE_繋ぐ
-$REPLACE_繍
 $REPLACE_織
 $REPLACE_織り
 $REPLACE_織物
@@ -57413,12 +57397,10 @@ $REPLACE_纏っ
 $REPLACE_纒
 $REPLACE_纓
 $REPLACE_红
-$REPLACE_线
 $REPLACE_缶
 $REPLACE_罐
 $REPLACE_网
 $REPLACE_罕
-$REPLACE_罘
 $REPLACE_罠
 $REPLACE_罪
 $REPLACE_罫
@@ -57436,10 +57418,12 @@ $REPLACE_罰金
 $REPLACE_署
 $REPLACE_署名
 $REPLACE_罵
+$REPLACE_罷
 $REPLACE_罷免
 $REPLACE_罹
 $REPLACE_羂
 $REPLACE_羅
+$REPLACE_羆
 $REPLACE_羊
 $REPLACE_羋
 $REPLACE_羌
@@ -57465,6 +57449,7 @@ $REPLACE_美術
 $REPLACE_美貌
 $REPLACE_美里
 $REPLACE_羞
+$REPLACE_羣
 $REPLACE_群
 $REPLACE_群れ
 $REPLACE_群島
@@ -57496,11 +57481,11 @@ $REPLACE_翌日
 $REPLACE_翌月
 $REPLACE_翌朝
 $REPLACE_翌週
-$REPLACE_翎
 $REPLACE_習
 $REPLACE_習い
 $REPLACE_習っ
 $REPLACE_習得
+$REPLACE_習志
 $REPLACE_習志野
 $REPLACE_習慣
 $REPLACE_翔
@@ -57508,9 +57493,9 @@ $REPLACE_翟
 $REPLACE_翠
 $REPLACE_翡
 $REPLACE_翦
-$REPLACE_翫
 $REPLACE_翰
 $REPLACE_翳
+$REPLACE_翹
 $REPLACE_翻
 $REPLACE_翻弄
 $REPLACE_翻訳
@@ -57589,6 +57574,7 @@ $REPLACE_職員
 $REPLACE_職場
 $REPLACE_職業
 $REPLACE_聾
+$REPLACE_肄
 $REPLACE_肆
 $REPLACE_肇
 $REPLACE_肉
@@ -57600,6 +57586,7 @@ $REPLACE_肖
 $REPLACE_肖像
 $REPLACE_肘
 $REPLACE_肛
+$REPLACE_肜
 $REPLACE_肝
 $REPLACE_肝臓
 $REPLACE_股
@@ -57683,7 +57670,6 @@ $REPLACE_脱落
 $REPLACE_脱走
 $REPLACE_脱退
 $REPLACE_脳
-$REPLACE_脹
 $REPLACE_脾
 $REPLACE_腋
 $REPLACE_腎
@@ -57732,6 +57718,7 @@ $REPLACE_臓
 $REPLACE_臓器
 $REPLACE_臘
 $REPLACE_臙
+$REPLACE_臚
 $REPLACE_臣
 $REPLACE_臣下
 $REPLACE_臥
@@ -57797,7 +57784,6 @@ $REPLACE_致
 $REPLACE_致命
 $REPLACE_致死
 $REPLACE_臺
-$REPLACE_臻
 $REPLACE_臼
 $REPLACE_舁
 $REPLACE_舂
@@ -57964,7 +57950,6 @@ $REPLACE_英米
 $REPLACE_英訳
 $REPLACE_英語
 $REPLACE_英雄
-$REPLACE_苴
 $REPLACE_苺
 $REPLACE_苻
 $REPLACE_茂
@@ -58037,6 +58022,7 @@ $REPLACE_菌
 $REPLACE_菓
 $REPLACE_菓子
 $REPLACE_菖
+$REPLACE_菘
 $REPLACE_菜
 $REPLACE_菟
 $REPLACE_菩
@@ -58122,6 +58108,7 @@ $REPLACE_蒸
 $REPLACE_蒸気
 $REPLACE_蒸留
 $REPLACE_蒸発
+$REPLACE_蒹
 $REPLACE_蒼
 $REPLACE_蒿
 $REPLACE_蓁
@@ -58157,12 +58144,12 @@ $REPLACE_蕊
 $REPLACE_蕎麦
 $REPLACE_蕗
 $REPLACE_蕙
+$REPLACE_蕤
 $REPLACE_蕨
 $REPLACE_蕩
 $REPLACE_蕪
 $REPLACE_蕭
 $REPLACE_蕾
-$REPLACE_薀
 $REPLACE_薁
 $REPLACE_薄
 $REPLACE_薄い
@@ -58205,7 +58192,6 @@ $REPLACE_藤村
 $REPLACE_藤枝
 $REPLACE_藤沢
 $REPLACE_藤田
-$REPLACE_藥
 $REPLACE_藩
 $REPLACE_藩主
 $REPLACE_藩政
@@ -58213,11 +58199,13 @@ $REPLACE_藩領
 $REPLACE_藪
 $REPLACE_藺
 $REPLACE_藻
+$REPLACE_蘂
 $REPLACE_蘄
 $REPLACE_蘆
 $REPLACE_蘇
 $REPLACE_蘇生
 $REPLACE_蘊
+$REPLACE_蘋
 $REPLACE_蘚
 $REPLACE_蘭
 $REPLACE_蘿
@@ -58239,7 +58227,6 @@ $REPLACE_虻
 $REPLACE_蚊
 $REPLACE_蚕
 $REPLACE_蚤
-$REPLACE_蚩
 $REPLACE_蛆
 $REPLACE_蛇
 $REPLACE_蛋
@@ -58250,6 +58237,7 @@ $REPLACE_蛎
 $REPLACE_蛙
 $REPLACE_蛛
 $REPLACE_蛟
+$REPLACE_蛤
 $REPLACE_蛭
 $REPLACE_蛮
 $REPLACE_蛯
@@ -58260,7 +58248,6 @@ $REPLACE_蜀
 $REPLACE_蜂
 $REPLACE_蜂起
 $REPLACE_蜃
-$REPLACE_蜉
 $REPLACE_蜘蛛
 $REPLACE_蜚
 $REPLACE_蜜
@@ -58283,7 +58270,6 @@ $REPLACE_融
 $REPLACE_融合
 $REPLACE_融資
 $REPLACE_螢
-$REPLACE_螳
 $REPLACE_螺
 $REPLACE_螺旋
 $REPLACE_蟄
@@ -58294,7 +58280,6 @@ $REPLACE_蟷
 $REPLACE_蟹
 $REPLACE_蟻
 $REPLACE_蟾
-$REPLACE_蠅
 $REPLACE_蠍
 $REPLACE_蠕
 $REPLACE_蠡
@@ -58379,6 +58364,7 @@ $REPLACE_表紙
 $REPLACE_表記
 $REPLACE_表面
 $REPLACE_表題
+$REPLACE_衫
 $REPLACE_衰
 $REPLACE_衰え
 $REPLACE_衰弱
@@ -58406,11 +58392,13 @@ $REPLACE_被疑
 $REPLACE_袰
 $REPLACE_袱
 $REPLACE_袴
+$REPLACE_袷
 $REPLACE_袿
 $REPLACE_裁
 $REPLACE_裁判
 $REPLACE_裁定
 $REPLACE_裂
+$REPLACE_裃
 $REPLACE_装
 $REPLACE_装っ
 $REPLACE_装備
@@ -58426,7 +58414,6 @@ $REPLACE_裏切ら
 $REPLACE_裏切り
 $REPLACE_裏腹
 $REPLACE_裏面
-$REPLACE_裒
 $REPLACE_裔
 $REPLACE_裕
 $REPLACE_裕子
@@ -58445,7 +58432,6 @@ $REPLACE_補正
 $REPLACE_補給
 $REPLACE_補習
 $REPLACE_補足
-$REPLACE_裟
 $REPLACE_裡
 $REPLACE_裳
 $REPLACE_裴
@@ -58479,12 +58465,15 @@ $REPLACE_褒
 $REPLACE_褒め
 $REPLACE_褒章
 $REPLACE_褚
+$REPLACE_褥
 $REPLACE_褪
 $REPLACE_褶
+$REPLACE_褻
 $REPLACE_襄
 $REPLACE_襖
 $REPLACE_襞
 $REPLACE_襟
+$REPLACE_襤
 $REPLACE_襦
 $REPLACE_襲
 $REPLACE_襲い
@@ -58554,7 +58543,6 @@ $REPLACE_覆わ
 $REPLACE_覆面
 $REPLACE_覇
 $REPLACE_覇権
-$REPLACE_覈
 $REPLACE_見
 $REPLACE_見い
 $REPLACE_見え
@@ -58658,7 +58646,6 @@ $REPLACE_観覧
 $REPLACE_観賞
 $REPLACE_観音
 $REPLACE_覺
-$REPLACE_覽
 $REPLACE_觀
 $REPLACE_视
 $REPLACE_角
@@ -58709,6 +58696,7 @@ $REPLACE_言及
 $REPLACE_言葉
 $REPLACE_言語
 $REPLACE_言論
+$REPLACE_訂
 $REPLACE_訂正
 $REPLACE_訃
 $REPLACE_訃報
@@ -58786,6 +58774,7 @@ $REPLACE_証拠
 $REPLACE_証明
 $REPLACE_証書
 $REPLACE_証言
+$REPLACE_詁
 $REPLACE_詐
 $REPLACE_詐欺
 $REPLACE_詔
@@ -58812,6 +58801,7 @@ $REPLACE_試料
 $REPLACE_試練
 $REPLACE_試行
 $REPLACE_試験
+$REPLACE_詧
 $REPLACE_詩
 $REPLACE_詩人
 $REPLACE_詩集
@@ -58889,6 +58879,7 @@ $REPLACE_誤解
 $REPLACE_誤認
 $REPLACE_誥
 $REPLACE_誦
+$REPLACE_誨
 $REPLACE_說
 $REPLACE_説
 $REPLACE_説い
@@ -58952,7 +58943,6 @@ $REPLACE_論じ
 $REPLACE_論争
 $REPLACE_論文
 $REPLACE_論理
-$REPLACE_諜
 $REPLACE_諜報
 $REPLACE_諡
 $REPLACE_諦
@@ -59006,6 +58996,7 @@ $REPLACE_謳
 $REPLACE_謹
 $REPLACE_謹慎
 $REPLACE_證
+$REPLACE_譏
 $REPLACE_識
 $REPLACE_識別
 $REPLACE_譙
@@ -59063,6 +59054,7 @@ $REPLACE_谷村
 $REPLACE_谿
 $REPLACE_豆
 $REPLACE_豆腐
+$REPLACE_豉
 $REPLACE_豊
 $REPLACE_豊か
 $REPLACE_豊中
@@ -59086,6 +59078,7 @@ $REPLACE_豪族
 $REPLACE_豪華
 $REPLACE_豪雨
 $REPLACE_豫
+$REPLACE_豬
 $REPLACE_豳
 $REPLACE_豹
 $REPLACE_貂
@@ -59171,7 +59164,6 @@ $REPLACE_貿易
 $REPLACE_賀
 $REPLACE_賀茂
 $REPLACE_賁
-$REPLACE_賂
 $REPLACE_賃
 $REPLACE_賃貸
 $REPLACE_賃金
@@ -59337,14 +59329,11 @@ $REPLACE_踏む
 $REPLACE_踏ん
 $REPLACE_踏切
 $REPLACE_踏襲
-$REPLACE_踞
+$REPLACE_踪
 $REPLACE_踰
-$REPLACE_踵
 $REPLACE_蹂
 $REPLACE_蹄
-$REPLACE_蹉
 $REPLACE_蹊
-$REPLACE_蹟
 $REPLACE_蹠
 $REPLACE_蹲
 $REPLACE_蹴
@@ -59406,6 +59395,7 @@ $REPLACE_軍部
 $REPLACE_軍隊
 $REPLACE_軍需
 $REPLACE_軒
+$REPLACE_軕
 $REPLACE_軟
 $REPLACE_軟式
 $REPLACE_転
@@ -59434,7 +59424,6 @@ $REPLACE_転送
 $REPLACE_軫
 $REPLACE_軸
 $REPLACE_軻
-$REPLACE_軼
 $REPLACE_軽
 $REPLACE_軽い
 $REPLACE_軽く
@@ -59511,7 +59500,6 @@ $REPLACE_農民
 $REPLACE_農産
 $REPLACE_農耕
 $REPLACE_農薬
-$REPLACE_辷
 $REPLACE_辺
 $REPLACE_辺り
 $REPLACE_辺境
@@ -59531,6 +59519,7 @@ $REPLACE_迎え
 $REPLACE_迎える
 $REPLACE_迎え撃
 $REPLACE_迎撃
+$REPLACE_运
 $REPLACE_近
 $REPLACE_近い
 $REPLACE_近く
@@ -59747,7 +59736,6 @@ $REPLACE_連載
 $REPLACE_連邦
 $REPLACE_連鎖
 $REPLACE_連隊
-$REPLACE_逮
 $REPLACE_逮捕
 $REPLACE_週
 $REPLACE_週刊
@@ -59923,7 +59911,6 @@ $REPLACE_遺言
 $REPLACE_遺跡
 $REPLACE_遺骨
 $REPLACE_遼
-$REPLACE_遽
 $REPLACE_避
 $REPLACE_避け
 $REPLACE_避ける
@@ -59931,6 +59918,7 @@ $REPLACE_避難
 $REPLACE_邀
 $REPLACE_邁
 $REPLACE_邂
+$REPLACE_邃
 $REPLACE_還
 $REPLACE_還元
 $REPLACE_邇
@@ -59941,6 +59929,7 @@ $REPLACE_邏
 $REPLACE_邑
 $REPLACE_邕
 $REPLACE_邙
+$REPLACE_邠
 $REPLACE_邢
 $REPLACE_那
 $REPLACE_那智
@@ -60020,7 +60009,7 @@ $REPLACE_都立
 $REPLACE_鄂
 $REPLACE_鄄
 $REPLACE_鄒
-$REPLACE_鄖
+$REPLACE_鄔
 $REPLACE_鄙
 $REPLACE_鄢
 $REPLACE_鄧
@@ -60028,6 +60017,7 @@ $REPLACE_鄭
 $REPLACE_鄯
 $REPLACE_鄰
 $REPLACE_鄱
+$REPLACE_鄲
 $REPLACE_鄴
 $REPLACE_酈
 $REPLACE_酉
@@ -60065,6 +60055,7 @@ $REPLACE_酢
 $REPLACE_酢酸
 $REPLACE_酩
 $REPLACE_酪
+$REPLACE_酬
 $REPLACE_酵
 $REPLACE_酵素
 $REPLACE_酷
@@ -60078,6 +60069,7 @@ $REPLACE_酸素
 $REPLACE_醇
 $REPLACE_醉
 $REPLACE_醍醐
+$REPLACE_醐
 $REPLACE_醒
 $REPLACE_醗
 $REPLACE_醜
@@ -60172,6 +60164,7 @@ $REPLACE_釜石
 $REPLACE_針
 $REPLACE_釣
 $REPLACE_釣り
+$REPLACE_釦
 $REPLACE_釧
 $REPLACE_釧路
 $REPLACE_鈍
@@ -60183,7 +60176,7 @@ $REPLACE_鈞
 $REPLACE_鈴
 $REPLACE_鈴木
 $REPLACE_鈴鹿
-$REPLACE_鈷
+$REPLACE_鈺
 $REPLACE_鈿
 $REPLACE_鉄
 $REPLACE_鉄人
@@ -60197,9 +60190,9 @@ $REPLACE_鉄道
 $REPLACE_鉄鋼
 $REPLACE_鉄骨
 $REPLACE_鉅
-$REPLACE_鉈
 $REPLACE_鉉
 $REPLACE_鉋
+$REPLACE_鉗
 $REPLACE_鉛
 $REPLACE_鉛筆
 $REPLACE_鉞
@@ -60253,12 +60246,10 @@ $REPLACE_鋼製
 $REPLACE_鋼鉄
 $REPLACE_錆
 $REPLACE_錐
-$REPLACE_錕
 $REPLACE_錘
 $REPLACE_錚
 $REPLACE_錠
 $REPLACE_錢
-$REPLACE_錣
 $REPLACE_錦
 $REPLACE_錨
 $REPLACE_錫
@@ -60277,6 +60268,7 @@ $REPLACE_鍛
 $REPLACE_鍛え
 $REPLACE_鍛冶
 $REPLACE_鍬
+$REPLACE_鍮
 $REPLACE_鍵
 $REPLACE_鍵盤
 $REPLACE_鍼
@@ -60286,7 +60278,6 @@ $REPLACE_鎌倉
 $REPLACE_鎔
 $REPLACE_鎖
 $REPLACE_鎗
-$REPLACE_鎚
 $REPLACE_鎧
 $REPLACE_鎬
 $REPLACE_鎭
@@ -60308,13 +60299,15 @@ $REPLACE_鐙
 $REPLACE_鐡
 $REPLACE_鐵
 $REPLACE_鐸
+$REPLACE_鑁
 $REPLACE_鑑
 $REPLACE_鑑定
 $REPLACE_鑑賞
 $REPLACE_鑒
 $REPLACE_鑓
-$REPLACE_鑚
 $REPLACE_鑢
+$REPLACE_鑫
+$REPLACE_鑰
 $REPLACE_鑲
 $REPLACE_鑽
 $REPLACE_鑿
@@ -60453,6 +60446,7 @@ $REPLACE_関門
 $REPLACE_閣
 $REPLACE_閣僚
 $REPLACE_閣議
+$REPLACE_閤
 $REPLACE_閥
 $REPLACE_閨
 $REPLACE_閩
@@ -60469,7 +60463,6 @@ $REPLACE_闍
 $REPLACE_闐
 $REPLACE_闓
 $REPLACE_闕
-$REPLACE_闖
 $REPLACE_闘
 $REPLACE_闘い
 $REPLACE_闘争
@@ -60744,6 +60737,7 @@ $REPLACE_電鉄
 $REPLACE_需
 $REPLACE_需要
 $REPLACE_霄
+$REPLACE_霆
 $REPLACE_震
 $REPLACE_震度
 $REPLACE_震源
@@ -60944,7 +60938,6 @@ $REPLACE_顛
 $REPLACE_類
 $REPLACE_類似
 $REPLACE_類型
-$REPLACE_顥
 $REPLACE_顧
 $REPLACE_顧問
 $REPLACE_顧客
@@ -61054,7 +61047,6 @@ $REPLACE_館林
 $REPLACE_館長
 $REPLACE_饅
 $REPLACE_饋
-$REPLACE_饌
 $REPLACE_饒
 $REPLACE_饗
 $REPLACE_首
@@ -61112,7 +61104,6 @@ $REPLACE_駒
 $REPLACE_駕
 $REPLACE_駙
 $REPLACE_駝
-$REPLACE_駢
 $REPLACE_駱
 $REPLACE_駿
 $REPLACE_駿河
@@ -61131,7 +61122,6 @@ $REPLACE_験
 $REPLACE_騙
 $REPLACE_騙さ
 $REPLACE_騙し
-$REPLACE_騫
 $REPLACE_騭
 $REPLACE_騰
 $REPLACE_騸
@@ -61147,7 +61137,6 @@ $REPLACE_驚異
 $REPLACE_驛
 $REPLACE_驟
 $REPLACE_驢
-$REPLACE_驤
 $REPLACE_驥
 $REPLACE_驩
 $REPLACE_驪
@@ -61157,7 +61146,6 @@ $REPLACE_骨格
 $REPLACE_骨髄
 $REPLACE_骸
 $REPLACE_髄
-$REPLACE_髏
 $REPLACE_髑
 $REPLACE_體
 $REPLACE_高
@@ -61216,17 +61204,21 @@ $REPLACE_高麗
 $REPLACE_高齢
 $REPLACE_髙
 $REPLACE_髠
+$REPLACE_髢
 $REPLACE_髣
+$REPLACE_髦
 $REPLACE_髪
 $REPLACE_髪型
 $REPLACE_髭
 $REPLACE_髯
+$REPLACE_髷
 $REPLACE_鬆
 $REPLACE_鬘
 $REPLACE_鬚
 $REPLACE_鬢
 $REPLACE_鬣
 $REPLACE_鬨
+$REPLACE_鬬
 $REPLACE_鬱
 $REPLACE_鬲
 $REPLACE_鬼
@@ -61238,7 +61230,6 @@ $REPLACE_魅
 $REPLACE_魅了
 $REPLACE_魅力
 $REPLACE_魍
-$REPLACE_魎
 $REPLACE_魏
 $REPLACE_魑
 $REPLACE_魔
@@ -61270,6 +61261,7 @@ $REPLACE_鮮
 $REPLACE_鮮やか
 $REPLACE_鮮明
 $REPLACE_鯉
+$REPLACE_鯏
 $REPLACE_鯖
 $REPLACE_鯛
 $REPLACE_鯨
@@ -61282,7 +61274,6 @@ $REPLACE_鰐
 $REPLACE_鰓
 $REPLACE_鰕
 $REPLACE_鰭
-$REPLACE_鰯
 $REPLACE_鰹
 $REPLACE_鰺
 $REPLACE_鰻
@@ -61297,6 +61288,7 @@ $REPLACE_鳥羽
 $REPLACE_鳥類
 $REPLACE_鳩
 $REPLACE_鳩山
+$REPLACE_鳰
 $REPLACE_鳳
 $REPLACE_鳳凰
 $REPLACE_鳴
@@ -61312,7 +61304,6 @@ $REPLACE_鴛
 $REPLACE_鴨
 $REPLACE_鴨川
 $REPLACE_鴫
-$REPLACE_鴬
 $REPLACE_鴻
 $REPLACE_鵜
 $REPLACE_鵝
@@ -61320,8 +61311,10 @@ $REPLACE_鵞
 $REPLACE_鵠
 $REPLACE_鵡
 $REPLACE_鵬
+$REPLACE_鵯
 $REPLACE_鵰
 $REPLACE_鵲
+$REPLACE_鵺
 $REPLACE_鶉
 $REPLACE_鶏
 $REPLACE_鶚
@@ -61337,10 +61330,8 @@ $REPLACE_鷲
 $REPLACE_鷹
 $REPLACE_鷺
 $REPLACE_鸕
-$REPLACE_鸚
 $REPLACE_鸞
 $REPLACE_鹵獲
-$REPLACE_鹸
 $REPLACE_鹹
 $REPLACE_鹽
 $REPLACE_鹿
@@ -61415,13 +61406,14 @@ $REPLACE_齎
 $REPLACE_齟
 $REPLACE_齢
 $REPLACE_齧
-$REPLACE_齲
+$REPLACE_齮
 $REPLACE_龍
 $REPLACE_龍之介
 $REPLACE_龍馬
 $REPLACE_龐
 $REPLACE_龔
 $REPLACE_龕
+$REPLACE_龗
 $REPLACE_龙
 $REPLACE_龜
 $REPLACE_가
@@ -61458,12 +61450,8 @@ $REPLACE_지
 $REPLACE_천
 $REPLACE_표
 $REPLACE_하
-$REPLACE_함
-$REPLACE_호
 $REPLACE_화
 $REPLACE_﨑
-$REPLACE_﨟
-$REPLACE_󠄁
 $TRANSFORM_ADJCG_ADJ
 $TRANSFORM_ADJCG_ADJC
 $TRANSFORM_ADJC_ADJ

@@ -5,15 +5,15 @@ Grammatical error correction model described in the paper ["GECToR -- Grammatica
 This project's code is based on the official implementation (https://github.com/grammarly/gector).
 
 TL;DR summary:
-- GECToR (iterative sequence tagging GEC model) implemented using [pretrained BERT model for Japanese](https://huggingface.co/cl-tohoku/bert-base-japanese-v2) (from Tohoku University NLP Lab), `transformers==4.5.0`, and `AllenNLP==2.4.0` libraries.
+- GECToR (iterative sequence tagging GEC model) implemented using [pretrained BERT model for Japanese](https://huggingface.co/cl-tohoku/bert-base-japanese-v2) (from Tohoku University NLP Lab) and Keras/Tensorflow 2.
 - Synthetic error dataset generated from Wikipedia dump for pre-training (with similar method to [Awasthi et al. 2019](https://github.com/awasthiabhijeet/PIE/tree/master/errorify)), fine tuning done on NAIST Lang8 Learner Corpora.
 
 ## Datasets
 
 - Pre-training: [Japanese Wikipedia dump](https://dumps.wikimedia.org/), extracted with [WikiExtractor](https://github.com/attardi/wikiextractor), synthetic errors generated using preprocessing scripts
-  - 24,499,568 edit-tagged sentences
+  - 24,502,187 edit-tagged sentences
 - Fine tuning: [NAIST Lang8 Learner Corpora](https://sites.google.com/site/naistlang8corpora/)
-  - 6,039,088 edit-tagged sentences
+  - 6,075,286 edit-tagged sentences
 
 ### Synthetically Generated Error Corpus
 
@@ -42,6 +42,8 @@ Lastly, in some cases, one pass of transformations is not sufficient to transfor
 This __iterative sequence tagging approach__ is described in more detail in section 5 of the GECToR paper.
 
 ## Model Architecture
+
+### Transformers
 
 ## Training
 

@@ -1,26 +1,33 @@
 import argparse
 import os
-import bz2
+
+import tensorflow as tf
+
+from helpers import read_dataset
 
 
 def preprocess_output_vocab(corpora_dir, output_file,
-                            edit_tags_file='edit_tagged_sentences.txt.bz2'):
+                            edit_tags_file='edit_tagged_sentences.tfrec.gz'):
     """Generate output vocab from all corpora."""
     if not os.path.isdir(corpora_dir):
         raise ValueError(f'{corpora_dir} not found')
     edit_vocab = set()
+    paths = []
     for root, dirs, files in os.walk(corpora_dir):
         if edit_tags_file in files:
             path = os.path.join(root, edit_tags_file)
-            with bz2.open(path, 'r') as f:
-                lines = f.readlines()
-            for line in lines:
-                tokens = line.decode('utf-8').strip().split()
-                for token in tokens:
-                    edit = token.rsplit('###')[1]
-                    edit_vocab.add(edit)
-            print(f'Processed {root}, {len(edit_vocab)} edits')
-    lines = [f'{edit}\n' for edit in sorted(edit_vocab) if edit]
+            paths.append(path)
+    dataset = read_dataset(paths)
+    print(dataset)
+    print(f'Loaded dataset')
+    for i, example in enumerate(dataset):
+        edits = example['labels'].numpy()
+        edit_vocab.update(e.decode() for e in edits)
+        if i % 10000 == 0:
+            print(f'{i} processed, {len(edit_vocab)} edits')
+    edit_vocab -= {'$KEEP', '$DELETE', ''}
+    lines = ['$KEEP\n', '$DELETE\n']
+    lines += [f'{edit}\n' for edit in sorted(edit_vocab)]
     with open(output_file, 'w', encoding='utf-8') as f:
         f.writelines(lines)
     print(f'{len(edit_vocab)} edits output to {output_file}.')

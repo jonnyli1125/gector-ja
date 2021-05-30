@@ -4,6 +4,8 @@ from transformers import AutoTokenizer
 import numpy as np
 import Levenshtein
 
+from helpers import Vocab, create_example
+
 
 class EditTagger:
     """
@@ -12,14 +14,15 @@ class EditTagger:
     Original reference code @ https://github.com/grammarly/gector (see README).
     """
 
-    def __init__(self, verb_adj_forms_path='data/transform.txt'):
+    def __init__(self,
+                 verb_adj_forms_path='data/transform.txt',
+                 detect_vocab_path='data/output_vocab/detect.txt'):
         self.tokenizer = AutoTokenizer.from_pretrained(
             'cl-tohoku/bert-base-japanese-v2')
         encode, decode = self.get_verb_adj_form_dicts(verb_adj_forms_path)
         self.encode_verb_adj_form = encode
         self.decode_verb_adj_form = decode
-        self.op_delim = '###'
-        self.token_delim = ' '
+        self.detect_vocab = Vocab.from_file(detect_vocab_path)
 
     def get_verb_adj_form_dicts(self, verb_adj_forms_path):
         encode, decode = {}, {}
@@ -43,17 +46,14 @@ class EditTagger:
         return self.tokenizer.convert_tokens_to_string(tokens).replace(' ', '')
 
     def __call__(self, source, target):
-        edit_lines = []
+        edit_rows = []
         edit_levels = self.get_edit_levels(source, target)
         # edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
-            labelled_tokens = []
-            for token, edit_list in zip(cur_tokens, cur_edits):
-                edit = edit_list[0]
-                labelled_tokens.append(f'{token}{self.op_delim}{edit}')
-            edit_line = self.token_delim.join(labelled_tokens)
-            edit_lines.append(edit_line)
-        return edit_lines
+            row = create_example(cur_tokens, cur_edits, self.tokenizer,
+                                 self.detect_vocab)
+            edit_rows.append(row)
+        return edit_rows
 
     def get_edits(self, source, target, add_special_tokens=True):
         source_tokens = self.tokenize(source,

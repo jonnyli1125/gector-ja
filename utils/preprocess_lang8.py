@@ -3,12 +3,12 @@ import os
 import json
 import re
 import unicodedata
-import bz2
 from multiprocessing import Pool
 from itertools import chain
 from difflib import SequenceMatcher
 
 from edits import EditTagger
+from helpers import write_dataset
 
 
 invalid_bytes_re = re.compile(r'[\x00-\x1F]+')
@@ -36,7 +36,7 @@ def clean_line(line):
 def preprocess_lang8_part(args,
                           correct_file='corr_sentences.txt',
                           incorrect_file='incorr_sentences.txt',
-                          edit_tags_file='edit_tagged_sentences.txt.bz2'):
+                          edit_tags_file='edit_tagged_sentences.tfrec.gz'):
     rows, part_output_dir = args
     pairs = set()
     for row in rows:
@@ -55,7 +55,7 @@ def preprocess_lang8_part(args,
                     pairs.add((learner_sent, target_sent))
     corr_lines = []
     incorr_lines = []
-    edit_lines = []
+    edit_rows = []
     for learner_sent, target_sent in pairs:
         # remove appended comments
         matcher = SequenceMatcher(None, learner_sent, target_sent)
@@ -68,7 +68,7 @@ def preprocess_lang8_part(args,
         corr_lines.append(f'{target_sent}\n')
         incorr_lines.append(f'{learner_sent}\n')
         levels = edit_tagger(learner_sent, target_sent)
-        edit_lines.extend(f'{lvl}\n' for lvl in levels)
+        edit_rows.extend(levels)
     if not os.path.exists(part_output_dir):
         os.makedirs(part_output_dir)
     corr_path = os.path.join(part_output_dir, correct_file)
@@ -78,16 +78,13 @@ def preprocess_lang8_part(args,
         f.writelines(corr_lines)
     with open(incorr_path, 'w', encoding='utf-8') as f:
         f.writelines(incorr_lines)
-    with open(edit_tags_path, 'wb') as f:
-        edit_lines_bytes = ''.join(edit_lines).encode('utf-8')
-        edit_lines_compressed = bz2.compress(edit_lines_bytes)
-        f.write(edit_lines_compressed)
+    write_dataset(edit_tags_path, edit_rows)
     print(f'Processed {len(corr_lines)} sentences, ' \
-          f'{len(edit_lines)} edit-tagged sentences to {part_output_dir}')
-    return len(corr_lines), len(edit_lines)
+          f'{len(edit_rows)} edit-tagged sentences to {part_output_dir}')
+    return len(corr_lines), len(edit_rows)
 
 
-def preprocess_lang8(source_file, output_dir):
+def preprocess_lang8(source_file, output_dir, processes):
     """Generate edit-tagged sentence corpus from Lang8 corpus."""
     lines = []
     with open(source_file, encoding='utf-8') as f:
@@ -97,20 +94,23 @@ def preprocess_lang8(source_file, output_dir):
         row = json.loads(invalid_bytes_re.sub('', line))
         if row[2] == 'Japanese':
             rows.append(row)
-    r = 8192
+    r = 512
     rows_parts = [(rows[i:i + r], os.path.join(output_dir, str((i//r)+1)))
                   for i in range(0, len(rows), r)]
     print(f'Loaded {len(rows)} Japanese entries into {len(rows_parts)} parts')
-    pool = Pool()
-    pool_results = pool.map(preprocess_lang8_part, rows_parts)
-    n_sents = sum(res[0] for res in pool_results)
-    n_edit_sents = sum(res[1] for res in pool_results)
+    pool = Pool(processes)
+    pool_outputs = pool.imap_unordered(preprocess_lang8_part, rows_parts)
+    n_sents = 0
+    n_edit_sents = 0
+    for n in pool_outputs:
+        n_sents += n[0]
+        n_edit_sents += n[1]
     print(f'Processed {n_sents} sentences and ' \
           f'{n_edit_sents} edit-tagged sentences.')
 
 
 def main(args):
-    preprocess_lang8(args.source, args.output_dir)
+    preprocess_lang8(args.source, args.output_dir, args.processes)
 
 
 if __name__ == '__main__':
@@ -121,5 +121,8 @@ if __name__ == '__main__':
     parser.add_argument('-o', '--output_dir',
                         help='Path to output directory',
                         required=True)
+    parser.add_argument('-p', '--processes', type=int,
+                        help='Number of processes',
+                        required=False)
     args = parser.parse_args()
     main(args)
