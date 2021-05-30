@@ -143,9 +143,12 @@ class Errorify:
         if f.orthBase == 'する' and f.lemma == '為る':
             return {
                 'VB': 'する',  # plain (終止形)
-                'VBI': 'し',  # imperfect (未然形) (also conjunctive)
+                'VBI': 'し',  # imperfect (未然形)
+                'VBC': 'し',  # conjunctive (連用形)
+                'VBCG': 'し',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'しろ',  # imperative (命令系)
-                'VBV': 'しよう'  # volitional (意志推量形)
+                'VBV': 'しよう',  # volitional (意志推量形)
+                'VBS': 'する'  # stem/subword token
             }
         elif f.kanaBase == 'イク' or (f.orthBase and f.orthBase[-2:] == '行く'):
             forms = {
@@ -154,20 +157,25 @@ class Errorify:
                 'VBC': 'き',  # conjunctive (連用形)
                 'VBCG': 'っ',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'け',  # imperative (命令系)
-                'VBV': 'こう'  # volitional (意志推量形)
+                'VBV': 'こう',  # volitional (意志推量形)
+                'VBS': 'く'  # stem/subword token
             }
         elif f.pos1 == '形容詞':  # i-adj
             forms = {
                 'ADJ': 'い',  # plain (終止形)
                 'ADJC': 'く',  # conjunctive (連用形)
-                'ADJCG': 'かっ'  # conjunctive geminate (連用形-促音便)
+                'ADJCG': 'かっ',  # conjunctive geminate (連用形-促音便)
+                'ADJS': ''  # stem/subword token
             }
         elif '一段' in f.cType:  # ru-verbs
             forms = {
                 'VB': 'る',  # plain (終止形)
-                'VBI': '',  # imperfect (未然形) (also conjunctive)
+                'VBI': '',  # imperfect (未然形)
+                'VBC': '',  # conjunctive (連用形)
+                'VBCG': '',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'ろ',  # imperative (命令系)
-                'VBV': 'よう'  # volitional (意志推量形)
+                'VBV': 'よう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'る':  # u-verbs from here
             forms = {
@@ -176,7 +184,8 @@ class Errorify:
                 'VBC': 'り',  # conjunctive (連用形)
                 'VBCG': 'っ',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'れ',  # imperative (命令系)
-                'VBV': 'ろう'  # volitional (意志推量形)
+                'VBV': 'ろう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'つ':
             forms = {
@@ -185,7 +194,8 @@ class Errorify:
                 'VBC': 'ち',  # conjunctive (連用形)
                 'VBCG': 'っ',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'て',  # imperative (命令系)
-                'VBV': 'とう'  # volitional (意志推量形)
+                'VBV': 'とう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'う':
             forms = {
@@ -194,7 +204,8 @@ class Errorify:
                 'VBC': 'い',  # conjunctive (連用形)
                 'VBCG': 'っ',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'え',  # imperative (命令系)
-                'VBV': 'おう'  # volitional (意志推量形)
+                'VBV': 'おう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'く':
             forms = {
@@ -203,7 +214,8 @@ class Errorify:
                 'VBC': 'き',  # conjunctive (連用形)
                 'VBCG': 'い',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'け',  # imperative (命令系)
-                'VBV': 'こう'  # volitional (意志推量形)
+                'VBV': 'こう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'ぐ':
             forms = {
@@ -212,15 +224,18 @@ class Errorify:
                 'VBC': 'ぎ',  # conjunctive (連用形)
                 'VBCG': 'い',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'げ',  # imperative (命令系)
-                'VBV': 'ごう'  # volitional (意志推量形)
+                'VBV': 'ごう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'す':
             forms = {
                 'VB': 'す',  # plain (終止形)
                 'VBI': 'さ',  # imperfect (未然形)
                 'VBC': 'し',  # conjunctive (連用形)
+                'VBCG': 'し',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'せ',  # imperative (命令系)
-                'VBV': 'そう'  # volitional (意志推量形)
+                'VBV': 'そう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'む':
             forms = {
@@ -229,7 +244,8 @@ class Errorify:
                 'VBC': 'み',  # conjunctive (連用形)
                 'VBCG': 'ん',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'め',  # imperative (命令系)
-                'VBV': 'もう'  # volitional (意志推量形)
+                'VBV': 'もう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'ぬ':
             forms = {
@@ -238,7 +254,8 @@ class Errorify:
                 'VBC': 'に',  # conjunctive (連用形)
                 'VBCG': 'ん',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'ね',  # imperative (命令系)
-                'VBV': 'のう'  # volitional (意志推量形)
+                'VBV': 'のう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         elif baseform[-1] == 'ぶ':
             forms = {
@@ -247,7 +264,8 @@ class Errorify:
                 'VBC': 'び',  # conjunctive (連用形)
                 'VBCG': 'ん',  # conjunctive geminate (連用形-促音便)
                 'VBP': 'べ',  # imperative (命令系)
-                'VBV': 'ぼう'  # volitional (意志推量形)
+                'VBV': 'ぼう',  # volitional (意志推量形)
+                'VBS': ''  # stem/subword token
             }
         else:
             forms = {}

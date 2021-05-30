@@ -16,13 +16,15 @@ class EditTagger:
 
     def __init__(self,
                  verb_adj_forms_path='data/transform.txt',
-                 detect_vocab_path='data/output_vocab/detect.txt'):
+                 detect_vocab_path='data/output_vocab/detect.txt',
+                 labels_vocab_path='data/output_vocab/labels.txt'):
         self.tokenizer = AutoTokenizer.from_pretrained(
             'cl-tohoku/bert-base-japanese-v2')
         encode, decode = self.get_verb_adj_form_dicts(verb_adj_forms_path)
         self.encode_verb_adj_form = encode
         self.decode_verb_adj_form = decode
         self.detect_vocab = Vocab.from_file(detect_vocab_path)
+        self.labels_vocab = Vocab.from_file(labels_vocab_path)
 
     def get_verb_adj_form_dicts(self, verb_adj_forms_path):
         encode, decode = {}, {}
@@ -51,7 +53,7 @@ class EditTagger:
         # edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
             row = create_example(cur_tokens, cur_edits, self.tokenizer,
-                                 self.detect_vocab)
+                                 self.labels_vocab, self.detect_vocab)
             edit_rows.append(row)
         return edit_rows
 

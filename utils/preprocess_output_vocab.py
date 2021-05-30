@@ -1,47 +1,32 @@
 import argparse
 import os
 
-import tensorflow as tf
-
-from helpers import read_dataset
+from transformers import AutoTokenizer
 
 
-def preprocess_output_vocab(corpora_dir, output_file,
-                            edit_tags_file='edit_tagged_sentences.tfrec.gz'):
+def preprocess_output_vocab(output_file):
     """Generate output vocab from all corpora."""
-    if not os.path.isdir(corpora_dir):
-        raise ValueError(f'{corpora_dir} not found')
-    edit_vocab = set()
-    paths = []
-    for root, dirs, files in os.walk(corpora_dir):
-        if edit_tags_file in files:
-            path = os.path.join(root, edit_tags_file)
-            paths.append(path)
-    dataset = read_dataset(paths)
-    print(dataset)
-    print(f'Loaded dataset')
-    for i, example in enumerate(dataset):
-        edits = example['labels'].numpy()
-        edit_vocab.update(e.decode() for e in edits)
-        if i % 10000 == 0:
-            print(f'{i} processed, {len(edit_vocab)} edits')
-    edit_vocab -= {'$KEEP', '$DELETE', ''}
-    lines = ['$KEEP\n', '$DELETE\n']
-    lines += [f'{edit}\n' for edit in sorted(edit_vocab)]
+    tokenizer = AutoTokenizer.from_pretrained('cl-tohoku/bert-base-japanese-v2')
+    labels = ['[PAD]', '$KEEP', '$DELETE']
+    vb_transform = ['VB', 'VBI', 'VBC', 'VBCG', 'VBP', 'VBV', 'VBS']
+    adj_transform = ['ADJ', 'ADJC', 'ADJCG', 'ADJS']
+    labels.extend(f'$TRANSFORM_{f1}_{f2}'
+                  for f1 in vb_transform for f2 in vb_transform if f1 != f2)
+    labels.extend(f'$TRANSFORM_{f1}_{f2}'
+                  for f1 in adj_transform for f2 in adj_transform if f1 != f2)
+    labels.extend(f'$APPEND_{word}' for word in tokenizer.vocab)
+    labels.extend(f'$REPLACE_{word}' for word in tokenizer.vocab)
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.writelines(lines)
-    print(f'{len(edit_vocab)} edits output to {output_file}.')
+        f.writelines(f'{label}\n' for label in labels)
+    print(f'{len(labels)} edits output to {output_file}.')
 
 
 def main(args):
-    preprocess_output_vocab(args.corpora_dir, args.output)
+    preprocess_output_vocab(args.output)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--corpora_dir',
-                        help='Path to corpora directory',
-                        required=True)
     parser.add_argument('-o', '--output',
                         help='Path to output file',
                         required=True)
