@@ -16,8 +16,8 @@ class EditTagger:
 
     def __init__(self, tokenizer=None,
                  verb_adj_forms_path='data/transform.txt',
-                 detect_vocab_path='data/output_vocab/detect.txt',
-                 labels_vocab_path='data/output_vocab/labels.txt'):
+                 vocab_detect_path='data/output_vocab/detect.txt',
+                 vocab_labels_path='data/output_vocab/labels.txt'):
         if tokenizer:
             self.tokenizer = tokenizer
         else:
@@ -26,8 +26,8 @@ class EditTagger:
         encode, decode = self.get_verb_adj_form_dicts(verb_adj_forms_path)
         self.encode_verb_adj_form = encode
         self.decode_verb_adj_form = decode
-        self.detect_vocab = Vocab.from_file(detect_vocab_path)
-        self.labels_vocab = Vocab.from_file(labels_vocab_path)
+        self.vocab_detect = Vocab.from_file(vocab_detect_path)
+        self.vocab_labels = Vocab.from_file(vocab_labels_path)
 
     def get_verb_adj_form_dicts(self, verb_adj_forms_path):
         encode, decode = {}, {}
@@ -56,7 +56,7 @@ class EditTagger:
         # edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
             row = create_example(cur_tokens, cur_edits, self.tokenizer,
-                                 self.labels_vocab, self.detect_vocab)
+                                 self.vocab_labels, self.vocab_detect)
             edit_rows.append(row)
         return edit_rows
 

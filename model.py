@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
@@ -10,21 +12,26 @@ from utils.edits import EditTagger
 
 class GEC:
     def __init__(self, max_len=512, confidence=0.0, min_error_prob=0.0,
-                 vocab_labels_path='data/output_vocab/labels.txt',
-                 vocab_detect_path='data/output_vocab/detect.txt',
+                 vocab_path='data/output_vocab/',
+                 verb_adj_forms_path='data/transform.txt',
                  bert_model='cl-tohoku/bert-base-japanese-v2',
                  pretrained_model_path=None):
         self.max_len = max_len
         self.confidence = confidence
         self.min_error_prob = min_error_prob
         self.tokenizer = AutoTokenizer.from_pretrained(bert_model)
+        vocab_labels_path = os.path.join(vocab_path, 'labels.txt')
+        vocab_detect_path = os.path.join(vocab_path, 'detect.txt')
         self.vocab_labels = Vocab.from_file(vocab_labels_path)
         self.vocab_detect = Vocab.from_file(vocab_detect_path)
         if pretrained_model_path:
             self.model = keras.models.load_model(pretrained_model_path)
         else:
             self.model = self.create_model(bert_model)
-        self.edit_tagger = EditTagger(tokenizer=self.tokenizer)
+        self.edit_tagger = EditTagger(tokenizer=self.tokenizer,
+            vocab_labels_path=vocab_labels_path,
+            vocab_detect_path=vocab_detect_path,
+            verb_adj_forms_path=verb_adj_forms_path)
 
     def create_model(self, bert_model):
         encoder = TFAutoModel.from_pretrained(bert_model)

@@ -7,8 +7,9 @@ from model import GEC
 from utils.helpers import read_dataset
 
 
-def train(corpora_dir, output_dir, pretrained_dir, batch_size, n_epochs,
-          dev_size, filename='edit_tagged_sentences.tfrec.gz'):
+def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
+          batch_size, n_epochs, dev_size,
+          filename='edit_tagged_sentences.tfrec.gz'):
     files = [os.path.join(root, filename)
              for root, dirs, files in os.walk(corpora_dir)
              if filename in files]
@@ -30,18 +31,21 @@ def train(corpora_dir, output_dir, pretrained_dir, batch_size, n_epochs,
         tf.tpu.experimental.initialize_tpu_system(resolver)
         print("TPUs: ", tf.config.list_logical_devices('TPU'))
         strategy = tf.distribute.TPUStrategy(resolver)
-    except ValueError:
-        print('TPU initialization failed, using GPU/CPU strategy')
+    except (ValueError, KeyError) as e:
+        print(f'TPU initialization failed: {e}')
+        print('Using GPU/CPU strategy')
         strategy = tf.distribute.MultiWorkerMirroredStrategy()
     with strategy.scope():
-        gec = GEC(pretrained_model_path=pretrained_dir)
+        gec = GEC(vocab_path=vocab_dir, pretrained_model_path=pretrained_dir,
+                  verb_adj_forms_path=transforms_file)
     gec.model.fit(train_set, epochs=n_epochs)
     gec.model.save(output_dir)
 
 
 def main(args):
-    train(args.corpora_dir, args.output_dir, args.pretrained_dir,
-          args.batch_size, args.n_epochs, args.dev_size)
+    train(args.corpora_dir, args.output_dir, args.vocab_dir,
+          args.transforms_file, args.pretrained_dir, args.batch_size,
+          args.n_epochs, args.dev_size)
 
 
 if __name__ == '__main__':
@@ -50,8 +54,14 @@ if __name__ == '__main__':
                         help='Path to dataset folder',
                         required=True)
     parser.add_argument('-o', '--output_dir',
-                        help='Path to saved model output dir',
+                        help='Path to saved model output folder',
                         required=True)
+    parser.add_argument('-v', '--vocab_dir',
+                        help='Path to output vocab folder',
+                        default='./data/output_vocab')
+    parser.add_argument('-t', '--transforms_file',
+                        help='Path to verb/adj transforms file',
+                        default='./data/transform.txt')
     parser.add_argument('-p', '--pretrained_dir',
                         help='Path to pretrained model dir')
     parser.add_argument('-b', '--batch_size', type=int,
