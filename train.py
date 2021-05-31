@@ -23,7 +23,16 @@ def train(corpora_dir, output_dir, pretrained_dir, batch_size, n_epochs,
         lambda i, x: x).batch(batch_size)
     print(f'Split dataset into train/dev = {100-dev_i}/{dev_i}')
 
-    strategy = tf.distribute.MultiWorkerMirroredStrategy()
+    try:
+        resolver = tf.distribute.cluster_resolver.TPUClusterResolver(
+            tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
+        tf.config.experimental_connect_to_cluster(resolver)
+        tf.tpu.experimental.initialize_tpu_system(resolver)
+        print("TPUs: ", tf.config.list_logical_devices('TPU'))
+        strategy = tf.distribute.TPUStrategy(resolver)
+    except ValueError:
+        print('TPU initialization failed, using GPU/CPU strategy')
+        strategy = tf.distribute.MultiWorkerMirroredStrategy()
     with strategy.scope():
         gec = GEC(pretrained_model_path=pretrained_dir)
     gec.model.fit(train_set, epochs=n_epochs)
