@@ -4,7 +4,7 @@ from itertools import chain
 
 from fugashi import Tagger
 
-from errorify import Errorify
+from .errorify import Errorify
 
 
 def preprocess_transformations(verbs_file, adjs_file, output_file):

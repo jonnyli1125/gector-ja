@@ -4,9 +4,9 @@ import re
 import unicodedata
 from multiprocessing import Pool
 
-from errorify import Errorify
-from edits import EditTagger
-from helpers import write_dataset
+from .errorify import Errorify
+from .edits import EditTagger
+from .helpers import write_dataset
 
 
 en_sentence_re = re.compile(r'([a-zA-Z]+[\W]*\s){5,}')

@@ -7,8 +7,8 @@ from multiprocessing import Pool
 from itertools import chain
 from difflib import SequenceMatcher
 
-from edits import EditTagger
-from helpers import write_dataset
+from .edits import EditTagger
+from .helpers import write_dataset
 
 
 invalid_bytes_re = re.compile(r'[\x00-\x1F]+')

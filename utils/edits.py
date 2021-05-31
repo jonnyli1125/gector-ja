@@ -4,7 +4,7 @@ from transformers import AutoTokenizer
 import numpy as np
 import Levenshtein
 
-from helpers import Vocab, create_example
+from .helpers import Vocab, create_example
 
 
 class EditTagger:
@@ -14,12 +14,15 @@ class EditTagger:
     Original reference code @ https://github.com/grammarly/gector (see README).
     """
 
-    def __init__(self,
+    def __init__(self, tokenizer=None,
                  verb_adj_forms_path='data/transform.txt',
                  detect_vocab_path='data/output_vocab/detect.txt',
                  labels_vocab_path='data/output_vocab/labels.txt'):
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            'cl-tohoku/bert-base-japanese-v2')
+        if tokenizer:
+            self.tokenizer = tokenizer
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                'cl-tohoku/bert-base-japanese-v2')
         encode, decode = self.get_verb_adj_form_dicts(verb_adj_forms_path)
         self.encode_verb_adj_form = encode
         self.decode_verb_adj_form = decode

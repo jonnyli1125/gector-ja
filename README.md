@@ -6,14 +6,14 @@ This project's code is based on the official implementation (https://github.com/
 
 TL;DR summary:
 - GECToR (iterative sequence tagging GEC model) implemented using [pretrained BERT model for Japanese](https://huggingface.co/cl-tohoku/bert-base-japanese-v2) (from Tohoku University NLP Lab) and Keras/Tensorflow 2.
-- Synthetic error dataset generated from Wikipedia dump for pre-training (with similar method to [Awasthi et al. 2019](https://github.com/awasthiabhijeet/PIE/tree/master/errorify)), fine tuning done on NAIST Lang8 Learner Corpora.
+- Synthetic error dataset generated from Wikipedia dump for pre-training, fine tuning done on NAIST Lang8 Learner Corpora.
 
 ## Datasets
 
-- Pre-training: [Japanese Wikipedia dump](https://dumps.wikimedia.org/), extracted with [WikiExtractor](https://github.com/attardi/wikiextractor), synthetic errors generated using preprocessing scripts
-  - 24,502,187 edit-tagged sentences
-- Fine tuning: [NAIST Lang8 Learner Corpora](https://sites.google.com/site/naistlang8corpora/)
-  - 6,075,286 edit-tagged sentences
+- [Japanese Wikipedia dump](https://dumps.wikimedia.org/), extracted with [WikiExtractor](https://github.com/attardi/wikiextractor), synthetic errors generated using preprocessing scripts
+  - 24,691,842 edit-tagged sentences for pre-training
+- [NAIST Lang8 Learner Corpora](https://sites.google.com/site/naistlang8corpora/)
+  - 6,075,016 edit-tagged sentences for fine tuning
 
 ### Synthetically Generated Error Corpus
 
@@ -43,8 +43,10 @@ This __iterative sequence tagging approach__ is described in more detail in sect
 
 ## Model Architecture
 
+
+
 ### Transformers
 
 ## Training
 
-## Usage
+## Inference

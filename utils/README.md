@@ -1,5 +1,5 @@
-# Dataset Preprocessing Scripts
-- `preprocess_wiki.py`: Generates a TFRecordDataset from a Wikipedia dump extracted by WikiExtractor.
-- `preprocess_lang8.py`: Generates a TFRecordDataset from the Lang8 corpus.
-- `edits.py`: Module for edit-tagging parallel sentences.
-- `errorify.py`: Module for generating synthetic errors in sentences.
+# Dataset Preprocessing Modules
+- `utils.preprocess_wiki`: Generates a TFRecordDataset from a Wikipedia dump extracted by WikiExtractor.
+- `utils.preprocess_lang8`: Generates a TFRecordDataset from the Lang8 corpus.
+- `utils.edits`: Module for edit-tagging parallel sentences.
+- `utils.errorify`: Module for generating synthetic errors in sentences.

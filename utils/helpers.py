@@ -48,7 +48,7 @@ def read_dataset(paths):
 
 
 def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
-                   max_tokens_len=1024):
+                   max_tokens_len=512):
     if len(tokens) > max_tokens_len:
         print(f'Truncated {len(tokens)} tokens to {max_tokens_len} tokens')
         tokens = tokens[:max_tokens_len]
@@ -81,15 +81,19 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
     return Example(features=Features(feature=feature))
 
 
-def parse_example(example, max_tokens_len=1024):
+def parse_example(example, max_tokens_len=512):
     feature_desc = {
         'token_ids': FixedLenFeature([max_tokens_len], tf.int64),
         'att_mask': FixedLenFeature([max_tokens_len], tf.int64),
         'label_ids': FixedLenFeature([max_tokens_len], tf.int64),
         'detect_ids': FixedLenFeature([max_tokens_len], tf.int64)
     }
-    e = parse_single_example(example, feature_desc)
-    return (e['token_ids'], e['att_mask']), (e['label_ids'], e['detect_ids'])
+    example = parse_single_example(example, feature_desc)
+    token_ids = tf.cast(example['token_ids'], tf.int32)
+    att_mask = tf.cast(example['att_mask'], tf.int32)
+    label_ids = example['label_ids']
+    detect_ids = example['detect_ids']
+    return (token_ids, att_mask), (label_ids, detect_ids)
 
 
 def int64_list_feature(value):
