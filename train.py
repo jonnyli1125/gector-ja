@@ -8,12 +8,15 @@ from utils.helpers import read_dataset
 
 
 def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
-          batch_size, n_epochs, dev_size,
+          batch_size, n_epochs, dev_size, dataset_len,
           filename='edit_tagged_sentences.tfrec.gz'):
     files = [os.path.join(root, filename)
              for root, dirs, files in os.walk(corpora_dir)
              if filename in files]
     dataset = read_dataset(files).shuffle(buffer_size=1024)
+    if dataset_len:
+        assert_card = tf.data.experimental.assert_cardinality(dataset_len)
+        dataset = dataset.apply(assert_card)
     print(dataset)
     print('Loaded dataset')
 
@@ -38,14 +41,14 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, pretrained_model_path=pretrained_dir,
                   verb_adj_forms_path=transforms_file)
-    gec.model.fit(train_set, epochs=n_epochs)
+    gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set)
     gec.model.save(output_dir)
 
 
 def main(args):
     train(args.corpora_dir, args.output_dir, args.vocab_dir,
           args.transforms_file, args.pretrained_dir, args.batch_size,
-          args.n_epochs, args.dev_size)
+          args.n_epochs, args.dev_size, args.dataset_len)
 
 
 if __name__ == '__main__':
@@ -73,5 +76,7 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--dev_size', type=float,
                         help='Percent of whole dataset to use for dev set',
                         default=0.01)
+    parser.add_argument('-l', '--dataset_len', type=int,
+                        help='Cardinality of dataset')
     args = parser.parse_args()
     main(args)
