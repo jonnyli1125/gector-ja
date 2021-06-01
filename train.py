@@ -12,7 +12,7 @@ AUTO = tf.data.AUTOTUNE
 
 
 def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
-          batch_size, n_epochs, dev_size, dataset_len,
+          batch_size, n_epochs, dev_ratio, dataset_len, dataset_ratio,
           filename='edit_tagged_sentences.tfrec.gz'):
     try:
         tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
@@ -29,25 +29,19 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
     if dataset_len:
         dataset_card = tf.data.experimental.assert_cardinality(dataset_len)
         dataset = dataset.apply(dataset_card)
+    if 0 < dataset_ratio < 1:
+        dataset_len = int(dataset_len * dataset_ratio)
+        dataset = dataset.take(dataset_len)
     print(dataset, dataset.cardinality().numpy())
     print('Loaded dataset')
 
-    dev_i = int(dev_size * 100)
-    train_set = dataset.enumerate().filter(lambda i, x: i % 100 >= dev_i).map(
-        lambda i, x: x)
-    dev_set = dataset.enumerate().filter(lambda i, x: i % 100 < dev_i).map(
-        lambda i, x: x)
-    if dataset_len:
-        dev_len = math.ceil(dataset_len / 100) * dev_i
-        train_len = dataset_len - dev_len
-        dev_card = tf.data.experimental.assert_cardinality(dev_len)
-        train_card = tf.data.experimental.assert_cardinality(train_len)
-        train_set = train_set.apply(train_card)
-        dev_set = dev_set.apply(dev_card)
-        print(train_set.cardinality().numpy(), dev_set.cardinality().numpy())
+    dev_len = int(dataset_len * dev_ratio)
+    train_set = dataset.skip(dev_len)
+    dev_set = dataset.take(dev_len)
+    print(train_set.cardinality().numpy(), dev_set.cardinality().numpy())
+    print(f'Using {dev_ratio} of dataset for dev set')
     train_set = train_set.batch(batch_size, num_parallel_calls=AUTO)
     dev_set = dev_set.batch(batch_size, num_parallel_calls=AUTO)
-    print(f'Split dataset into train/dev = {100-dev_i}/{dev_i}')
 
     if tpu:
         strategy = tf.distribute.TPUStrategy(tpu)
@@ -63,7 +57,7 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
 def main(args):
     train(args.corpora_dir, args.output_dir, args.vocab_dir,
           args.transforms_file, args.pretrained_dir, args.batch_size,
-          args.n_epochs, args.dev_size, args.dataset_len)
+          args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio)
 
 
 if __name__ == '__main__':
@@ -88,10 +82,13 @@ if __name__ == '__main__':
     parser.add_argument('-e', '--n_epochs', type=int,
                         help='Number of epochs',
                         default=10)
-    parser.add_argument('-d', '--dev_size', type=float,
+    parser.add_argument('-d', '--dev_ratio', type=float,
                         help='Percent of whole dataset to use for dev set',
                         default=0.01)
     parser.add_argument('-l', '--dataset_len', type=int,
                         help='Cardinality of dataset')
+    parser.add_argument('-r', '--dataset_ratio', type=float,
+                        help='Percent of whole dataset to use',
+                        default=1.0)
     args = parser.parse_args()
     main(args)
