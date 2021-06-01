@@ -20,7 +20,7 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
     except (ValueError, KeyError) as e:
         tpu = None
     files = [os.path.join(root, filename)
-             for root, dirs, files in os.walk(corpora_dir)
+             for root, dirs, files in tf.io.gfile.walk(corpora_dir)
              if filename in files]
     dataset = read_dataset(files).shuffle(buffer_size=1024)
     if dataset_len:
