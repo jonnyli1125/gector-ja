@@ -11,6 +11,14 @@ from utils.helpers import read_dataset
 def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
           batch_size, n_epochs, dev_size, dataset_len,
           filename='edit_tagged_sentences.tfrec.gz'):
+    try:
+        tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
+            tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
+        tf.config.experimental_connect_to_cluster(tpu)
+        tf.tpu.experimental.initialize_tpu_system(tpu)
+        print('TPUs: ', tf.config.list_logical_devices('TPU'))
+    except (ValueError, KeyError) as e:
+        tpu = None
     files = [os.path.join(root, filename)
              for root, dirs, files in os.walk(corpora_dir)
              if filename in files]
@@ -38,16 +46,9 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
     dev_set = dev_set.batch(batch_size)
     print(f'Split dataset into train/dev = {100-dev_i}/{dev_i}')
 
-    try:
-        resolver = tf.distribute.cluster_resolver.TPUClusterResolver(
-            tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
-        tf.config.experimental_connect_to_cluster(resolver)
-        tf.tpu.experimental.initialize_tpu_system(resolver)
-        print("TPUs: ", tf.config.list_logical_devices('TPU'))
-        strategy = tf.distribute.TPUStrategy(resolver)
-    except (ValueError, KeyError) as e:
-        print(f'TPU initialization failed: {e}')
-        print('Using GPU/CPU strategy')
+    if tpu:
+        strategy = tf.distribute.TPUStrategy(tpu)
+    else:
         strategy = tf.distribute.MultiWorkerMirroredStrategy()
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, pretrained_model_path=pretrained_dir,
