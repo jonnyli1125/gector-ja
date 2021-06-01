@@ -14,15 +14,12 @@ class EditTagger:
     Original reference code @ https://github.com/grammarly/gector (see README).
     """
 
-    def __init__(self, tokenizer=None,
+    def __init__(self,
                  verb_adj_forms_path='data/transform.txt',
                  vocab_detect_path='data/output_vocab/detect.txt',
                  vocab_labels_path='data/output_vocab/labels.txt'):
-        if tokenizer:
-            self.tokenizer = tokenizer
-        else:
-            self.tokenizer = AutoTokenizer.from_pretrained(
-                'cl-tohoku/bert-base-japanese-v2')
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            'cl-tohoku/bert-base-japanese-v2')
         encode, decode = self.get_verb_adj_form_dicts(verb_adj_forms_path)
         self.encode_verb_adj_form = encode
         self.decode_verb_adj_form = decode

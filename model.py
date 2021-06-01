@@ -7,7 +7,6 @@ from tensorflow.keras import layers
 from transformers import TFAutoModel, AutoTokenizer
 
 from utils.helpers import Vocab
-from utils.edits import EditTagger
 
 
 class GEC:
@@ -26,12 +25,8 @@ class GEC:
         self.vocab_detect = Vocab.from_file(vocab_detect_path)
         self.model = self.get_model(bert_model)
         if pretrained_weights_path:
-            print(f'Using pretrained weights from {pretrained_weights_path}')
             self.model.load_weights(pretrained_weights_path)
-        self.edit_tagger = EditTagger(tokenizer=self.tokenizer,
-            vocab_labels_path=vocab_labels_path,
-            vocab_detect_path=vocab_detect_path,
-            verb_adj_forms_path=verb_adj_forms_path)
+        self.transform = self.get_transforms(verb_adj_forms_path)
 
     def get_model(self, bert_model):
         encoder = TFAutoModel.from_pretrained(bert_model)
@@ -98,7 +93,7 @@ class GEC:
     def correct(self, sentence, max_iter=10):
         cur_sentence = sentence
         for i in range(max_iter):
-            new_sentences = self.correct_once(cur_sentence)
+            new_sentence = self.correct_once(cur_sentence)
             if cur_sentence == new_sentence:
                 break
             cur_sentence = new_sentence
@@ -109,7 +104,7 @@ class GEC:
             padding='max_length', max_length=self.max_len,
             return_token_type_ids=False, return_tensors='tf')
         output_dict = self.predict(input_dict)
-        labels = output_dict['labels']
+        labels = output_dict['labels'][0]
         labels_probs = tf.math.reduce_max(
             output_dict['labels_probs'], axis=-1)[0].numpy()
         max_error_prob = output_dict['max_error_probs'][0]
@@ -120,9 +115,33 @@ class GEC:
         mask = input_dict['attention_mask'][0].numpy()
         for i in range(len(tokens)):
             if not mask[i]:
+                tokens[i] = ''
+            elif labels[i] == '$KEEP' or labels_probs[i] < self.min_error_prob:
                 continue
-            if labels_probs[i] < self.min_error_prob:
-                labels[i] = '$KEEP'
-        new_tokens = self.edit_tagger.apply_edits(tokens, labels)  # TODO: cant use edit tagger here
-        new_sentence = self.edit_tagger.join_tokens(new_tokens)
+            elif labels[i] == '$DELETE':
+                tokens[i] = ''
+            elif labels[i].startswith('$APPEND_'):
+                tokens[i] += ' ' + labels[i].replace('$APPEND_', '')
+            elif labels[i].startswith('$REPLACE_'):
+                tokens[i] = labels[i].replace('$REPLACE_', '')
+            elif labels[i].startswith('$TRANSFORM_'):
+                transform_op = labels[i].replace('$TRANSFORM_', '')
+                tokens[i] = self.transform[f'{tokens[i]}_{transform_op}']
+        tokens = ' '.join(tokens).split()
+        tokens = [t for t in tokens if t not in ['[CLS]', '[SEP]', '[PAD]']]
+        new_sentence = self.tokenizer.convert_tokens_to_string(tokens)
+        new_sentence = new_sentence.replace(' ', '')
         return new_sentence
+
+    def get_transforms(self, verb_adj_forms_path):
+        decode = {}
+        with open(verb_adj_forms_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                words, tags = line.split(':')
+                tags = tags.strip()
+                word1, word2 = words.split('_')
+                tag1, tag2 = tags.split('_')
+                decode_key = f'{word1}_{tag1}_{tag2}'
+                if decode_key not in decode:
+                    decode[decode_key] = word2
+        return decode
