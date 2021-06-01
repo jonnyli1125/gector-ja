@@ -1,5 +1,6 @@
 import argparse
 import os
+import math
 
 import tensorflow as tf
 
@@ -15,16 +16,25 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
              if filename in files]
     dataset = read_dataset(files).shuffle(buffer_size=1024)
     if dataset_len:
-        assert_card = tf.data.experimental.assert_cardinality(dataset_len)
-        dataset = dataset.apply(assert_card)
-    print(dataset)
+        dataset_card = tf.data.experimental.assert_cardinality(dataset_len)
+        dataset = dataset.apply(dataset_card)
+    print(dataset, dataset.cardinality().numpy())
     print('Loaded dataset')
 
     dev_i = int(dev_size * 100)
     train_set = dataset.enumerate().filter(lambda i, x: i % 100 >= dev_i).map(
-        lambda i, x: x).batch(batch_size)
+        lambda i, x: x)
     dev_set = dataset.enumerate().filter(lambda i, x: i % 100 < dev_i).map(
-        lambda i, x: x).batch(batch_size)
+        lambda i, x: x)
+    if dataset_len:
+        dev_len = math.ceil(dataset_len / 100) * dev_i
+        train_len = dataset_len - dev_len
+        dev_card = tf.data.experimental.assert_cardinality(dev_len)
+        train_card = tf.data.experimental.assert_cardinality(train_len)
+        train_set = train_set.apply(train_card)
+        dev_set = dev_set.apply(dev_card)
+    train_set = train_set.batch(batch_size)
+    dev_set = dev_set.batch(batch_size)
     print(f'Split dataset into train/dev = {100-dev_i}/{dev_i}')
 
     try:
