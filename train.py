@@ -33,6 +33,7 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
         train_card = tf.data.experimental.assert_cardinality(train_len)
         train_set = train_set.apply(train_card)
         dev_set = dev_set.apply(dev_card)
+        print(train_set.cardinality().numpy(), dev_set.cardinality().numpy())
     train_set = train_set.batch(batch_size)
     dev_set = dev_set.batch(batch_size)
     print(f'Split dataset into train/dev = {100-dev_i}/{dev_i}')

@@ -35,6 +35,7 @@ class GEC:
 
     def create_model(self, bert_model):
         encoder = TFAutoModel.from_pretrained(bert_model)
+        encoder.bert.trainable = False
         input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32)
         attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32)
         embedding = encoder(input_ids, attention_mask=attention_mask)[0]
