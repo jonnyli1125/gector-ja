@@ -50,7 +50,14 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
             pretrained_weights_path=pretrained_weights_path)
-    gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set)
+    model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+        filepath=output_weights_path + '_checkpoint',
+        save_weights_only=True,
+        monitor='val_labels_probs_sparse_categorical_accuracy',
+        mode='max',
+        save_best_only=True)
+    gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set,
+        callbacks=[model_checkpoint_callback])
     gec.model.save_weights(output_weights_path)
 
 
