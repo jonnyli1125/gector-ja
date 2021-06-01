@@ -51,8 +51,7 @@ class GEC:
         )
         loss = keras.losses.SparseCategoricalCrossentropy()
         optimizer = keras.optimizers.Adam()
-        metrics = [keras.metrics.SparseCategoricalAccuracy(),
-            keras.metrics.Precision(), keras.metrics.Recall()]
+        metrics = [keras.metrics.SparseCategoricalAccuracy()]
         model.compile(optimizer=optimizer, loss=[loss, loss], metrics=metrics)
         return model
 

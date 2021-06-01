@@ -1,7 +1,7 @@
 import os
 
 import tensorflow as tf
-from tensorflow.data import TFRecordDataset
+from tensorflow.data import TFRecordDataset, AUTOTUNE
 from tensorflow.train import Features, Feature, Example, BytesList, Int64List
 from tensorflow.io import (TFRecordWriter, TFRecordOptions, FixedLenFeature,
                            parse_single_example)
@@ -44,7 +44,9 @@ def write_dataset(path, examples):
 
 
 def read_dataset(paths):
-    return TFRecordDataset(paths, compression_type='GZIP').map(parse_example)
+    return TFRecordDataset(paths, compression_type='GZIP',
+        num_parallel_reads=AUTOTUNE).map(parse_example,
+        num_parallel_calls=AUTOTUNE)
 
 
 def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
