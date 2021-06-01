@@ -11,9 +11,9 @@ from utils.helpers import read_dataset
 AUTO = tf.data.AUTOTUNE
 
 
-def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
-          batch_size, n_epochs, dev_ratio, dataset_len, dataset_ratio,
-          filename='edit_tagged_sentences.tfrec.gz'):
+def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
+          pretrained_weights_path, batch_size, n_epochs, dev_ratio, dataset_len,
+          dataset_ratio, filename='edit_tagged_sentences.tfrec.gz'):
     try:
         tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
             tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
@@ -48,15 +48,15 @@ def train(corpora_dir, output_dir, vocab_dir, transforms_file, pretrained_dir,
     else:
         strategy = tf.distribute.MultiWorkerMirroredStrategy()
     with strategy.scope():
-        gec = GEC(vocab_path=vocab_dir, pretrained_model_path=pretrained_dir,
-                  verb_adj_forms_path=transforms_file)
+        gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
+            pretrained_weights_path=pretrained_weights_path)
     gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set)
-    gec.model.save(output_dir)
+    gec.model.save_weights(output_weights_path)
 
 
 def main(args):
-    train(args.corpora_dir, args.output_dir, args.vocab_dir,
-          args.transforms_file, args.pretrained_dir, args.batch_size,
+    train(args.corpora_dir, args.output_weights_path, args.vocab_dir,
+          args.transforms_file, args.pretrained_weights_path, args.batch_size,
           args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio)
 
 
@@ -65,8 +65,8 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--corpora_dir',
                         help='Path to dataset folder',
                         required=True)
-    parser.add_argument('-o', '--output_dir',
-                        help='Path to saved model output folder',
+    parser.add_argument('-o', '--output_weights_path',
+                        help='Path to save model weights to',
                         required=True)
     parser.add_argument('-v', '--vocab_dir',
                         help='Path to output vocab folder',
@@ -74,8 +74,8 @@ if __name__ == '__main__':
     parser.add_argument('-t', '--transforms_file',
                         help='Path to verb/adj transforms file',
                         default='./data/transform.txt')
-    parser.add_argument('-p', '--pretrained_dir',
-                        help='Path to pretrained model dir')
+    parser.add_argument('-p', '--pretrained_weights_path',
+                        help='Path to pretrained model weights')
     parser.add_argument('-b', '--batch_size', type=int,
                         help='Number of samples per batch',
                         default=32)

@@ -30,10 +30,8 @@ class Vocab:
     def __getitem__(self, key):
         if isinstance(key, str):
             return self.word2id[key]
-        elif isinstance(key, int):
-            return self.id2word[key]
         else:
-            raise ValueError('Key must be str or int')
+            return self.id2word[key]
 
 
 def write_dataset(path, examples):
@@ -95,7 +93,7 @@ def parse_example(example, max_tokens_len=512):
     att_mask = tf.cast(example['att_mask'], tf.int32)
     label_ids = example['label_ids']
     detect_ids = example['detect_ids']
-    return (token_ids, att_mask), (label_ids, detect_ids)
+    return (token_ids, att_mask), (label_ids, detect_ids), att_mask
 
 
 def int64_list_feature(value):
