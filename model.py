@@ -36,21 +36,24 @@ class GEC:
     def create_model(self, bert_model):
         encoder = TFAutoModel.from_pretrained(bert_model)
         encoder.bert.trainable = False
-        input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32)
-        attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32)
+        input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32,
+            name='input_ids')
+        attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32,
+            name='attention_mask')
         embedding = encoder(input_ids, attention_mask=attention_mask)[0]
         labels_probs = layers.Dense(len(self.vocab_labels),
-            activation='softmax')(embedding)
+            activation='softmax', name='labels_probs')(embedding)
         detect_probs = layers.Dense(len(self.vocab_detect),
-            activation='softmax')(embedding)
+            activation='softmax', name='detect_probs')(embedding)
         model = keras.Model(
             inputs=[input_ids, attention_mask],
             outputs=[labels_probs, detect_probs]
         )
         loss = keras.losses.SparseCategoricalCrossentropy()
         optimizer = keras.optimizers.Adam()
-        model.compile(optimizer=optimizer, loss=[loss, loss],
-            metrics=[keras.metrics.SparseCategoricalAccuracy()])
+        metrics = [keras.metrics.SparseCategoricalAccuracy(),
+            keras.metrics.Precision(), keras.metrics.Recall()]
+        model.compile(optimizer=optimizer, loss=[loss, loss], metrics=metrics)
         return model
 
     def predict(self, input_dict):
