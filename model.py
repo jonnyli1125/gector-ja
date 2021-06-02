@@ -47,10 +47,6 @@ class GEC:
             inputs=[input_ids, attention_mask],
             outputs=[labels_probs, detect_probs]
         )
-        loss = keras.losses.SparseCategoricalCrossentropy()
-        optimizer = keras.optimizers.Adam(learning_rate=1e-5)
-        metrics = [keras.metrics.SparseCategoricalAccuracy()]
-        model.compile(optimizer=optimizer, loss=[loss, loss], metrics=metrics)
         return model
 
     def predict(self, input_dict):

@@ -3,6 +3,7 @@ import os
 import math
 
 import tensorflow as tf
+from tensorflow import keras
 
 from model import GEC
 from utils.helpers import read_dataset
@@ -13,7 +14,7 @@ AUTO = tf.data.AUTOTUNE
 
 def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
           pretrained_weights_path, batch_size, n_epochs, dev_ratio, dataset_len,
-          dataset_ratio, bert_trainable,
+          dataset_ratio, bert_trainable, learning_rate,
           filename='edit_tagged_sentences.tfrec.gz'):
     try:
         tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
@@ -52,7 +53,12 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
             pretrained_weights_path=pretrained_weights_path,
             bert_trainable=bert_trainable)
-    model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+        loss = keras.losses.SparseCategoricalCrossentropy()
+        optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
+        metrics = [keras.metrics.SparseCategoricalAccuracy()]
+        gec.model.compile(optimizer=optimizer, loss=[loss, loss],
+            metrics=metrics)
+    model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
         save_weights_only=True,
         monitor='val_labels_probs_sparse_categorical_accuracy',
@@ -67,7 +73,7 @@ def main(args):
     train(args.corpora_dir, args.output_weights_path, args.vocab_dir,
           args.transforms_file, args.pretrained_weights_path, args.batch_size,
           args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio,
-          args.bert_trainable)
+          args.bert_trainable, args.learning_rate)
 
 
 if __name__ == '__main__':
@@ -103,5 +109,8 @@ if __name__ == '__main__':
     parser.add_argument('-bt', '--bert_trainable',
                         help='Enable training for BERT encoder layers',
                         action='store_true')
+    parser.add_argument('-lr', '--learning_rate', type=float,
+                        help='Learning rate',
+                        default=1e-5)
     args = parser.parse_args()
     main(args)
