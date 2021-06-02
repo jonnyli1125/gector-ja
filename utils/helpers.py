@@ -48,9 +48,8 @@ def read_dataset(paths):
 
 
 def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
-                   max_tokens_len=512):
+                   max_tokens_len=128):
     if len(tokens) > max_tokens_len:
-        print(f'Truncated {len(tokens)} tokens to {max_tokens_len} tokens')
         tokens = tokens[:max_tokens_len]
         edits = edits[:max_tokens_len]
     token_ids = [0] * max_tokens_len
@@ -64,7 +63,7 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
     label_ids[:n] = [labels_vocab[e[0]] for e in edits]
     corr_idx = detect_vocab['CORRECT']
     incorr_idx = detect_vocab['INCORRECT']
-    detect_ids[:n] = [corr_idx if e == '$KEEP' else incorr_idx
+    detect_ids[:n] = [corr_idx if e[0] == '$KEEP' else incorr_idx
                       for e in edits]
 
     assert len(token_ids) == max_tokens_len
@@ -81,7 +80,7 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
     return Example(features=Features(feature=feature))
 
 
-def parse_example(example, max_tokens_len=512):
+def parse_example(example, max_tokens_len=128):
     feature_desc = {
         'token_ids': FixedLenFeature([max_tokens_len], tf.int64),
         'att_mask': FixedLenFeature([max_tokens_len], tf.int64),

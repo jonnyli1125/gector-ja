@@ -10,7 +10,7 @@ from utils.helpers import Vocab
 
 
 class GEC:
-    def __init__(self, max_len=512, confidence=0.0, min_error_prob=0.0,
+    def __init__(self, max_len=128, confidence=0.0, min_error_prob=0.0,
                  vocab_path='data/output_vocab/',
                  verb_adj_forms_path='data/transform.txt',
                  bert_model='cl-tohoku/bert-base-japanese-v2',

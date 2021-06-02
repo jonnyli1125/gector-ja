@@ -57,10 +57,12 @@ class EditTagger:
             edit_rows.append(row)
         return edit_rows
 
-    def get_edits(self, source, target, add_special_tokens=True):
+    def get_edits(self, source, target, add_special_tokens=True, max_len=128):
         source_tokens = self.tokenize(source,
                                       add_special_tokens=add_special_tokens)
         target_tokens = self.tokenize(target, add_special_tokens=True)
+        if len(source_tokens) > max_len or len(target_tokens) > max_len:
+            return [], []
         matcher = SequenceMatcher(None, source_tokens, target_tokens)
         diffs = list(matcher.get_opcodes())
         edits = []
@@ -216,6 +218,8 @@ class EditTagger:
         for i in range(max_iter):
             cur_tokens, cur_edits = self.get_edits(cur_sent, target,
                                                    add_special_tokens=(i==0))
+            if not cur_tokens:
+                break
             if i > 0 and all(e == ['$KEEP'] for e in cur_edits):
                 break
             levels.append((cur_tokens, cur_edits))
