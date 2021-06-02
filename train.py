@@ -100,8 +100,8 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--dataset_ratio', type=float,
                         help='Percent of whole dataset to use',
                         default=1.0)
-    parser.add_argument('-bt', '--bert_trainable', type=bool,
+    parser.add_argument('-bt', '--bert_trainable',
                         help='Enable training for BERT encoder layers',
-                        default=True)
+                        action='store_true')
     args = parser.parse_args()
     main(args)
