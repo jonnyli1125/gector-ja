@@ -13,7 +13,8 @@ AUTO = tf.data.AUTOTUNE
 
 def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
           pretrained_weights_path, batch_size, n_epochs, dev_ratio, dataset_len,
-          dataset_ratio, filename='edit_tagged_sentences.tfrec.gz'):
+          dataset_ratio, bert_trainable,
+          filename='edit_tagged_sentences.tfrec.gz'):
     try:
         tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
             tpu='grpc://' + os.environ['COLAB_TPU_ADDR'])
@@ -36,8 +37,8 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     print('Loaded dataset')
 
     dev_len = int(dataset_len * dev_ratio)
-    train_set = dataset.skip(dev_len)
-    dev_set = dataset.take(dev_len)
+    train_set = dataset.skip(dev_len).prefetch(AUTO)
+    dev_set = dataset.take(dev_len).prefetch(AUTO)
     print(train_set.cardinality().numpy(), dev_set.cardinality().numpy())
     print(f'Using {dev_ratio} of dataset for dev set')
     train_set = train_set.batch(batch_size, num_parallel_calls=AUTO)
@@ -49,7 +50,8 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
         strategy = tf.distribute.MultiWorkerMirroredStrategy()
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
-            pretrained_weights_path=pretrained_weights_path)
+            pretrained_weights_path=pretrained_weights_path,
+            bert_trainable=bert_trainable)
     model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
         save_weights_only=True,
@@ -64,7 +66,8 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
 def main(args):
     train(args.corpora_dir, args.output_weights_path, args.vocab_dir,
           args.transforms_file, args.pretrained_weights_path, args.batch_size,
-          args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio)
+          args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio,
+          args.bert_trainable)
 
 
 if __name__ == '__main__':
@@ -97,5 +100,8 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--dataset_ratio', type=float,
                         help='Percent of whole dataset to use',
                         default=1.0)
+    parser.add_argument('-bt', '--bert_trainable', type=bool,
+                        help='Enable training for BERT encoder layers',
+                        default=True)
     args = parser.parse_args()
     main(args)

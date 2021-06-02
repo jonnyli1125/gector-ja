@@ -14,7 +14,8 @@ class GEC:
                  vocab_path='data/output_vocab/',
                  verb_adj_forms_path='data/transform.txt',
                  bert_model='cl-tohoku/bert-base-japanese-v2',
-                 pretrained_weights_path=None):
+                 pretrained_weights_path=None,
+                 bert_trainable=True):
         self.max_len = max_len
         self.confidence = confidence
         self.min_error_prob = min_error_prob
@@ -23,14 +24,14 @@ class GEC:
         vocab_detect_path = os.path.join(vocab_path, 'detect.txt')
         self.vocab_labels = Vocab.from_file(vocab_labels_path)
         self.vocab_detect = Vocab.from_file(vocab_detect_path)
-        self.model = self.get_model(bert_model)
+        self.model = self.get_model(bert_model, bert_trainable)
         if pretrained_weights_path:
             self.model.load_weights(pretrained_weights_path)
         self.transform = self.get_transforms(verb_adj_forms_path)
 
-    def get_model(self, bert_model):
+    def get_model(self, bert_model, bert_trainable=True):
         encoder = TFAutoModel.from_pretrained(bert_model)
-        encoder.bert.trainable = False
+        encoder.bert.trainable = bert_trainable
         input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32,
             name='input_ids')
         attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32,
