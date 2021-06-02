@@ -64,8 +64,10 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
         monitor='val_labels_probs_sparse_categorical_accuracy',
         mode='max',
         save_best_only=True)
+    early_stopping_callback = keras.callbacks.EarlyStopping(
+        monitor='loss', patience=3)
     gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set,
-        callbacks=[model_checkpoint_callback])
+        callbacks=[model_checkpoint_callback, early_stopping_callback])
     gec.model.save_weights(output_weights_path)
 
 
