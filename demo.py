@@ -29,7 +29,7 @@ class S(BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
-        text = json.loads(post_data.decode())['text'][:512]
+        text = json.loads(post_data.decode())['text'][:128]
         text = unicodedata.normalize('NFKC', text).replace(' ', '')
         correct_text = gec.correct(text)
         diffs = list(ndiff(text, correct_text))
