@@ -113,7 +113,9 @@ class GEC:
         for i in range(len(tokens)):
             if not mask[i]:
                 tokens[i] = ''
-            elif labels[i] == '$KEEP' or labels_probs[i] < self.min_error_prob:
+            elif labels_probs[i] < self.min_error_prob:
+                continue
+            elif labels[i] in ['[PAD]', '[UNK]', '$KEEP']:
                 continue
             elif labels[i] == '$DELETE':
                 tokens[i] = ''

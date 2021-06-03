@@ -3,6 +3,7 @@ import os
 import json
 import re
 import unicodedata
+from collections import Counter
 from multiprocessing import Pool
 from itertools import chain
 from difflib import SequenceMatcher
@@ -37,6 +38,7 @@ def preprocess_lang8_part(args,
                           correct_file='corr_sentences.txt',
                           incorrect_file='incorr_sentences.txt',
                           edit_tags_file='edit_tagged_sentences.tfrec.gz'):
+    edit_tagger.edit_freq = Counter()
     rows, part_output_dir = args
     pairs = set()
     for row in rows:
@@ -81,10 +83,11 @@ def preprocess_lang8_part(args,
     write_dataset(edit_tags_path, edit_rows)
     print(f'Processed {len(corr_lines)} sentences, ' \
           f'{len(edit_rows)} edit-tagged sentences to {part_output_dir}')
-    return len(corr_lines), len(edit_rows)
+    return len(corr_lines), len(edit_rows), edit_tagger.edit_freq
 
 
-def preprocess_lang8(source_file, output_dir, processes):
+def preprocess_lang8(source_file, output_dir, processes,
+                     edit_freq_file='edit_freq.json'):
     """Generate edit-tagged sentence corpus from Lang8 corpus."""
     lines = []
     with open(source_file, encoding='utf-8') as f:
@@ -102,9 +105,13 @@ def preprocess_lang8(source_file, output_dir, processes):
     pool_outputs = pool.imap_unordered(preprocess_lang8_part, rows_parts)
     n_sents = 0
     n_edit_sents = 0
+    edit_freq = Counter()
     for n in pool_outputs:
         n_sents += n[0]
         n_edit_sents += n[1]
+        edit_freq.update(n[2])
+    with open(os.path.join(output_dir, edit_freq_file), 'w') as f:
+        json.dump(edit_freq, f)
     print(f'Processed {n_sents} sentences and ' \
           f'{n_edit_sents} edit-tagged sentences.')
 

@@ -1,4 +1,5 @@
 from difflib import SequenceMatcher
+from collections import Counter
 
 from transformers import AutoTokenizer
 import numpy as np
@@ -25,6 +26,7 @@ class EditTagger:
         self.decode_verb_adj_form = decode
         self.vocab_detect = Vocab.from_file(vocab_detect_path)
         self.vocab_labels = Vocab.from_file(vocab_labels_path)
+        self.edit_freq = Counter()
 
     def get_verb_adj_form_dicts(self, verb_adj_forms_path):
         encode, decode = {}, {}
@@ -52,6 +54,7 @@ class EditTagger:
         edit_levels = self.get_edit_levels(source, target)
         # edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
+            self.edit_freq.update(e[0] for e in cur_edits)
             row = create_example(cur_tokens, cur_edits, self.tokenizer,
                                  self.vocab_labels, self.vocab_detect)
             edit_rows.append(row)
