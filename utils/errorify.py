@@ -3,7 +3,7 @@ import json
 import traceback
 
 import numpy as np
-from numpy.random import choice, randint, uniform
+from numpy.random import choice, randint, uniform, binomial
 from fugashi import Tagger
 
 
@@ -15,9 +15,8 @@ class Errorify:
                  reading2kanji_path='./data/reading_lookup.json',
                  transitivity_pairs_path='./data/transitivity_pairs.json'):
         self.tagger = Tagger('-Owakati')
-        self.num_errors_prob = [0.03, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.15,
-                                0.15, 0.13]
-        self.error_funcs_prob = [.20, .30, .25, .25]
+        self.error_prob = 1/7
+        self.error_funcs_prob = [.30, .20, .30, .20]
         self.error_funcs = [
             self.delete_error,
             self.inflection_error,
@@ -39,7 +38,7 @@ class Errorify:
         self.kanji_re = re.compile('([一-龯])')
         self.typo_chars = ['っ', '。', '、', '.', ',']
 
-    def delete_error(self, sentence):  # delete copula
+    def delete_error(self, sentence):
         """Delete a random token or character."""
         tokens = self.tagger(sentence)
         surface_tokens = [w.surface for w in tokens]
@@ -127,7 +126,7 @@ class Errorify:
     def __call__(self, sentence):
         """Get sentence with artificially generated errors."""
         error_sent = sentence
-        count = choice(range(len(self.num_errors_prob)), p=self.num_errors_prob)
+        count = binomial(len(self.tagger(sentence)), self.error_prob)
         for i in range(count):
             try:
                 error_func = choice(self.error_funcs, p=self.error_funcs_prob)
