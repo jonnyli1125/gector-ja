@@ -11,6 +11,7 @@ class Vocab:
     def __init__(self, words):
         self.id2word = words
         self.word2id = {word: i for i, word in enumerate(words)}
+        self.unk_id = self.word2id['[UNK]'] if '[UNK]' in self.word2id else -1
 
     @classmethod
     def from_file(cls, file):
@@ -29,7 +30,7 @@ class Vocab:
 
     def __getitem__(self, key):
         if isinstance(key, str):
-            return self.word2id[key]
+            return self.word2id.get(key, self.unk_id)
         else:
             return self.id2word[key]
 
