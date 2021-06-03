@@ -20,7 +20,7 @@ def preprocess_output_vocab(output_file):
     freqs = sorted(wps_freq.items(), key=lambda x: x[1])
     total = sum(f[1] for f in freqs)
     dist = [f[1] / total for f in freqs]
-    m = len(freqs) // 4
+    m = len(freqs) // 8
     print(sum(dist[-m:]))
     filtered_vocab = sorted(word for word, freq in freqs[-m:])
     labels.extend(f'$APPEND_{word}' for word in filtered_vocab)
