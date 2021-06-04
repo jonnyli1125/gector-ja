@@ -36,7 +36,8 @@ class GEC:
             name='input_ids')
         attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32,
             name='attention_mask')
-        embedding = encoder(input_ids, attention_mask=attention_mask)[0]
+        embedding = encoder(input_ids, attention_mask=attention_mask,
+            training=bert_trainable)[0]
         n_labels = len(self.vocab_labels)
         n_detect = len(self.vocab_detect)
         labels_probs = layers.Dense(n_labels, activation='softmax',

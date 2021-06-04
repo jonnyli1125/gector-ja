@@ -1,6 +1,6 @@
 import argparse
 import os
-import math
+import json
 
 import tensorflow as tf
 from tensorflow import keras
@@ -14,7 +14,7 @@ AUTO = tf.data.AUTOTUNE
 
 def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
           pretrained_weights_path, batch_size, n_epochs, dev_ratio, dataset_len,
-          dataset_ratio, bert_trainable, learning_rate,
+          dataset_ratio, bert_trainable, learning_rate, class_weight_path,
           filename='edit_tagged_sentences.tfrec.gz'):
     try:
         tpu = tf.distribute.cluster_resolver.TPUClusterResolver(
@@ -53,10 +53,17 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
             pretrained_weights_path=pretrained_weights_path,
             bert_trainable=bert_trainable)
-        loss = keras.losses.SparseCategoricalCrossentropy()
+        if class_weight_path:
+            with open(class_weight_path) as f:
+                class_weight = json.load(f)
+            losses = [WeightedSCCE(w) for w in class_weight]
+            print('Using weighted SCCE loss')
+        else:
+            losses = [keras.losses.SparseCategoricalCrossentropy(),
+                keras.losses.SparseCategoricalCrossentropy()]
         optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
         metrics = [keras.metrics.SparseCategoricalAccuracy()]
-        gec.model.compile(optimizer=optimizer, loss=[loss, loss],
+        gec.model.compile(optimizer=optimizer, loss=losses,
             metrics=metrics)
     model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
@@ -71,11 +78,31 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     gec.model.save_weights(output_weights_path)
 
 
+class WeightedSCCE(keras.losses.Loss):
+    def __init__(self, class_weight, from_logits=False, name='weighted_scce'):
+        if class_weight is None or all(v == 1. for v in class_weight):
+            self.class_weight = None
+        else:
+            self.class_weight = tf.convert_to_tensor(class_weight,
+                dtype=tf.float32)
+        self.reduction = keras.losses.Reduction.NONE
+        self.unreduced_scce = keras.losses.SparseCategoricalCrossentropy(
+            from_logits=from_logits, name=name,
+            reduction=self.reduction)
+
+    def __call__(self, y_true, y_pred, sample_weight=None):
+        loss = self.unreduced_scce(y_true, y_pred, sample_weight)
+        if self.class_weight is not None:
+            weight_mask = tf.gather(self.class_weight, y_true)
+            loss = tf.math.multiply(loss, weight_mask)
+        return loss
+
+
 def main(args):
     train(args.corpora_dir, args.output_weights_path, args.vocab_dir,
           args.transforms_file, args.pretrained_weights_path, args.batch_size,
           args.n_epochs, args.dev_ratio, args.dataset_len, args.dataset_ratio,
-          args.bert_trainable, args.learning_rate)
+          args.bert_trainable, args.learning_rate, args.class_weight_path)
 
 
 if __name__ == '__main__':
@@ -114,5 +141,7 @@ if __name__ == '__main__':
     parser.add_argument('-lr', '--learning_rate', type=float,
                         help='Learning rate',
                         default=1e-5)
+    parser.add_argument('-cw', '--class_weight_path',
+                        help='Path to class weight file')
     args = parser.parse_args()
     main(args)
