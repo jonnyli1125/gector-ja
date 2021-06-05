@@ -79,9 +79,9 @@ class Errorify:
             return sentence
         i = randint(len(tokens))
         rand = uniform()
-        if rand < 0.1:  # pick a kanji
-            new_word = choice(self.kanji, p=self.kanji_prob)
-        elif rand < 0.2:  # pick a typo character
+        #if rand < 0.1:  # pick a kanji
+            # new_word = choice(self.kanji, p=self.kanji_prob)
+        if rand < 0.1:  # pick a typo character
             new_word = choice(self.typo_chars)
         else:  # pick a particle
             new_word = choice(self.particles, p=self.particles_prob)
@@ -94,7 +94,8 @@ class Errorify:
         surface_tokens = [w.surface for w in tokens]
         candidate_tokens = [i for i, t in enumerate(tokens)
                             if t.feature.pos2 == '格助詞'
-                            or self.kanji_re.search(t.surface)]
+                            or t.feature.pos1 in ['動詞', '形容詞']]
+                            #or self.kanji_re.search(t.surface)]
         if not candidate_tokens:
             return sentence
         i = choice(candidate_tokens)
@@ -111,15 +112,16 @@ class Errorify:
             ending = token.surface[len(token.feature.orthBase)-1:]
             repl_word = choice(self.reading_lookup[reading]) + ending
         else:
-            kanji = self.kanji_re.findall(token.surface)
-            if not kanji:
-                return sentence
-            j = randint(len(kanji))
-            reading = self.tagger(kanji[j])[0].feature.kana
-            if reading not in self.reading_lookup:
-                return sentence
-            repl_kanji = choice(self.reading_lookup[reading])
-            repl_word = token.surface.replace(kanji[j], repl_kanji, 1)
+            #kanji = self.kanji_re.findall(token.surface)
+            #if not kanji:
+            #    return sentence
+            #j = randint(len(kanji))
+            #reading = self.tagger(kanji[j])[0].feature.kana
+            #if reading not in self.reading_lookup:
+            #    return sentence
+            #repl_kanji = choice(self.reading_lookup[reading])
+            #repl_word = token.surface.replace(kanji[j], repl_kanji, 1)
+            pass
         surface_tokens[i] = repl_word
         return ''.join(surface_tokens)
 
