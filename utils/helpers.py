@@ -54,13 +54,11 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
         tokens = tokens[:max_tokens_len]
         edits = edits[:max_tokens_len]
     token_ids = [0] * max_tokens_len
-    attention_mask = [0] * max_tokens_len
     label_ids = [0] * max_tokens_len
     detect_ids = [0] * max_tokens_len
 
     n = min(len(tokens), max_tokens_len)
     token_ids[:n] = tokenizer.convert_tokens_to_ids(tokens)
-    attention_mask[:n] = [1] * n
     label_ids[:n] = [labels_vocab[e[0]] for e in edits]
     corr_idx = detect_vocab['CORRECT']
     incorr_idx = detect_vocab['INCORRECT']
@@ -68,13 +66,11 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
                       for e in edits]
 
     assert len(token_ids) == max_tokens_len
-    assert len(attention_mask) == max_tokens_len
     assert len(label_ids) == max_tokens_len
     assert len(detect_ids) == max_tokens_len
 
     feature = {
         'token_ids': int64_list_feature(token_ids),
-        'att_mask': int64_list_feature(attention_mask),
         'label_ids': int64_list_feature(label_ids),
         'detect_ids': int64_list_feature(detect_ids)
     }
@@ -84,16 +80,15 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
 def parse_example(example, max_tokens_len=128):
     feature_desc = {
         'token_ids': FixedLenFeature([max_tokens_len], tf.int64),
-        'att_mask': FixedLenFeature([max_tokens_len], tf.int64),
         'label_ids': FixedLenFeature([max_tokens_len], tf.int64),
         'detect_ids': FixedLenFeature([max_tokens_len], tf.int64)
     }
     example = parse_single_example(example, feature_desc)
     token_ids = tf.cast(example['token_ids'], tf.int32)
-    att_mask = tf.cast(example['att_mask'], tf.int32)
+    att_mask = token_ids != 0
     label_ids = example['label_ids']
     detect_ids = example['detect_ids']
-    return (token_ids, att_mask), (label_ids, detect_ids), att_mask
+    return token_ids, (label_ids, detect_ids), att_mask
 
 
 def int64_list_feature(value):

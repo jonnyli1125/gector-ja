@@ -34,8 +34,7 @@ class GEC:
         encoder.bert.trainable = bert_trainable
         input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32,
             name='input_ids')
-        attention_mask = layers.Input(shape=(self.max_len,), dtype=tf.int32,
-            name='attention_mask')
+        attention_mask = input_ids != 0
         embedding = encoder(input_ids, attention_mask=attention_mask,
             training=bert_trainable)[0]
         n_labels = len(self.vocab_labels)
@@ -45,7 +44,7 @@ class GEC:
         detect_probs = layers.Dense(n_detect, activation='softmax',
             name='detect_probs')(embedding)
         model = keras.Model(
-            inputs=[input_ids, attention_mask],
+            inputs=input_ids,
             outputs=[labels_probs, detect_probs]
         )
         return model
