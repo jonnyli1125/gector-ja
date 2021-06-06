@@ -4,8 +4,9 @@ import json
 
 import tensorflow as tf
 from tensorflow import keras
-
+import numpy as np
 from transformers import AdamWeightDecay
+from sklearn.metrics import classification_report
 
 from model import GEC
 from utils.helpers import read_dataset
@@ -78,7 +79,14 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set,
         callbacks=[model_checkpoint_callback, early_stopping_callback])
     gec.model.save_weights(output_weights_path)
-
+    print('Confusion matrices:')
+    y_pred = gec.model.predict(dev_set)
+    for i, y_pred in enumerate(gec.model.predict(dev_set)):
+        y_pred = tf.reshape(tf.math.argmax(y_pred, axis=-1), [-1])
+        y_true = np.concatenate([y[i] for x, y, w in dev_set], axis=0).flatten()
+        weights = y_true != 0
+        print(tf.math.confusion_matrix(y_true, y_pred, weights=weights).numpy())
+        print(classification_report(y_true, y_pred, sample_weight=weights))
 
 class WeightedSCCE(keras.losses.Loss):
     def __init__(self, class_weight, from_logits=False, name='weighted_scce'):
