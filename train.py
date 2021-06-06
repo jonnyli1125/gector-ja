@@ -5,6 +5,8 @@ import json
 import tensorflow as tf
 from tensorflow import keras
 
+from transformers import AdamWeightDecay
+
 from model import GEC
 from utils.helpers import read_dataset
 
@@ -61,7 +63,7 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
         else:
             losses = [keras.losses.SparseCategoricalCrossentropy(),
                 keras.losses.SparseCategoricalCrossentropy()]
-        optimizer = keras.optimizers.Adam(learning_rate=learning_rate)
+        optimizer = AdamWeightDecay(learning_rate=learning_rate)
         metrics = [keras.metrics.SparseCategoricalAccuracy()]
         gec.model.compile(optimizer=optimizer, loss=losses,
             metrics=metrics)
