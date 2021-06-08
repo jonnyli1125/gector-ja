@@ -65,14 +65,13 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
             losses = [keras.losses.SparseCategoricalCrossentropy(),
                 keras.losses.SparseCategoricalCrossentropy()]
         optimizer = AdamWeightDecay(learning_rate=learning_rate)
-        metrics = [keras.metrics.SparseCategoricalAccuracy()]
         gec.model.compile(optimizer=optimizer, loss=losses,
-            metrics=metrics)
+            weighted_metrics=['sparse_categorical_accuracy'])
     model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
         save_weights_only=True,
-        monitor='val_labels_probs_sparse_categorical_accuracy',
-        mode='max',
+        monitor='loss',
+        mode='min',
         save_best_only=True)
     early_stopping_callback = keras.callbacks.EarlyStopping(
         monitor='loss', patience=3)
