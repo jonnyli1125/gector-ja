@@ -1,10 +1,31 @@
 import os
 
 import tensorflow as tf
+from tensorflow import keras
 from tensorflow.data import TFRecordDataset, AUTOTUNE
 from tensorflow.train import Features, Feature, Example, BytesList, Int64List
 from tensorflow.io import (TFRecordWriter, TFRecordOptions, FixedLenFeature,
                            parse_single_example)
+
+
+class WeightedSCCE(keras.losses.Loss):
+    def __init__(self, class_weight, from_logits=False, name='weighted_scce'):
+        if class_weight is None or all(v == 1. for v in class_weight):
+            self.class_weight = None
+        else:
+            self.class_weight = tf.convert_to_tensor(class_weight,
+                dtype=tf.float32)
+        self.reduction = keras.losses.Reduction.NONE
+        self.unreduced_scce = keras.losses.SparseCategoricalCrossentropy(
+            from_logits=from_logits, name=name,
+            reduction=self.reduction)
+
+    def __call__(self, y_true, y_pred, sample_weight=None):
+        loss = self.unreduced_scce(y_true, y_pred, sample_weight)
+        if self.class_weight is not None:
+            weight_mask = tf.gather(self.class_weight, y_true)
+            loss = tf.math.multiply(loss, weight_mask)
+        return loss
 
 
 class Vocab:

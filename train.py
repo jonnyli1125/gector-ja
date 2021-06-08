@@ -9,7 +9,7 @@ from transformers import AdamWeightDecay
 from sklearn.metrics import classification_report
 
 from model import GEC
-from utils.helpers import read_dataset
+from utils.helpers import read_dataset, WeightedSCCE
 
 
 AUTO = tf.data.AUTOTUNE
@@ -79,33 +79,12 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set,
         callbacks=[model_checkpoint_callback, early_stopping_callback])
     gec.model.save_weights(output_weights_path)
-    print('Confusion matrices:')
-    y_pred = gec.model.predict(dev_set)
-    for i, y_pred in enumerate(gec.model.predict(dev_set)):
-        y_pred = tf.reshape(tf.math.argmax(y_pred, axis=-1), [-1])
-        y_true = np.concatenate([y[i] for x, y, w in dev_set], axis=0).flatten()
-        weights = y_true != 0
-        print(tf.math.confusion_matrix(y_true, y_pred, weights=weights).numpy())
-        print(classification_report(y_true, y_pred, sample_weight=weights))
-
-class WeightedSCCE(keras.losses.Loss):
-    def __init__(self, class_weight, from_logits=False, name='weighted_scce'):
-        if class_weight is None or all(v == 1. for v in class_weight):
-            self.class_weight = None
-        else:
-            self.class_weight = tf.convert_to_tensor(class_weight,
-                dtype=tf.float32)
-        self.reduction = keras.losses.Reduction.NONE
-        self.unreduced_scce = keras.losses.SparseCategoricalCrossentropy(
-            from_logits=from_logits, name=name,
-            reduction=self.reduction)
-
-    def __call__(self, y_true, y_pred, sample_weight=None):
-        loss = self.unreduced_scce(y_true, y_pred, sample_weight)
-        if self.class_weight is not None:
-            weight_mask = tf.gather(self.class_weight, y_true)
-            loss = tf.math.multiply(loss, weight_mask)
-        return loss
+    #for i, y_pred in enumerate(gec.model.predict(dev_set)):
+    #    y_pred = tf.reshape(tf.math.argmax(y_pred, axis=-1), [-1])
+    #    y_true = np.concatenate([y[i] for x, y, w in dev_set], axis=0).flatten()
+    #    weights = y_true != 0
+    #    print(tf.math.confusion_matrix(y_true, y_pred, weights=weights).numpy())
+    #    print(classification_report(y_true, y_pred, sample_weight=weights))
 
 
 def main(args):
