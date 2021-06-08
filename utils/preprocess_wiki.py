@@ -139,7 +139,7 @@ if __name__ == '__main__':
                         help='Number of processes',
                         required=False)
     parser.add_argument('-e', '--use_existing',
-                        help='Use existing error-generated sentences',
+                        help='Edit tag existing error-generated sentences',
                         action='store_true')
     args = parser.parse_args()
     main(args)

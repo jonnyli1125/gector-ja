@@ -10,133 +10,64 @@ from fugashi import Tagger
 class Errorify:
     """Generate artificial errors in sentences."""
 
-    def __init__(self, kanji2freq_path='./data/kanji_freq.json',
-                 particle2freq_path='./data/particle_freq.json',
-                 reading2kanji_path='./data/reading_lookup.json',
-                 transitivity_pairs_path='./data/transitivity_pairs.json'):
+    def __init__(self, particle2freq_path='./data/particle_freq.json'):
         self.tagger = Tagger('-Owakati')
-        self.error_prob = 1/7
-        self.error_funcs_prob = [.30, .20, .30, .20]
-        self.error_funcs = [
-            self.delete_error,
-            self.inflection_error,
-            self.insert_error,
-            self.replace_error
-        ]
-        with open(kanji2freq_path, 'r') as f:
-            kanji2freq = json.load(f)
-            self.kanji = list(kanji2freq.keys())
-            kanji_freq = np.array(list(kanji2freq.values()))
-            self.kanji_prob = kanji_freq / kanji_freq.sum()
-        with open(particle2freq_path, 'r') as f:
-            particle2freq = json.load(f)
-            self.particles = list(particle2freq.keys())
-            particles_freq = np.array(list(particle2freq.values()))
-            self.particles_prob = particles_freq / particles_freq.sum()
-        with open(reading2kanji_path, 'r') as f:
-            self.reading_lookup = json.load(f)
-        self.kanji_re = re.compile('([一-龯])')
-        self.typo_chars = ['っ', '。', '、', '.', ',']
+        self.error_prob = 1/8
+        self.particles = ['は', 'と', 'を', 'の', 'で', 'が', 'に', 'から', 'へ',
+                          'より', 'まで', 'って', 'て', 'や', 'か']
 
-    def delete_error(self, sentence):
+    def delete_error(self, token, feature):
         """Delete a random token or character."""
-        tokens = self.tagger(sentence)
-        surface_tokens = [w.surface for w in tokens]
-        candidate_tokens = [i for i, t in enumerate(tokens)
-                            if '記号' not in t.feature.pos1]
-        if not candidate_tokens:
-            return sentence
-        i = choice(candidate_tokens)  # pick a token
-        j = randint(len(surface_tokens[i])+1)  # pick a char or whole token
-        if j == len(surface_tokens[i]):
-            del surface_tokens[i]
+        i = randint(len(token)+1)  # pick a char or whole token
+        if i == len(token):
+            return ''
         else:
-            surface_tokens[i] = surface_tokens[i][:j] + surface_tokens[i][j+1:]
-        return ''.join(surface_tokens)
+            return token[:i] + token[i+1:]
 
-    def inflection_error(self, sentence):
+    def inflection_error(self, token, feature):
         """Misinflect a random verb/adj stem."""
-        tokens = self.tagger(sentence)
-        surface_tokens = [w.surface for w in tokens]
-        candidate_tokens = [i for i, t in enumerate(tokens)
-                            if t.feature.pos1 in ['動詞', '形容詞']]
-        if not candidate_tokens:
-            return sentence
-        i = choice(candidate_tokens)
-        baseform = tokens[i].feature.orthBase or tokens[i].feature.lemma
+        baseform = feature.orthBase or feature.lemma
         if not baseform:
-            return sentence
+            return token
         morphs = list(self.get_forms(baseform).values())
         if not morphs:
-            return sentence
-        surface_tokens[i] = choice(morphs)
-        return ''.join(surface_tokens)
+            return token
+        return choice(morphs)
 
-    def insert_error(self, sentence):
+    def insert_error(self, token, feature):
         """Insert a random kanji, particle, or typo character."""
-        tokens = [w.surface for w in self.tagger(sentence)]
-        if not tokens:
-            return sentence
-        i = randint(len(tokens))
-        rand = uniform()
-        #if rand < 0.1:  # pick a kanji
-            # new_word = choice(self.kanji, p=self.kanji_prob)
-        if rand < 0.1:  # pick a typo character
-            new_word = choice(self.typo_chars)
-        else:  # pick a particle
-            new_word = choice(self.particles, p=self.particles_prob)
-        tokens[i] += new_word
-        return ''.join(tokens)
+        new_word = choice(self.particles)
+        return token + new_word
 
-    def replace_error(self, sentence):
+    def replace_error(self, token, feature):
         """Replace a random particle or kanji/verb/adj with same reading."""
-        tokens = self.tagger(sentence)
-        surface_tokens = [w.surface for w in tokens]
-        candidate_tokens = [i for i, t in enumerate(tokens)
-                            if t.feature.pos2 == '格助詞'
-                            or t.feature.pos1 in ['動詞', '形容詞']]
-                            #or self.kanji_re.search(t.surface)]
-        if not candidate_tokens:
-            return sentence
-        i = choice(candidate_tokens)
-        token = tokens[i]
-        if token.feature.pos2 == '格助詞':
-            repl_word = choice(self.particles, p=self.particles_prob)
-        elif token.feature.pos1 in ['動詞', '形容詞']:
-            kanaBase = token.feature.kanaBase
-            if not kanaBase:
-                return sentence
-            reading = f'{kanaBase[:-1]}.{kanaBase[-1]}'
-            if reading not in self.reading_lookup:
-                return sentence
-            ending = token.surface[len(token.feature.orthBase)-1:]
-            repl_word = choice(self.reading_lookup[reading]) + ending
-        else:
-            #kanji = self.kanji_re.findall(token.surface)
-            #if not kanji:
-            #    return sentence
-            #j = randint(len(kanji))
-            #reading = self.tagger(kanji[j])[0].feature.kana
-            #if reading not in self.reading_lookup:
-            #    return sentence
-            #repl_kanji = choice(self.reading_lookup[reading])
-            #repl_word = token.surface.replace(kanji[j], repl_kanji, 1)
-            pass
-        surface_tokens[i] = repl_word
-        return ''.join(surface_tokens)
+        return choice(self.particles)
 
     def __call__(self, sentence):
         """Get sentence with artificially generated errors."""
-        error_sent = sentence
-        count = binomial(len(self.tagger(sentence)), self.error_prob)
-        for i in range(count):
-            try:
-                error_func = choice(self.error_funcs, p=self.error_funcs_prob)
-                error_sent = error_func(error_sent)
-            except Exception:
-                print(sentence)
-                traceback.print_exc()
-        return error_sent
+        # need to this because fugashi has some weird bug
+        tokens = [(t.surface, t.feature) for t in self.tagger(sentence)]
+        error_tokens = []
+        error_prob = self.error_prob
+        for token, feature in tokens:
+            if uniform() >= error_prob:
+                error_tokens.append(token)
+                error_prob += self.error_prob
+                continue
+            error_prob = self.error_prob
+            if feature.pos2 in ['格助詞', '副助詞', '係助詞']:
+                error_func = choice([self.insert_error, self.delete_error,
+                                     self.replace_error], p=[0.1, 0.45, 0.45])
+            elif feature.pos1 in ['動詞', '形容詞']:
+                error_func = choice([self.insert_error, self.inflection_error],
+                                    p=[0.1, 0.9])
+            elif feature.pos2 not in ['数詞']:
+                error_func = choice([self.insert_error, self.delete_error])
+            else:
+                error_func = lambda t, f: t
+            error_token = error_func(token, feature)
+            error_tokens.append(error_token)
+        return ''.join(error_tokens)
 
     def get_forms(self, baseform):
         f = self.tagger(baseform)[0].feature
