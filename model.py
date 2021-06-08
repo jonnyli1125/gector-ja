@@ -49,12 +49,12 @@ class GEC:
         )
         return model
 
-    def predict(self, input_dict):
-        labels_probs, detect_probs = self.model(input_dict)
+    def predict(self, input_ids):
+        labels_probs, detect_probs = self.model(input_ids)
 
         # get maximum INCORRECT probability across tokens for each sequence
         incorr_index = self.vocab_detect['INCORRECT']
-        mask = tf.cast(input_dict['attention_mask'], tf.float32)
+        mask = tf.cast(input_ids != 0, tf.float32)
         error_probs = detect_probs[:, :, incorr_index] * mask
         max_error_probs = tf.math.reduce_max(error_probs, axis=-1)
 
@@ -100,7 +100,7 @@ class GEC:
         input_dict = self.tokenizer(sentence, add_special_tokens=True,
             padding='max_length', max_length=self.max_len,
             return_token_type_ids=False, return_tensors='tf')
-        output_dict = self.predict(input_dict)
+        output_dict = self.predict(input_dict['input_ids'])
         labels = output_dict['labels'][0]
         labels_probs = tf.math.reduce_max(
             output_dict['labels_probs'], axis=-1)[0].numpy()
