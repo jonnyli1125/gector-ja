@@ -70,8 +70,8 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
         save_weights_only=True,
-        monitor='loss',
-        mode='min',
+        monitor='val_labels_probs_sparse_categorical_accuracy',
+        mode='max',
         save_best_only=True)
     early_stopping_callback = keras.callbacks.EarlyStopping(
         monitor='loss', patience=3)
@@ -80,9 +80,10 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     gec.model.save_weights(output_weights_path)
     #for i, y_pred in enumerate(gec.model.predict(dev_set)):
     #    y_pred = tf.reshape(tf.math.argmax(y_pred, axis=-1), [-1])
-    #    y_true = np.concatenate([y[i] for x, y, w in dev_set], axis=0).flatten()
-    #    weights = y_true != 0
-    #    print(tf.math.confusion_matrix(y_true, y_pred, weights=weights).numpy())
+    #    labels = [y[i] for x, y, w in dev_set]
+    #    y_true = np.concatenate(labels, axis=0).flatten()
+    #    masks = [w for x, y, w in dev_set]
+    #    weights = np.concatenate(masks, axis=0).flatten()
     #    print(classification_report(y_true, y_pred, sample_weight=weights))
 
 
