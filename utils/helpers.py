@@ -80,11 +80,10 @@ def create_example(tokens, edits, tokenizer, labels_vocab, detect_vocab,
 
     n = min(len(tokens), max_tokens_len)
     token_ids[:n] = tokenizer.convert_tokens_to_ids(tokens)
-    label_ids[:n] = [labels_vocab[e[0]] for e in edits]
+    label_ids[:n] = [labels_vocab[e] for e in edits]
     corr_idx = detect_vocab['CORRECT']
     incorr_idx = detect_vocab['INCORRECT']
-    detect_ids[:n] = [corr_idx if e[0] == '$KEEP' else incorr_idx
-                      for e in edits]
+    detect_ids[:n] = [corr_idx if e == '$KEEP' else incorr_idx for e in edits]
 
     assert len(token_ids) == max_tokens_len
     assert len(label_ids) == max_tokens_len

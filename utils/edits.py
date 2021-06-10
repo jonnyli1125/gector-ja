@@ -51,10 +51,11 @@ class EditTagger:
 
     def __call__(self, source, target):
         edit_rows = []
-        edit_levels = self.get_edit_levels(source, target)
-        # edit_levels = [self.get_edits(source, target)]
+        # edit_levels = self.get_edit_levels(source, target)
+        edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
-            self.edit_freq.update(e[0] for e in cur_edits)
+            cur_edits = [e[0] for e in cur_edits]
+            self.edit_freq.update(cur_edits)
             row = create_example(cur_tokens, cur_edits, self.tokenizer,
                                  self.vocab_labels, self.vocab_detect)
             edit_rows.append(row)
