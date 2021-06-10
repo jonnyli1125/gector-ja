@@ -12,17 +12,14 @@ class Errorify:
 
     def __init__(self, particle2freq_path='./data/particle_freq.json'):
         self.tagger = Tagger('-Owakati')
-        self.error_prob = 1/8
+        self.error_prob = 0.1
         self.particles = ['は', 'と', 'を', 'の', 'で', 'が', 'に', 'から', 'へ',
                           'より', 'まで', 'って', 'て', 'や', 'か']
 
     def delete_error(self, token, feature):
-        """Delete a random token or character."""
-        i = randint(len(token)+1)  # pick a char or whole token
-        if i == len(token):
-            return ''
-        else:
-            return token[:i] + token[i+1:]
+        """Delete a random character in a token."""
+        i = randint(len(token))  # pick a char
+        return token[:i] + token[i+1:]
 
     def inflection_error(self, token, feature):
         """Misinflect a random verb/adj stem."""
@@ -60,8 +57,8 @@ class Errorify:
                                      self.replace_error], p=[0.1, 0.45, 0.45])
             elif feature.pos1 in ['動詞', '形容詞']:
                 error_func = choice([self.insert_error, self.inflection_error],
-                                    p=[0.1, 0.9])
-            elif feature.pos2 not in ['数詞']:
+                                    p=[0.05, 0.95])
+            elif feature.pos2 not in ['数詞', '固有名詞'] and uniform() < 0.5:
                 error_func = choice([self.insert_error, self.delete_error])
             else:
                 error_func = lambda t, f: t
