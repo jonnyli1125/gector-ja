@@ -49,10 +49,12 @@ class EditTagger:
     def join_tokens(self, tokens):
         return self.tokenizer.convert_tokens_to_string(tokens).replace(' ', '')
 
-    def __call__(self, source, target):
+    def __call__(self, source, target, levels=False):
         edit_rows = []
-        # edit_levels = self.get_edit_levels(source, target)
-        edit_levels = [self.get_edits(source, target)]
+        if levels:
+            edit_levels = self.get_edit_levels(source, target)
+        else:
+            edit_levels = [self.get_edits(source, target)]
         for cur_tokens, cur_edits in edit_levels:
             cur_edits = [e[0] for e in cur_edits]
             self.edit_freq.update(cur_edits)

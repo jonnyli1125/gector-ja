@@ -69,7 +69,7 @@ def preprocess_lang8_part(args,
             continue
         corr_lines.append(f'{target_sent}\n')
         incorr_lines.append(f'{learner_sent}\n')
-        levels = edit_tagger(learner_sent, target_sent)
+        levels = edit_tagger(learner_sent, target_sent, levels=True)
         edit_rows.extend(levels)
     if not os.path.exists(part_output_dir):
         os.makedirs(part_output_dir)

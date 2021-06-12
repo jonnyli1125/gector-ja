@@ -10,8 +10,8 @@ def get_class_weights(classes, freqs):
     class_weights = [1.] * len(classes)
     for i, c in enumerate(classes):
         if c in freqs:
-            w = math.log(n_samples / freqs[c])
-            class_weights[i] = max(w, 1.0)
+            w = n_samples / (len(classes) * freqs[c])
+            class_weights[i] = w
     return class_weights
 
 

@@ -7,9 +7,9 @@ The [pretrained Japanese BERT model](https://huggingface.co/cl-tohoku/bert-base-
 ## Datasets
 
 - [Japanese Wikipedia dump](https://dumps.wikimedia.org/), extracted with [WikiExtractor](https://github.com/attardi/wikiextractor), synthetic errors generated using preprocessing scripts
-  - 19,841,767 edit-tagged sentences for pre-training
+  - 19,841,767 sentences
 - [NAIST Lang8 Learner Corpora](https://sites.google.com/site/naistlang8corpora/)
-  - 6,066,306 edit-tagged sentences for fine tuning
+  - 6,066,306 sentences
 
 ### Synthetically Generated Error Corpus
 
