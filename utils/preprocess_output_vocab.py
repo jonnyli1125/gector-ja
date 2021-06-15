@@ -10,8 +10,8 @@ def get_class_weights(classes, freqs):
     class_weights = [1.] * len(classes)
     for i, c in enumerate(classes):
         if c in freqs:
-            w = n_samples / (len(classes) * freqs[c])
-            class_weights[i] = w
+            w = math.log(n_samples / freqs[c])
+            class_weights[i] = max(w, 1.0)
     return class_weights
 
 
@@ -38,6 +38,7 @@ def preprocess_output_vocab(output_file, weights_file):
         ['CORRECT', 'INCORRECT'],
         {'CORRECT': n_correct, 'INCORRECT': n_samples-n_correct}
     )
+    detect_class_weights = [1.] + detect_class_weights
     with open(weights_file, 'w', encoding='utf-8') as f:
         json.dump([labels_class_weights, detect_class_weights], f)
     with open(output_file, 'w', encoding='utf-8') as f:

@@ -10,19 +10,24 @@ from fugashi import Tagger
 class Errorify:
     """Generate artificial errors in sentences."""
 
-    def __init__(self, particle2freq_path='./data/particle_freq.json'):
+    def __init__(self, reading_lookup_path='./data/reading_lookup.json'):
         self.tagger = Tagger('-Owakati')
-        self.error_prob = 0.1
-        self.particles = ['は', 'と', 'を', 'の', 'で', 'が', 'に', 'から', 'へ',
-                          'より', 'まで', 'って', 'て', 'や', 'か']
+        self.error_prob = [0.05, 0.07, 0.25, 0.35, 0.28]
+        self.core_particles = ['が', 'の', 'を', 'に', 'へ', 'と', 'で', 'から',
+                               'より', 'は', 'も']
+        self.other_particles = ['か', 'の', 'や', 'に', 'と', 'やら', 'なり',
+                                'だの', 'ばかり', 'まで', 'だけ', 'ほど', 'くらい',
+                                'など', 'やら', 'こそ', 'でも', 'しか', 'さえ',
+                                'だに', 'ば', 'て', 'のに', 'ので', 'から']
+        with open(reading_lookup_path) as f:
+            self.reading_lookup = json.load(f)
 
     def delete_error(self, token, feature):
-        """Delete a random character in a token."""
-        i = randint(len(token))  # pick a char
-        return token[:i] + token[i+1:]
+        """Delete a token."""
+        return ''
 
     def inflection_error(self, token, feature):
-        """Misinflect a random verb/adj stem."""
+        """Misinflect a verb/adj stem."""
         baseform = feature.orthBase or feature.lemma
         if not baseform:
             return token
@@ -32,39 +37,51 @@ class Errorify:
         return choice(morphs)
 
     def insert_error(self, token, feature):
-        """Insert a random kanji, particle, or typo character."""
-        new_word = choice(self.particles)
-        return token + new_word
+        """Insert a random particle."""
+        return token + choice(self.other_particles)
 
     def replace_error(self, token, feature):
-        """Replace a random particle or kanji/verb/adj with same reading."""
-        return choice(self.particles)
+        """Replace a particle or word with another word of the same reading."""
+        if feature.pos2 in ['格助詞', '係助詞']:
+            return choice(self.core_particles)
+        elif feature.pos1 in ['動詞', '形容詞']:
+            reading = f'{feature.kanaBase[:-1]}.{feature.kanaBase[-1]}'
+            if reading not in self.reading_lookup:
+                return token
+            ending = token[len(feature.orthBase)-1:]
+            return choice(self.reading_lookup[reading]) + ending
+        else:
+            if feature.kanaBase not in self.reading_lookup:
+                return token
+            return choice(self.reading_lookup[feature.kanaBase])
 
     def __call__(self, sentence):
         """Get sentence with artificially generated errors."""
         # need to this because fugashi has some weird bug
         tokens = [(t.surface, t.feature) for t in self.tagger(sentence)]
-        error_tokens = []
-        error_prob = self.error_prob
-        for token, feature in tokens:
-            if uniform() >= error_prob:
-                error_tokens.append(token)
-                error_prob += self.error_prob
-                continue
-            error_prob = self.error_prob
-            if feature.pos2 in ['格助詞', '副助詞', '係助詞']:
-                error_func = choice([self.insert_error, self.delete_error,
-                                     self.replace_error], p=[0.1, 0.45, 0.45])
-            elif feature.pos1 in ['動詞', '形容詞']:
-                error_func = choice([self.insert_error, self.inflection_error],
+        tokens_surface = [t[0] for t in tokens]
+        n_errors = choice(range(len(self.error_prob)), p=self.error_prob)
+        candidate_tokens = [i for i, (t, f) in enumerate(tokens)
+                            if f.pos2 not in ['数詞', '固有名詞']
+                            and f.pos1 not in ['記号', '補助記号']]
+        if not candidate_tokens:
+            return sentence
+        error_token_ids = choice(candidate_tokens, size=(n_errors,))
+        for token_id in error_token_ids:
+            token, feat = tokens[token_id]
+            if feat.pos2 in ['格助詞', '係助詞']:
+                error_func = choice([self.delete_error, self.replace_error])
+            elif feat.pos1 in ['動詞', '形容詞']:
+                error_func = choice([self.replace_error, self.inflection_error],
                                     p=[0.05, 0.95])
-            elif feature.pos2 not in ['数詞', '固有名詞'] and uniform() < 0.5:
-                error_func = choice([self.insert_error, self.delete_error])
+            elif feat.pos1 == '名詞':
+                error_func = choice([self.insert_error, self.replace_error],
+                                    p=[0.05, 0.95])
             else:
-                error_func = lambda t, f: t
-            error_token = error_func(token, feature)
-            error_tokens.append(error_token)
-        return ''.join(error_tokens)
+                error_func = choice([self.insert_error, self.delete_error],
+                                    p=[0.05, 0.95])
+            tokens_surface[token_id] = error_func(token, feat)
+        return ''.join(tokens_surface)
 
     def get_forms(self, baseform):
         f = self.tagger(baseform)[0].feature
