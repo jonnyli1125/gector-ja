@@ -25,7 +25,7 @@ def preprocess_output_vocab(output_file, weights_file):
     edit_freq = Counter(jawiki_edit_freq)
     edit_freq.update(lang8_edit_freq)
     ordered = sorted(edit_freq.items(), key=lambda x: x[1], reverse=True)
-    labels += [edit for edit, freq in ordered if freq >= 5000]
+    labels += [edit for edit, freq in ordered if freq >= 500]
     n_samples = sum(edit_freq[edit] for edit in labels)
     dist = [freq / n_samples for edit, freq in ordered]
     print(ordered[:100])

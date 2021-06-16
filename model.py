@@ -50,7 +50,7 @@ class GEC:
         return model
 
     def predict(self, input_ids):
-        labels_probs, detect_probs = self.model(input_ids)
+        labels_probs, detect_probs = self.model(input_ids, training=False)
 
         # get maximum INCORRECT probability across tokens for each sequence
         incorr_index = self.vocab_detect['INCORRECT']
