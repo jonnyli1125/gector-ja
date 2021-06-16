@@ -7,13 +7,13 @@ The [pretrained Japanese BERT model](https://huggingface.co/cl-tohoku/bert-base-
 ## Datasets
 
 - [Japanese Wikipedia dump](https://dumps.wikimedia.org/), extracted with [WikiExtractor](https://github.com/attardi/wikiextractor), synthetic errors generated using preprocessing scripts
-  - 19,841,767 sentences
+  - 19,841,767 training sentences
 - [NAIST Lang8 Learner Corpora](https://sites.google.com/site/naistlang8corpora/)
-  - 6,066,306 sentences
+  - 6,066,306 training sentences (generated from 3,084,0376 original sentences)
 
 ### Synthetically Generated Error Corpus
 
-The Wikipedia corpus was used to synthetically generate errorful sentences, with a method similar to [Awasthi et al. 2019](https://github.com/awasthiabhijeet/PIE/tree/master/errorify), but for Japanese. The details of the implementation can be found in the [preprocessing scripts](https://github.com/jonnyli1125/gector-ja/blob/main/utils/) in this repository.
+The Wikipedia corpus was used to synthetically generate errorful sentences, with a method similar to [Awasthi et al. 2019](https://github.com/awasthiabhijeet/PIE/tree/master/errorify), but with adjustments for Japanese. The details of the implementation can be found in the [preprocessing scripts](https://github.com/jonnyli1125/gector-ja/blob/main/utils/) in this repository.
 
 Example error-generated sentence:
 ```
@@ -31,11 +31,11 @@ Example edit-tagged sentence (using the same pair of sentences above):
 $KEEP $KEEP $KEEP $REPLACE_に $KEEP $KEEP $DELETE $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $APPEND_海 $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $DELETE $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $KEEP $TRANSFORM_VBV_VB $KEEP $KEEP
 ```
 
-Furthermore, on top of the basic 4 token transformations (`$KEEP`, `$DELETE`, `$APPEND`, `$REPLACE`), there are a set of special transformations called "g-transformations", described in the GECToR paper (section 3). G-transformations are mainly used for common replacements, such as switching verb conjugation forms. The g-transformations in this project were also redefined to accommodate for Japanese.
+Furthermore, on top of the basic 4 token transformations (`$KEEP`, `$DELETE`, `$APPEND`, `$REPLACE`), there are a set of special transformations called "g-transformations" (i.e. `$TRANSFORM_VBV_VB` in the example above). G-transformations are mainly used for common replacements, such as switching verb conjugations, as described in the GECToR paper (section 3). The g-transformations in this model were redefined to accommodate for Japanese verbs and i-adjectives, which both inflect for tense.
 
 ## Model Architecture
 
-The model consists of a [pretrained BERT encoder layer](https://huggingface.co/cl-tohoku/bert-base-japanese-v2) and two linear classification layers, one for `labels` and one for `detect`. `labels` predicts a specific edit transformation (`$KEEP`, `$DELETE`, `$APPEND_x`, etc), and `detect` predicts whether the token is `CORRECT` or `INCORRECT`. The results from the two are used to make a prediction. The predicted transformations are then applied to the errorful input sentence to obtain a corrected sentence.
+The model consists of a [pretrained BERT encoder layer](https://huggingface.co/cl-tohoku/bert-base-japanese-v2) and two linear classification heads, one for `labels` and one for `detect`. `labels` predicts a specific edit transformation (`$KEEP`, `$DELETE`, `$APPEND_x`, etc), and `detect` predicts whether the token is `CORRECT` or `INCORRECT`. The results from the two are used to make a prediction. The predicted transformations are then applied to the errorful input sentence to obtain a corrected sentence.
 
 Furthermore, in some cases, one pass of predicted transformations is not sufficient to transform the errorful sentence to the target sentence. Therefore, we repeat the process again on the result of the previous pass of transformations, until the model predicts that the sentence no longer contains incorrect tokens.
 
@@ -43,12 +43,10 @@ For more details about the model architecture and __iterative sequence tagging a
 
 ## Training
 
-The model was trained in Colab with TPUs on each corpus with the following hyperparameters:
+The model was trained in Colab with TPUs on each corpus with the following hyperparameters (default is used if unspecified):
 
 ```
-batch_size: 128
+batch_size: 64
 learning_rate: 1e-5
 bert_trainable: true
 ```
-
-A class-weighted cross entropy loss function was used in order to compensate for the imbalance in classes, as about 88% of the labels are `$KEEP`/`CORRECT`.
