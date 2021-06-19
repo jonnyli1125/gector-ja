@@ -50,3 +50,14 @@ batch_size: 64
 learning_rate: 1e-5
 bert_trainable: true
 ```
+
+Synthetic error corpus (Wikipedia dump):
+```
+length: 19841767
+epochs: 3
+```
+
+Lang8 corpus:
+```
+length: 6066306
+epochs: 10```

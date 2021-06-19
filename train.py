@@ -78,13 +78,6 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     gec.model.fit(train_set, epochs=n_epochs, validation_data=dev_set,
         callbacks=[model_checkpoint_callback, early_stopping_callback])
     gec.model.save_weights(output_weights_path)
-    #for i, y_pred in enumerate(gec.model.predict(dev_set)):
-    #    y_pred = tf.reshape(tf.math.argmax(y_pred, axis=-1), [-1])
-    #    labels = [y[i] for x, y, w in dev_set]
-    #    y_true = np.concatenate(labels, axis=0).flatten()
-    #    masks = [w for x, y, w in dev_set]
-    #    weights = np.concatenate(masks, axis=0).flatten()
-    #    print(classification_report(y_true, y_pred, sample_weight=weights))
 
 
 def main(args):

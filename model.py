@@ -87,50 +87,55 @@ class GEC:
 
         return output_dict
 
-    def correct(self, sentence, max_iter=10):
-        cur_sentence = sentence
+    def correct(self, sentences, max_iter=10):
+        single = isinstance(sentences, str)
+        cur_sentences = [sentences] if single else sentences
         for i in range(max_iter):
-            new_sentence = self.correct_once(cur_sentence)
-            if cur_sentence == new_sentence:
+            new_sentences = self.correct_once(cur_sentences)
+            if cur_sentences == new_sentences:
                 break
-            cur_sentence = new_sentence
-        return cur_sentence
+            cur_sentences = new_sentences
+        return cur_sentences[0] if single else cur_sentences
 
-    def correct_once(self, sentence):
-        input_dict = self.tokenizer(sentence, add_special_tokens=True,
-            padding='max_length', max_length=self.max_len,
-            return_token_type_ids=False, return_tensors='tf')
+    def correct_once(self, sentences):
+        input_dict = self.tokenizer(sentences, add_special_tokens=True,
+            padding='max_length', max_length=self.max_len, return_tensors='tf')
         output_dict = self.predict(input_dict['input_ids'])
-        labels = output_dict['labels'][0]
+        labels = output_dict['labels']
+        print(sentences, labels, output_dict['detect'])  # debug
         labels_probs = tf.math.reduce_max(
-            output_dict['labels_probs'], axis=-1)[0].numpy()
-        max_error_prob = output_dict['max_error_probs'][0]
-        if max_error_prob < self.min_error_prob:
-            return sentence
-        input_ids = input_dict['input_ids'][0].numpy()
-        tokens = self.tokenizer.convert_ids_to_tokens(input_ids)
-        mask = input_dict['attention_mask'][0].numpy()
-        for i in range(len(tokens)):
-            if not mask[i]:
-                tokens[i] = ''
-            elif labels_probs[i] < self.min_error_prob:
+            output_dict['labels_probs'], axis=-1).numpy()
+        new_sentences = []
+        for i, sentence in enumerate(sentences):
+            max_error_prob = output_dict['max_error_probs'][i]
+            if max_error_prob < self.min_error_prob:
+                new_sentences.append(sentence)
                 continue
-            elif labels[i] in ['[PAD]', '[UNK]', '$KEEP']:
-                continue
-            elif labels[i] == '$DELETE':
-                tokens[i] = ''
-            elif labels[i].startswith('$APPEND_'):
-                tokens[i] += ' ' + labels[i].replace('$APPEND_', '')
-            elif labels[i].startswith('$REPLACE_'):
-                tokens[i] = labels[i].replace('$REPLACE_', '')
-            elif labels[i].startswith('$TRANSFORM_'):
-                transform_op = labels[i].replace('$TRANSFORM_', '')
-                tokens[i] = self.transform[f'{tokens[i]}_{transform_op}']
-        tokens = ' '.join(tokens).split()
-        tokens = [t for t in tokens if t not in ['[CLS]', '[SEP]', '[PAD]']]
-        new_sentence = self.tokenizer.convert_tokens_to_string(tokens)
-        new_sentence = new_sentence.replace(' ', '')
-        return new_sentence
+            input_ids = input_dict['input_ids'][i].numpy()
+            tokens = self.tokenizer.convert_ids_to_tokens(input_ids)
+            mask = input_dict['attention_mask'][i].numpy()
+            for j in range(len(tokens)):
+                if not mask[j]:
+                    tokens[j] = ''
+                elif labels_probs[i][j] < self.min_error_prob:
+                    continue
+                elif labels[i][j] in ['[PAD]', '[UNK]', '$KEEP']:
+                    continue
+                elif labels[i][j] == '$DELETE':
+                    tokens[j] = ''
+                elif labels[i][j].startswith('$APPEND_'):
+                    tokens[j] += ' ' + labels[i][j].replace('$APPEND_', '')
+                elif labels[i][j].startswith('$REPLACE_'):
+                    tokens[j] = labels[i][j].replace('$REPLACE_', '')
+                elif labels[i][j].startswith('$TRANSFORM_'):
+                    transform_op = labels[i][j].replace('$TRANSFORM_', '')
+                    tokens[j] = self.transform[f'{tokens[j]}_{transform_op}']
+            tokens = ' '.join(tokens).split()
+            tokens = [t for t in tokens if t not in ['[CLS]', '[SEP]', '[PAD]']]
+            new_sentence = self.tokenizer.convert_tokens_to_string(tokens)
+            new_sentence = new_sentence.replace(' ', '')
+            new_sentences.append(new_sentence)
+        return new_sentences
 
     def get_transforms(self, verb_adj_forms_path):
         decode = {}
