@@ -4,13 +4,14 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
-from transformers import TFAutoModel, AutoTokenizer
+from transformers import TFBertModel, BertTokenizer, AdamWeightDecay
 
 from utils.helpers import Vocab
 
 
 class GEC:
     def __init__(self, max_len=128, confidence=0.0, min_error_prob=0.0,
+                 learning_rate=1e-5,
                  vocab_path='data/output_vocab/',
                  verb_adj_forms_path='data/transform.txt',
                  bert_model='cl-tohoku/bert-base-japanese-v2',
@@ -19,18 +20,18 @@ class GEC:
         self.max_len = max_len
         self.confidence = confidence
         self.min_error_prob = min_error_prob
-        self.tokenizer = AutoTokenizer.from_pretrained(bert_model)
+        self.tokenizer = BertTokenizer.from_pretrained(bert_model)
         vocab_labels_path = os.path.join(vocab_path, 'labels.txt')
         vocab_detect_path = os.path.join(vocab_path, 'detect.txt')
         self.vocab_labels = Vocab.from_file(vocab_labels_path)
         self.vocab_detect = Vocab.from_file(vocab_detect_path)
-        self.model = self.get_model(bert_model, bert_trainable)
+        self.model = self.get_model(bert_model, bert_trainable, learning_rate)
         if pretrained_weights_path:
             self.model.load_weights(pretrained_weights_path)
         self.transform = self.get_transforms(verb_adj_forms_path)
 
-    def get_model(self, bert_model, bert_trainable=True):
-        encoder = TFAutoModel.from_pretrained(bert_model)
+    def get_model(self, bert_model, bert_trainable=True, learning_rate=None):
+        encoder = TFBertModel.from_pretrained(bert_model)
         encoder.bert.trainable = bert_trainable
         input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32,
             name='input_ids')
@@ -47,6 +48,11 @@ class GEC:
             inputs=input_ids,
             outputs=[labels_probs, detect_probs]
         )
+        losses = [keras.losses.SparseCategoricalCrossentropy(),
+                  keras.losses.SparseCategoricalCrossentropy()]
+        optimizer = AdamWeightDecay(learning_rate=learning_rate)
+        model.compile(optimizer=optimizer, loss=losses,
+            weighted_metrics=['sparse_categorical_accuracy'])
         return model
 
     def predict(self, input_ids):

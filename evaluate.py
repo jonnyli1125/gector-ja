@@ -42,7 +42,6 @@ def main(weights_path, vocab_dir, transforms_file, corpus_dir):
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
                   pretrained_weights_path=weights_path)
-        gec.model.compile()
 
     pred_tokens = []
     source_batches = [source_sents[i:i + 64]

@@ -55,18 +55,7 @@ def train(corpora_dir, output_weights_path, vocab_dir, transforms_file,
     with strategy.scope():
         gec = GEC(vocab_path=vocab_dir, verb_adj_forms_path=transforms_file,
             pretrained_weights_path=pretrained_weights_path,
-            bert_trainable=bert_trainable)
-        if class_weight_path:
-            with open(class_weight_path) as f:
-                class_weight = json.load(f)
-            losses = [WeightedSCCE(w) for w in class_weight]
-            print('Using weighted SCCE loss')
-        else:
-            losses = [keras.losses.SparseCategoricalCrossentropy(),
-                keras.losses.SparseCategoricalCrossentropy()]
-        optimizer = AdamWeightDecay(learning_rate=learning_rate)
-        gec.model.compile(optimizer=optimizer, loss=losses,
-            weighted_metrics=['sparse_categorical_accuracy'])
+            bert_trainable=bert_trainable, learning_rate=learning_rate)
     model_checkpoint_callback = keras.callbacks.ModelCheckpoint(
         filepath=output_weights_path + '_checkpoint',
         save_weights_only=True,
