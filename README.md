@@ -60,4 +60,13 @@ epochs: 3
 Lang8 corpus:
 ```
 length: 6066306
-epochs: 10```
+epochs: 10
+```
+
+## Evaluation
+
+The model can be evaluated with `evaluate.py` on a parallel sentences corpus. The evaluation corpus used was [TMU Evaluation Corpus for Japanese Learners (Koyama et al. 2020)](https://www.aclweb.org/anthology/2020.lrec-1.26/), and the metric is GLEU score.
+
+Using the model trained with the parameters described above, it achieved a GLEU score of around 0.81.
+
+In the GECToR paper, F0.5 score was used, which can also be determined through use of [errant](https://github.com/chrisjbryant/errant) and [m2scorer](https://github.com/nusnlp/m2scorer). However, this requires modifying the tools' source code to accomodate for Japanese. In this project GLEU score was used as in Koyama et al. 2020, which works "out of the box" from the NLTK library.

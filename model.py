@@ -102,7 +102,6 @@ class GEC:
             padding='max_length', max_length=self.max_len, return_tensors='tf')
         output_dict = self.predict(input_dict['input_ids'])
         labels = output_dict['labels']
-        print(sentences, labels, output_dict['detect'])  # debug
         labels_probs = tf.math.reduce_max(
             output_dict['labels_probs'], axis=-1).numpy()
         new_sentences = []
@@ -129,7 +128,9 @@ class GEC:
                     tokens[j] = labels[i][j].replace('$REPLACE_', '')
                 elif labels[i][j].startswith('$TRANSFORM_'):
                     transform_op = labels[i][j].replace('$TRANSFORM_', '')
-                    tokens[j] = self.transform[f'{tokens[j]}_{transform_op}']
+                    key = f'{tokens[j]}_{transform_op}'
+                    if key in self.transform:
+                        tokens[j] = self.transform[key]
             tokens = ' '.join(tokens).split()
             tokens = [t for t in tokens if t not in ['[CLS]', '[SEP]', '[PAD]']]
             new_sentence = self.tokenizer.convert_tokens_to_string(tokens)

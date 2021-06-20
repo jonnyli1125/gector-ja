@@ -1,2 +1,3 @@
 *.pyc
 data/corpora/*
+data/model/*
