@@ -42,7 +42,7 @@
       if (e.keyCode == 13 && inputText != '') {
         inputTextbox.value = '';
         var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "index", true);
+        xhttp.open("POST", "correct", true);
         xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
