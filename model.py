@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
-from transformers import TFBertModel, BertTokenizer, AdamWeightDecay
+from transformers import TFAutoModel, AutoTokenizer, AdamWeightDecay
 
 from utils.helpers import Vocab
 
@@ -20,7 +20,7 @@ class GEC:
         self.max_len = max_len
         self.confidence = confidence
         self.min_error_prob = min_error_prob
-        self.tokenizer = BertTokenizer.from_pretrained(bert_model)
+        self.tokenizer = AutoTokenizer.from_pretrained(bert_model)
         vocab_labels_path = os.path.join(vocab_path, 'labels.txt')
         vocab_detect_path = os.path.join(vocab_path, 'detect.txt')
         self.vocab_labels = Vocab.from_file(vocab_labels_path)
@@ -31,7 +31,7 @@ class GEC:
         self.transform = self.get_transforms(verb_adj_forms_path)
 
     def get_model(self, bert_model, bert_trainable=True, learning_rate=None):
-        encoder = TFBertModel.from_pretrained(bert_model)
+        encoder = TFAutoModel.from_pretrained(bert_model)
         encoder.bert.trainable = bert_trainable
         input_ids = layers.Input(shape=(self.max_len,), dtype=tf.int32,
             name='input_ids')
