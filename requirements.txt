@@ -1,5 +1,5 @@
-tensorflow==2.5.0
-transformers==4.5.1
+tensorflow==2.8
+transformers==4.30.1
 fugashi==1.1.0
 unidic-lite==1.0.8
 Flask==2.0.1
